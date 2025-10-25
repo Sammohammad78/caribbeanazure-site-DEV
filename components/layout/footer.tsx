@@ -9,16 +9,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   const localizedSlugs = {
-    services: locale === 'nl' ? 'diensten' : 'services',
-    industries: locale === 'nl' ? 'sectoren' : 'industries',
-    integrations: locale === 'nl' ? 'integraties' : 'integrations',
-    security: 'security',
-    insights: 'insights',
-    blueprint: 'blueprint',
-    roi: 'roi',
+    about: locale === 'nl' ? 'over-ons' : 'over-ons',
+    solutions: 'oplossingen',
     cases: 'cases',
-    pricing: 'prijzen',
-    about: locale === 'nl' ? 'over-ons' : 'about',
     contact: 'contact',
   }
 
@@ -28,34 +21,25 @@ export function Footer() {
       { href: `/${locale}/${localizedSlugs.cases}`, label: t('nav.cases') },
       { href: `/${locale}/${localizedSlugs.contact}`, label: t('nav.contact') },
     ],
-    services: [
-      { href: `/${locale}/${localizedSlugs.services}`, label: t('nav.services') },
-      { href: `/${locale}/${localizedSlugs.industries}`, label: t('nav.industries') },
-      { href: `/${locale}/${localizedSlugs.integrations}`, label: t('nav.integrations') },
-      { href: `/${locale}/${localizedSlugs.security}`, label: t('nav.security') },
-    ],
-    resources: [
-      { href: `/${locale}/${localizedSlugs.insights}`, label: t('nav.insights') },
-      { href: `/${locale}/${localizedSlugs.blueprint}`, label: t('nav.blueprint') },
-      { href: `/${locale}/${localizedSlugs.roi}`, label: t('nav.roi') },
+    solutions: [
+      { href: `/${locale}/${localizedSlugs.solutions}`, label: t('nav.solutions') },
     ],
     legal: [
       { href: `/${locale}/privacy`, label: t('footer.privacy') },
-      { href: `/${locale}/${locale === 'nl' ? 'voorwaarden' : 'terms'}`, label: t('footer.terms') },
+      { href: `/${locale}/${locale === 'nl' ? 'voorwaarden' : 'voorwaarden'}`, label: t('footer.terms') },
     ],
   }
 
   return (
     <footer className="border-t border-[color:color-mix(in_oklab,var(--fg)_10%,transparent)] bg-[color:color-mix(in_oklab,var(--bg)_92%,transparent)]/90 backdrop-blur-xl">
       <div className="container-custom py-16">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-5">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
           <FooterColumn label={t('footer.company')} links={footerLinks.company} />
-          <FooterColumn label={t('footer.services')} links={footerLinks.services} />
-          <FooterColumn label={t('footer.resources')} links={footerLinks.resources} />
+          <FooterColumn label={t('nav.solutions')} links={footerLinks.solutions} />
           <FooterColumn label={t('footer.legal')} links={footerLinks.legal} />
 
           {/* Contact Column */}
-          <div className="col-span-2 md:col-span-1 space-y-4">
+          <div className="space-y-4">
             <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-[color:var(--fg-muted)]">
               Contact
             </h3>

@@ -756,5 +756,26 @@
     },
     "privacy": "We don't share your data. See our privacy policy.",
     "emailConsent": "I want to receive my calculation by email"
+  },
+  "about": {
+    "title": "About us",
+    "subtitle": "Caribbean Azure helps small and medium-sized teams work smarter with automation. We map processes, connect the right tools, and build only what's truly needed. No buzzwords—just measurable results and transferable workflows that your team understands and manages.",
+    "whatWeDoTitle": "What we do",
+    "whatWeDoSubtitle": "Practical automation for daily work",
+    "whatWeDo": [
+      "Process analysis and quick improvement plans",
+      "Integrations between email, CRM, documents, and planning",
+      "Dashboards and notifications for status & follow-up"
+    ],
+    "howWeWorkTitle": "How we work",
+    "steps": [
+      {"title": "Intake", "description": "30 minutes to understand your situation"},
+      {"title": "Proof-of-Value", "description": "1–2 weeks: quick prototype to prove value"},
+      {"title": "Implementation", "description": "Build, test, and go live with the solution"},
+      {"title": "Knowledge transfer", "description": "Your team learns to understand and manage it"}
+    ],
+    "cta": "Book a short intake",
+    "complianceTitle": "Independence & Compliance",
+    "complianceText": "Caribbean Azure operates independently and does not mention client or employer names. We only communicate results we can factually demonstrate."
   }
 }
