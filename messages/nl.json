@@ -781,5 +781,26 @@
     },
     "privacy": "We delen uw gegevens niet. Zie ons privacybeleid.",
     "emailConsent": "Ik wil mijn berekening per e-mail ontvangen"
+  },
+  "about": {
+    "title": "Over ons",
+    "subtitle": "Caribbean Azure helpt kleine en middelgrote teams om slimmer te werken met automatisering. We brengen processen in kaart, koppelen de juiste tools en bouwen alleen wat echt nodig is. Geen buzzwords—wel meetbaar resultaat en overdraagbare workflows die jouw team begrijpt en beheert.",
+    "whatWeDoTitle": "Wat we doen",
+    "whatWeDoSubtitle": "Praktische automatisering voor dagelijks werk",
+    "whatWeDo": [
+      "Procesanalyse en snelle verbeterplannen",
+      "Koppelingen tussen e-mail, CRM, documenten en planning",
+      "Dashboards en notificaties voor status & opvolging"
+    ],
+    "howWeWorkTitle": "Hoe we werken",
+    "steps": [
+      {"title": "Intake", "description": "30 minuten kennismaken en je situatie in kaart brengen"},
+      {"title": "Proof-of-Value", "description": "1–2 weken: snel prototype om waarde te bewijzen"},
+      {"title": "Implementatie", "description": "Bouwen, testen en live zetten van de oplossing"},
+      {"title": "Kennisoverdracht", "description": "Jouw team leert het te begrijpen en te beheren"}
+    ],
+    "cta": "Plan een korte intake",
+    "complianceTitle": "Onafhankelijkheid & Compliance",
+    "complianceText": "Caribbean Azure werkt onafhankelijk en noemt geen klant- of werkgeversnamen. We communiceren alleen resultaten die we feitelijk kunnen aantonen."
   }
 }

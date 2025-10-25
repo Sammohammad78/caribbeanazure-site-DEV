@@ -1,26 +1,15 @@
+import { getTranslations } from 'next-intl/server'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
+import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Target, CheckCircle, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { BackgroundEngine } from '@/components/backgrounds/BackgroundEngine'
 import { backgroundThemes } from '@/lib/backgroundThemes'
 
-const whatWeDo = [
-  "Procesanalyse en snelle verbeterplannen",
-  "Koppelingen tussen e-mail, CRM, documenten en planning",
-  "Dashboards en notificaties voor status & opvolging",
-]
-
-const howWeWork = [
-  { step: "1", title: "Intake", description: "30 minuten kennismaken en je situatie in kaart brengen" },
-  { step: "2", title: "Proof-of-Value", description: "1–2 weken: snel prototype om waarde te bewijzen" },
-  { step: "3", title: "Implementatie", description: "Bouwen, testen en live zetten van de oplossing" },
-  { step: "4", title: "Kennisoverdracht", description: "Jouw team leert het te begrijpen en te beheren" },
-]
-
-export default function AboutPage({ params }: { params: { locale: string } }) {
+export default async function AboutPage({ params }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale: params.locale, namespace: 'about' })
   const locale = params.locale
 
   return (
@@ -38,12 +27,10 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
             <div className="container-custom">
               <div className="mx-auto max-w-3xl">
                 <h1 className="text-balance text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-                  Over ons
+                  {t('title')}
                 </h1>
                 <p className="mt-6 text-lg leading-relaxed text-[color:var(--fg-subtle)]">
-                  Caribbean Azure helpt kleine en middelgrote teams om slimmer te werken met automatisering.
-                  We brengen processen in kaart, koppelen de juiste tools en bouwen alleen wat echt nodig is.
-                  Geen buzzwords—wel meetbaar resultaat en overdraagbare workflows die jouw team begrijpt en beheert.
+                  {t('subtitle')}
                 </p>
               </div>
             </div>
@@ -58,15 +45,15 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
                     <Target className="h-6 w-6" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold tracking-tight">Wat we doen</h2>
+                    <h2 className="text-2xl font-bold tracking-tight">{t('whatWeDoTitle')}</h2>
                     <p className="mt-2 text-[color:var(--fg-subtle)]">
-                      Praktische automatisering voor dagelijks werk
+                      {t('whatWeDoSubtitle')}
                     </p>
                   </div>
                 </div>
 
                 <ul className="space-y-3">
-                  {whatWeDo.map((item, index) => (
+                  {t.raw('whatWeDo').map((item: string, index: number) => (
                     <li key={index} className="flex items-start gap-3">
                       <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-[color:var(--brand)]" />
                       <span className="text-[color:var(--fg-subtle)]">{item}</span>
@@ -81,14 +68,14 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           <section className="section-padding-y">
             <div className="container-custom">
               <div className="mx-auto max-w-3xl">
-                <h2 className="mb-8 text-2xl font-bold tracking-tight">Hoe we werken</h2>
+                <h2 className="mb-8 text-2xl font-bold tracking-tight">{t('howWeWorkTitle')}</h2>
 
                 <div className="grid gap-6 md:grid-cols-2">
-                  {howWeWork.map((phase) => (
-                    <Card key={phase.step} className="rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-8">
+                  {t.raw('steps').map((phase: { title: string; description: string }, idx: number) => (
+                    <Card key={idx} className="rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-8">
                       <CardHeader>
                         <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[color:var(--brand)] text-lg font-bold text-white">
-                          {phase.step}
+                          {idx + 1}
                         </div>
                         <CardTitle className="text-lg">{phase.title}</CardTitle>
                         <CardDescription>{phase.description}</CardDescription>
@@ -101,7 +88,7 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
                 <div className="mt-10 text-center">
                   <Button size="lg" asChild>
                     <Link href={`/${locale}/contact`}>
-                      Plan een korte intake
+                      {t('cta')}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
@@ -114,12 +101,11 @@ export default function AboutPage({ params }: { params: { locale: string } }) {
           <section className="section-padding-y bg-[color:color-mix(in_oklab,var(--bg)_90%,transparent)]">
             <div className="container-custom">
               <div className="mx-auto max-w-3xl">
-                <Card className="border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)]">
+                <Card className="rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-8">
                   <CardHeader>
-                    <CardTitle className="text-base">Onafhankelijkheid & Compliance</CardTitle>
+                    <CardTitle className="text-base">{t('complianceTitle')}</CardTitle>
                     <CardDescription className="text-sm">
-                      Caribbean Azure werkt onafhankelijk en noemt geen klant- of werkgeversnamen.
-                      We communiceren alleen resultaten die we feitelijk kunnen aantonen.
+                      {t('complianceText')}
                     </CardDescription>
                   </CardHeader>
                 </Card>
