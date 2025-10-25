@@ -86,16 +86,16 @@ export function Footer() {
 
           <div className="text-xs text-[color:var(--fg-muted)] max-w-3xl">
             {locale === 'nl'
-              ? 'Caribbean Azure werkt onafhankelijk en noemt geen klant- of werkgeversnamen. We communiceren alleen resultaten die we feitelijk kunnen aantonen.'
-              : 'Caribbean Azure operates independently and does not mention client or employer names. We only communicate results we can factually demonstrate.'}
+              ? 'Caribbean Azure rapporteert resultaten altijd met toestemming en in samenwerking met de klant. Namen worden alleen gebruikt na expliciete goedkeuring.'
+              : 'Caribbean Azure reports results with client permission and collaboration. Names are only used after explicit approval.'}
           </div>
 
-          {/* KvK and BTW */}
-          <div className="text-xs text-[color:var(--fg-muted)] flex flex-wrap gap-x-4 gap-y-2">
-            <span>KvK: 12345678</span>
-            <span>BTW: NL123456789B01</span>
+          {/* KvK and BTW - Hidden until real values available */}
+          {/* <div className="text-xs text-[color:var(--fg-muted)] flex flex-wrap gap-x-4 gap-y-2">
+            <span>KvK: [TBD]</span>
+            <span>BTW: [TBD]</span>
             <span>© {currentYear} Caribbean Azure</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

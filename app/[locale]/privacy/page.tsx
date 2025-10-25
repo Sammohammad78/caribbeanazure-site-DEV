@@ -55,9 +55,7 @@ export default function PrivacyPage() {
                     <p>
                       <strong>Verwerkingsverantwoordelijke:</strong><br />
                       Caribbean Azure<br />
-                      KvK: 12345678<br />
-                      BTW: NL123456789B01<br />
-                      E-mail: privacy@caribbeanazure.nl
+                      E-mail: privacy@caribbeanazure.com
                     </p>
                     <p>
                       Caribbean Azure is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in deze privacyverklaring.
