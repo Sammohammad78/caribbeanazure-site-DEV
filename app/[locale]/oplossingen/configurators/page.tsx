@@ -8,7 +8,6 @@ import Link from 'next/link'
 import { BackgroundEngine } from '@/components/backgrounds/BackgroundEngine'
 import { backgroundThemes } from '@/lib/backgroundThemes'
 import { TrustStrip } from '@/components/sections/trust-strip'
-import { RoiCalculator } from '@/components/roi/RoiCalculator'
 import { getPriceOnRequest } from '@/lib/format'
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
@@ -219,30 +218,6 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
                     </Card>
                   )
                 })}
-              </div>
-            </div>
-          </section>
-
-          {/* ROI Calculator */}
-          <section className="section-padding-y bg-[color:color-mix(in_oklab,var(--panel)_30%,transparent)]">
-            <div className="container-custom">
-              <div className="mx-auto max-w-4xl text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                  {locale === 'nl' ? 'Bereken jouw ROI' : 'Calculate your ROI'}
-                </h2>
-                <p className="mt-4 text-lg text-[color:var(--fg-subtle)]">
-                  {locale === 'nl'
-                    ? 'Configurators besparen typisch 60-80% engineering tijd en elimineren productiefouten'
-                    : 'Configurators typically save 60-80% engineering time and eliminate production errors'}
-                </p>
-              </div>
-              <div className="mx-auto max-w-4xl">
-                <RoiCalculator
-                  variant="card"
-                  preset="c2p"
-                  showExport
-                  showMethodNote
-                />
               </div>
             </div>
           </section>
