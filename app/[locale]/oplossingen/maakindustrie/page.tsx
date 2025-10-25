@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 
 export default async function ManufacturingPage({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'solutions.manufacturing' })
+  const tCommon = await getTranslations({ locale: params.locale, namespace: 'common' })
   const locale = params.locale as 'nl' | 'en'
 
   const useCases = [
@@ -76,9 +77,9 @@ export default async function ManufacturingPage({ params }: { params: { locale: 
               <div className="mx-auto max-w-3xl text-center">
                 <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 px-4 py-2 text-sm font-medium text-[color:var(--brand)]">
                   <Sparkles className="h-4 w-4" />
-                  {locale === 'nl' ? 'Tier 2 · Aanbevolen voor maakbedrijven' : 'Tier 2 · Recommended for manufacturing'}
+                  {tCommon('tier2Recommended')}
                 </div>
-                <h1 className="text-balance text-fluid-h1 font-bold">
+                <h1 className="text-balance text-4xl font-bold md:text-5xl lg:text-6xl">
                   {t('title')}
                 </h1>
                 <p className="mx-auto mt-6 max-w-2xl text-fluid-body text-[color:var(--fg-subtle)]">
@@ -86,13 +87,12 @@ export default async function ManufacturingPage({ params }: { params: { locale: 
                 </p>
 
                 {/* Pricing */}
-                <div className="mt-8 inline-flex flex-col items-center gap-4 rounded-2xl border-2 border-[color:color-mix(in_oklab,var(--accent)_35%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-6 shadow-[0_28px_90px_rgb(45_43_99/20%)]">
+                <div className="mt-8 inline-flex flex-col items-center gap-4 rounded-3xl border-2 border-[color:color-mix(in_oklab,var(--accent)_35%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-8 shadow-[0_28px_90px_rgb(45_43_99/20%)]">
                   <div className="text-4xl font-bold text-[color:var(--brand)]">
-                    {locale === 'nl' ? 'vanaf ' : 'from '}
-                    {formatCurrency(1999, locale)}
+                    {tCommon('from')} {formatCurrency(1999, locale)}
                   </div>
                   <p className="text-sm text-[color:var(--fg-muted)]">
-                    {locale === 'nl' ? 'excl. btw · vanaf-prijs, exacte scope bepaald in intake' : 'excl. VAT · from-price, exact scope determined in intake'}
+                    {tCommon('exclVatFromPrice')}
                   </p>
                   <div className="flex gap-3">
                     <Button asChild size="lg">
@@ -102,8 +102,8 @@ export default async function ManufacturingPage({ params }: { params: { locale: 
                       </Link>
                     </Button>
                     <Button asChild size="lg" variant="outline">
-                      <Link href={`/${locale}/tarieven`}>
-                        {locale === 'nl' ? 'Bekijk alle tarieven' : 'View all pricing'}
+                      <Link href={`/${locale}/oplossingen`}>
+                        {tCommon('viewAllSolutions')}
                       </Link>
                     </Button>
                   </div>
@@ -147,13 +147,11 @@ export default async function ManufacturingPage({ params }: { params: { locale: 
           <section className="section-padding-y">
             <div className="container-custom">
               <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                  {locale === 'nl' ? 'Wat we bouwen voor je' : 'What we build for you'}
+                <h2 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
+                  {tCommon('whatWeBuildForYou')}
                 </h2>
                 <p className="mt-4 text-lg text-[color:var(--fg-subtle)]">
-                  {locale === 'nl'
-                    ? 'Productie-klare oplossingen die sales direct koppelen aan manufacturing'
-                    : 'Production-ready solutions that directly connect sales to manufacturing'}
+                  {tCommon('productionReadySolutions')}
                 </p>
               </div>
 
@@ -161,9 +159,9 @@ export default async function ManufacturingPage({ params }: { params: { locale: 
                 {useCases.map((useCase, idx) => {
                   const Icon = useCase.icon
                   return (
-                    <Card key={idx} className="rounded-2xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-6">
+                    <Card key={idx} className="rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-8">
                       <CardHeader className="p-0">
-                        <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white">
+                        <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white">
                           <Icon className="h-6 w-6" />
                         </div>
                         <CardTitle className="text-xl">{useCase.name}</CardTitle>
@@ -174,7 +172,7 @@ export default async function ManufacturingPage({ params }: { params: { locale: 
                       <CardContent className="mt-4 p-0">
                         <div className="rounded-lg bg-[color:color-mix(in_oklab,var(--fg)_5%,transparent)] p-4">
                           <p className="text-sm font-medium text-[color:var(--fg-muted)]">
-                            {locale === 'nl' ? 'Voorbeeld:' : 'Example:'}
+                            {tCommon('example')}
                           </p>
                           <p className="mt-1 text-sm text-[color:var(--fg-subtle)]">
                             {useCase.example}
@@ -192,10 +190,10 @@ export default async function ManufacturingPage({ params }: { params: { locale: 
           <section className="section-padding-y bg-[color:color-mix(in_oklab,var(--panel)_30%,transparent)]">
             <div className="container-custom">
               <div className="mx-auto max-w-3xl">
-                <Card className="rounded-2xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-8">
+                <Card className="rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-8">
                   <CardHeader className="p-0">
                     <CardTitle className="text-2xl">
-                      {locale === 'nl' ? 'Functionaliteit & mogelijkheden' : 'Features & capabilities'}
+                      {tCommon('featuresCapabilities')}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="mt-6 grid gap-4 p-0 sm:grid-cols-2">
@@ -218,17 +216,15 @@ export default async function ManufacturingPage({ params }: { params: { locale: 
             <div className="container-custom">
               <div className="rounded-3xl border border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] bg-gradient-to-br from-[color:var(--panel)] to-[color:color-mix(in_oklab,var(--brand)_5%,transparent)] p-12 text-center">
                 <h2 className="text-2xl font-bold md:text-3xl">
-                  {locale === 'nl' ? 'Volledige product configuratie nodig?' : 'Need full product configuration?'}
+                  {tCommon('needFullConfig')}
                 </h2>
                 <p className="mx-auto mt-4 max-w-2xl text-lg text-[color:var(--fg-subtle)]">
-                  {locale === 'nl'
-                    ? 'Bekijk onze CPQ & Configure-to-Production oplossingen voor complexe producten met duizenden varianten.'
-                    : 'Check out our CPQ & Configure-to-Production solutions for complex products with thousands of variants.'}
+                  {tCommon('cpqConfigDescription')}
                 </p>
                 <div className="mt-8">
                   <Button asChild size="lg">
                     <Link href={`/${locale}/oplossingen/configurators`}>
-                      {locale === 'nl' ? 'Configurator oplossingen' : 'Configurator solutions'}
+                      {tCommon('configuratorSolutions')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>

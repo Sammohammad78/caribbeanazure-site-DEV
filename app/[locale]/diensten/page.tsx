@@ -95,7 +95,9 @@ const services: ServiceBlock[] = [
   },
 ]
 
-export default function ServicesPage() {
+export default function ServicesPage({ params }: { params: { locale: string } }) {
+  const locale = params.locale
+
   return (
     <>
       <div className="relative">
@@ -251,7 +253,7 @@ export default function ServicesPage() {
                     size="lg"
                     className="w-full bg-white text-[color:var(--brand-600)] hover:bg-white/90"
                   >
-                    <Link href="/nl/contact">
+                    <Link href={`/${locale}/contact`}>
                       Plan een gesprek
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>

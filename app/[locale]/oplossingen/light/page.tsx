@@ -80,7 +80,7 @@ export default async function LightAutomationsPage({ params }: { params: { local
                   </span>
                   {tCommon('tier1')}
                 </div>
-                <h1 className="text-balance text-fluid-h1 font-bold">
+                <h1 className="text-balance text-4xl font-bold md:text-5xl lg:text-6xl">
                   {t('title')}
                 </h1>
                 <p className="mx-auto mt-6 max-w-2xl text-fluid-body text-[color:var(--fg-subtle)]">
@@ -88,7 +88,7 @@ export default async function LightAutomationsPage({ params }: { params: { local
                 </p>
 
                 {/* Pricing */}
-                <div className="mt-8 inline-flex flex-col items-center gap-4 rounded-2xl border border-[color:color-mix(in_oklab,var(--accent)_25%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-6">
+                <div className="mt-8 inline-flex flex-col items-center gap-4 rounded-3xl border border-[color:color-mix(in_oklab,var(--accent)_25%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-8">
                   <div className="text-4xl font-bold text-[color:var(--brand)]">
                     {tCommon('from')} {formatCurrency(999, locale)}
                   </div>
@@ -131,7 +131,7 @@ export default async function LightAutomationsPage({ params }: { params: { local
           <section className="section-padding-y bg-[color:color-mix(in_oklab,var(--panel)_30%,transparent)]">
             <div className="container-custom">
               <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
                   {tCommon('concreteUseCases')}
                 </h2>
                 <p className="mt-4 text-lg text-[color:var(--fg-subtle)]">
@@ -143,9 +143,9 @@ export default async function LightAutomationsPage({ params }: { params: { local
                 {useCases.map((useCase, idx) => {
                   const Icon = useCase.icon
                   return (
-                    <Card key={idx} className="rounded-2xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-6">
+                    <Card key={idx} className="rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-8">
                       <CardHeader className="p-0">
-                        <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 text-white">
+                        <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 text-white">
                           <Icon className="h-6 w-6" />
                         </div>
                         <CardTitle className="text-xl">{useCase.name}</CardTitle>
@@ -174,7 +174,7 @@ export default async function LightAutomationsPage({ params }: { params: { local
           <section className="section-padding-y">
             <div className="container-custom">
               <div className="mx-auto max-w-3xl">
-                <Card className="rounded-2xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-8">
+                <Card className="rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-8">
                   <CardHeader className="p-0">
                     <CardTitle className="text-2xl">
                       {tCommon('includedWithEvery')} {t('title')}
