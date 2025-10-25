@@ -41,7 +41,7 @@ export function Footer() {
     ],
     legal: [
       { href: `/${locale}/privacy`, label: t('footer.privacy') },
-      { href: `/${locale}/terms`, label: t('footer.terms') },
+      { href: `/${locale}/${locale === 'nl' ? 'voorwaarden' : 'terms'}`, label: t('footer.terms') },
     ],
   }
 

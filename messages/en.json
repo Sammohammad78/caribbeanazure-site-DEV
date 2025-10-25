@@ -17,6 +17,26 @@
     "cookies": "Cookies",
     "terms": "Terms"
   },
+  "common": {
+    "from": "from",
+    "learnMore": "Learn more",
+    "bookIntake": "Book an intake",
+    "popular": "Popular",
+    "recommended": "Recommended",
+    "priceOnRequest": "Price on request",
+    "month": "month",
+    "months": "months",
+    "exclVat": "excl. VAT",
+    "viewAllPricing": "View all pricing",
+    "calculateROI": "Calculate your ROI",
+    "example": "Example:",
+    "included": "Included with every",
+    "readyForMore": "Ready for more?",
+    "submitting": "Submitting...",
+    "people": "people",
+    "hours": "hours",
+    "hoursPerYear": "hours/year"
+  },
   "hero": {
     "title": "From request to production—automated for manufacturing SMEs",
     "qualifier": "",
