@@ -12,7 +12,7 @@ export default function NotFound() {
 
   const suggestions = [
     { href: `/${locale}`, label: locale === 'nl' ? 'Homepage' : 'Home', icon: Home },
-    { href: `/${locale}/diensten`, label: locale === 'nl' ? 'Diensten' : 'Services', icon: Search },
+    { href: `/${locale}/oplossingen`, label: locale === 'nl' ? 'Oplossingen' : 'Solutions', icon: Search },
     { href: `/${locale}/contact`, label: 'Contact', icon: ArrowLeft },
   ]
 

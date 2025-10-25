@@ -119,10 +119,13 @@ function FooterColumn({
           <li key={link.href}>
             <Link
               href={link.href}
-              className="lift-hover inline-flex items-center gap-2 text-sm font-medium text-[color:var(--fg-subtle)] transition-all duration-200 hover:text-[color:var(--fg)]"
+              className="group inline-flex items-center gap-2 text-sm font-medium text-[color:var(--fg-subtle)] transition-colors duration-200 hover:text-[color:var(--brand)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand)] focus-visible:ring-offset-2 rounded px-1 py-0.5"
             >
-              <span className="h-1 w-1 rounded-full bg-[color:var(--accent)]" />
-              {link.label}
+              <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--accent)] transition-all duration-200 group-hover:bg-[color:var(--brand)] group-hover:scale-125" />
+              <span className="relative">
+                {link.label}
+                <span className="absolute -bottom-0.5 left-0 right-0 h-[1px] bg-[color:var(--brand)] scale-x-0 transition-transform duration-200 group-hover:scale-x-100" />
+              </span>
             </Link>
           </li>
         ))}

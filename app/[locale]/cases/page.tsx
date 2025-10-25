@@ -205,7 +205,7 @@ export default async function CasesPage({ params }: { params: { locale: string }
                       Plan een intake
                     </a>
                     <a
-                      href={`/${params.locale}/roi`}
+                      href={`/${params.locale}/#roi-calculator`}
                       className="inline-flex items-center justify-center rounded-xl border-2 border-white/40 bg-white/10 px-8 py-3 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
                     >
                       Bereken je ROI
