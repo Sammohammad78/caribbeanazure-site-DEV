@@ -1,0 +1,48 @@
+<svg width="220" height="48" viewBox="0 0 220 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradientDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- CA Monogram Icon -->
+  <g id="ca-mark-dark">
+    <!-- Outer circle -->
+    <circle cx="24" cy="24" r="22" stroke="url(#logoGradientDark)" stroke-width="2" fill="none" opacity="0.4"/>
+
+    <!-- C shape with flowing counter -->
+    <path d="M 24 6 A 18 18 0 0 1 42 24 A 18 18 0 0 1 24 42 A 18 18 0 0 1 10 32"
+          stroke="url(#logoGradientDark)"
+          stroke-width="3"
+          stroke-linecap="round"
+          fill="none"/>
+
+    <!-- A accent (triangle peak) -->
+    <path d="M 24 14 L 30 28 L 24 26 L 18 28 Z"
+          fill="url(#logoGradientDark)"
+          opacity="0.9"/>
+
+    <!-- Flow line beneath -->
+    <path d="M 12 38 Q 24 36 36 38"
+          stroke="#22D3EE"
+          stroke-width="1.5"
+          fill="none"
+          opacity="0.6"/>
+  </g>
+
+  <!-- Text -->
+  <text x="54" y="29"
+        font-family="system-ui, -apple-system, 'Geist Sans', sans-serif"
+        font-size="19"
+        font-weight="700"
+        fill="#F8FAFC"
+        letter-spacing="-0.02em">Caribbean</text>
+
+  <text x="149" y="29"
+        font-family="system-ui, -apple-system, 'Geist Sans', sans-serif"
+        font-size="19"
+        font-weight="700"
+        fill="url(#logoGradientDark)"
+        letter-spacing="-0.02em">Azure</text>
+</svg>

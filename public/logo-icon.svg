@@ -1,0 +1,33 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- CA Monogram Icon Only -->
+  <g id="ca-icon">
+    <!-- Outer circle -->
+    <circle cx="24" cy="24" r="22" stroke="url(#iconGradient)" stroke-width="2" fill="none" opacity="0.3"/>
+
+    <!-- C shape with flowing counter -->
+    <path d="M 24 6 A 18 18 0 0 1 42 24 A 18 18 0 0 1 24 42 A 18 18 0 0 1 10 32"
+          stroke="url(#iconGradient)"
+          stroke-width="3"
+          stroke-linecap="round"
+          fill="none"/>
+
+    <!-- A accent (triangle peak) -->
+    <path d="M 24 14 L 30 28 L 24 26 L 18 28 Z"
+          fill="url(#iconGradient)"
+          opacity="0.8"/>
+
+    <!-- Flow line beneath -->
+    <path d="M 12 38 Q 24 36 36 38"
+          stroke="#06B6D4"
+          stroke-width="1.5"
+          fill="none"
+          opacity="0.5"/>
+  </g>
+</svg>

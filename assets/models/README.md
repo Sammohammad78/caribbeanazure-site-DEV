@@ -1,0 +1,1 @@
+# 3D Models\n\nStore CC0 models used in the hero and case visuals here. Suggested sources:\n\n- Kenney 3D assets: https://kenney.nl/assets\n- Poly Haven models: https://polyhaven.com/models\n- ambientCG textures and models: https://ambientcg.com\n\nKeep raw models in ssets/models/src/ and export optimized glb files to public/3d/ using the provided npm scripts.

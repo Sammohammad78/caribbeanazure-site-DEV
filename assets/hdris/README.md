@@ -1,0 +1,1 @@
+# HDRI Assets\n\nDownload Poly Haven Studio Small 08 (CC0) and place the HDR file here.\n\n- Studio Small 08 (2k): https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/studio_small_08_2k.hdr\n- Library for alternates: https://polyhaven.com/hdris\n\nKeep original filenames. Optimise with gltfpack/ktx2 if converting to environment maps.

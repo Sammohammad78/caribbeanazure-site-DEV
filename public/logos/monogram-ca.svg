@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- CA Monogram: Flowing ligature -->
+  <path d="M18 12C12 12 8 16 8 24C8 32 12 36 18 36C22 36 24 34 24 34" stroke="#1A9BD6" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M30 12C24 12 24 12 24 24C24 36 30 36 36 36C40 36 40 32 40 28" stroke="#1A9BD6" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M24 24C24 24 28 20 32 24" stroke="#1A9BD6" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+</svg>

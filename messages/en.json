@@ -1,0 +1,712 @@
+{
+  "nav": {
+    "home": "Home",
+    "solutions": "Solutions",
+    "services": "Services",
+    "cases": "Cases",
+    "pricing": "Pricing",
+    "about": "About",
+    "industries": "Industries",
+    "integrations": "Integrations",
+    "security": "Security",
+    "insights": "Insights",
+    "contact": "Contact",
+    "blueprint": "Blueprint",
+    "roi": "ROI calculator",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "terms": "Terms"
+  },
+  "hero": {
+    "title": "From request to production—automated for manufacturing SMEs",
+    "qualifier": "",
+    "subtitle": "Fast micro-automations (Tier 1), production-ready Sales→BOM & drawing packages (Tier 2), and configure-to-order configurators (Tier 3). GDPR-compliant, with n8n self-host option.",
+    "cta": {
+      "primary": "Book an intake",
+      "secondary": "Calculate your ROI"
+    },
+    "trustedBy": "Trusted by 50+ manufacturing SMEs"
+  },
+  "outcomes": {
+    "label": "Typical outcomes",
+    "speed": {
+      "title": "Faster response time",
+      "value": "-60%",
+      "footnote": "Average go-live within 6 weeks."
+    },
+    "deals": {
+      "title": "More deals",
+      "value": "+25-40%",
+      "footnote": "Sales pipeline moves to won faster."
+    },
+    "work": {
+      "title": "Less repetitive work",
+      "value": "-30-50%",
+      "footnote": "Teams focus on high-value tasks."
+    }
+  },
+  "services": {
+    "title": "What we build for you",
+    "subtitle": "Flows and agents that drive revenue from day one.",
+    "automation": {
+      "title": "Email-to-action",
+      "description": "Turn incoming email into tasks and follow-ups instantly."
+    },
+    "integrations": {
+      "title": "WhatsApp-first funnels",
+      "description": "Let WhatsApp handle quotes, reminders, and status updates."
+    },
+    "chatbots": {
+      "title": "AI agents & chatbots",
+      "description": "AI agents that resolve tier-one questions and escalate smartly."
+    },
+    "dashboards": {
+      "title": "Dashboards & reporting",
+      "description": "Weekly insight into bottlenecks, pipeline, and SLAs."
+    },
+    "web": {
+      "title": "Web design + automations",
+      "description": "Sites that connect your tools and qualify leads automatically."
+    },
+    "items": [
+      {
+        "title": "Email-to-action",
+        "description": "Turn incoming email into tasks and follow-ups instantly."
+      },
+      {
+        "title": "WhatsApp-first funnels",
+        "description": "Let WhatsApp handle quotes, reminders, and status updates."
+      },
+      {
+        "title": "AI agents & chatbots",
+        "description": "AI agents that resolve tier-one questions and escalate smartly."
+      },
+      {
+        "title": "Dashboards & reporting",
+        "description": "Weekly insight into bottlenecks, pipeline, and SLAs."
+      },
+      {
+        "title": "Web design + automations",
+        "description": "Sites that connect your tools and qualify leads automatically."
+      }
+    ]
+  },
+  "process": {
+    "title": "How we work",
+    "subtitle": "Three focused sprints from intake to live.",
+    "step1": {
+      "title": "Analysis & blueprint",
+      "description": "Interviews plus data audit turn into a visual flow with KPIs."
+    },
+    "step2": {
+      "title": "Build & test",
+      "description": "Two-week sprints deliver workflows, logging, and dashboards."
+    },
+    "step3": {
+      "title": "Launch & optimise",
+      "description": "Training, support, and iterations so your team can operate independently."
+    }
+  },
+  "cases": {
+    "title": "Proof, not promises",
+    "subtitle": "A selection of recent engagements and the measured impact.",
+    "cta": "View case",
+    "items": [
+      {
+        "slug": "randstad-inhouse",
+        "client": "Randstad Inhouse",
+        "sector": "Recruitment",
+        "headline": "Intake from 3 days to 3 hours",
+        "summary": "WhatsApp intake assistant feeds the ATS and prioritises candidates instantly.",
+        "kpis": [
+          "-60% time-to-first-call",
+          "2.4x more qualified candidates",
+          "100% GDPR logging automatically"
+        ],
+        "ctaLabel": "Read case"
+      },
+      {
+        "slug": "abn-amro-ventures",
+        "client": "ABN AMRO Ventures",
+        "sector": "Investment",
+        "headline": "Dealflow scoring with real-time dashboards",
+        "summary": "AI scorecards push ranked deals to partners with full Power BI context.",
+        "kpis": [
+          "-280 hours of Excel work per quarter",
+          "87% match between score and won deal",
+          "Alerts when pipeline health drops"
+        ],
+        "ctaLabel": "Read case"
+      },
+      {
+        "slug": "cm-com-support",
+        "client": "CM.com Support",
+        "sector": "Support",
+        "headline": "24/7 support with a hybrid AI agent",
+        "summary": "RAG agent resolves 62% of tickets; Zendesk receives context and solution proposals for the rest.",
+        "kpis": [
+          "-47% ticket backlog in 6 weeks",
+          "+0.5 uplift in CSAT",
+          "-32% average handling time"
+        ],
+        "ctaLabel": "Read case"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Two-week sprints",
+        "body": "Every project ships in two-week blocks with dashboards, changelog, and video tour."
+      },
+      {
+        "title": "Stakeholders in control",
+        "body": "Leadership tracks KPI impact live, receives alerts, and can course-correct instantly."
+      },
+      {
+        "title": "Transparent ROI",
+        "body": "Each engagement shows baseline, target, and realised impact so you know what you buy."
+      }
+    ],
+    "detail": {
+      "randstad-inhouse": {
+        "title": "Randstad Inhouse — intake from 3 days to 3 hours",
+        "quote": {
+          "text": "Recruiters see which candidates are call-ready. Everything sits in the ATS with full context.",
+          "author": "Recruitment Team Lead",
+          "role": "Randstad Inhouse"
+        },
+        "kpis": [
+          { "label": "Time-to-first-call", "before": "3 days", "after": "3 hours" },
+          { "label": "Manual admin time", "before": "5 h/day", "after": "1.5 h/day" },
+          { "label": "Profile completeness", "before": "Fragmented", "after": "100% complete" }
+        ],
+        "problem": "Recruiters received hundreds of emails and WhatsApp messages weekly. Candidate data was scattered, causing days-long intake cycles.",
+        "build": [
+          "WhatsApp intake assistant asking context questions and plugging gaps.",
+          "Airtable scorecard that auto-prioritises and assigns recruiters.",
+          "Power BI board for daily stand-ups with pipeline status."
+        ],
+        "result": [
+          "Recruiters only work qualified profiles.",
+          "Managers see bottlenecks in real time and adjust capacity.",
+          "Full GDPR logging in SharePoint without manual work."
+        ],
+        "flow": [
+          "Inbox → WhatsApp intake",
+          "Agent processes intake + scorecard",
+          "Task in ATS + Slack notification to recruiter"
+        ]
+      },
+      "abn-amro-ventures": {
+        "title": "ABN AMRO Ventures — real-time dealflow scoring",
+        "quote": {
+          "text": "Every morning we start with a prioritised list. The team sees exactly why deals score, no spreadsheets needed.",
+          "author": "Investment Manager",
+          "role": "ABN AMRO Ventures"
+        },
+        "kpis": [
+          { "label": "Manual Excel work", "before": "280 h/quarter", "after": "40 h/quarter" },
+          { "label": "Deal scoring accuracy", "before": "Subjective", "after": "87% match to wins" },
+          { "label": "Pipeline issue alerts", "before": "Ad hoc", "after": "Automated alerts" }
+        ],
+        "problem": "Dealflow entered via email and forms but disappeared into spreadsheets. Partners lacked visibility and prioritisation.",
+        "build": [
+          "Parser unifying email and Formsort leads into Airtable.",
+          "AI scoring model trained on historic deals and notes.",
+          "Power BI dashboard with status, alerts, and rationale."
+        ],
+        "result": [
+          "Partners start with curated, high-impact deals every day.",
+          "Scoring is transparent so decisions move faster.",
+          "Operations no longer maintain spreadsheets."
+        ],
+        "flow": [
+          "Inbox/Formsort → Airtable intake",
+          "AI scoring + partner review",
+          "Power BI dashboard + Slack digest"
+        ]
+      },
+      "cm-com-support": {
+        "title": "CM.com Support — hybrid AI agent handles 62% of tickets",
+        "quote": {
+          "text": "Customers get instant answers and agents receive transcripts plus a recommended fix. The team focuses on exceptions.",
+          "author": "Head of Support",
+          "role": "CM.com"
+        },
+        "kpis": [
+          { "label": "Ticket backlog", "before": "100%", "after": "53%" },
+          { "label": "CSAT", "before": "4.1", "after": "4.6" },
+          { "label": "Average handling time", "before": "12 min", "after": "8 min" }
+        ],
+        "problem": "Support juggled multiple channels and tools. Repetitive requests still required a human agent.",
+        "build": [
+          "RAG agent on product docs and historic tickets.",
+          "Zendesk macros with full context and proposed resolution.",
+          "WhatsApp follow-up pushing status updates automatically."
+        ],
+        "result": [
+          "62% of all inquiries resolved without human intervention.",
+          "Agents spend time on edge cases and high-touch issues.",
+          "Complete audit trail for compliance and QA."
+        ],
+        "flow": [
+          "Inbox → AI triage",
+          "Agent response or Zendesk ticket with context",
+          "WhatsApp update to customer"
+        ]
+      }
+    },
+    "structure": {
+      "problem": "Problem",
+      "build": "What we built",
+      "result": "Result",
+      "flow": "How it works",
+      "next": "Next step",
+      "cta": "Want the same for your team? Book a free intake."
+    }
+  },
+  "pricing": {
+    "title": "Transparent pricing for every scale",
+    "subtitle": "From fast micro-automations to complete configurators.",
+    "tiers": [
+      {
+        "id": "light",
+        "name": "Light Automations",
+        "tagline": "Fast micro-automations for immediate impact",
+        "price": "999",
+        "priceDisplay": "from €999",
+        "priceNote": "All prices excl. VAT. Exact price depends on scope and integrations.",
+        "features": [
+          "Inbox-to-Action automation",
+          "Leads-to-Booking flow",
+          "WhatsApp Helpdesk",
+          "Invoice Robot",
+          "Setup + Training included",
+          "Support 30/60/90 days"
+        ],
+        "cta": "View Light solutions"
+      },
+      {
+        "id": "manufacturing",
+        "name": "Sales→BOM & Drawing Packages",
+        "tagline": "Production-ready solutions for manufacturing",
+        "price": "1999",
+        "priceDisplay": "from €1,999",
+        "priceNote": "From-price, exact scope determined in intake.",
+        "features": [
+          "Sales→BOM Bridge",
+          "Drawing Pack Generator",
+          "ERP connectors (Exact, SAP, Odoo)",
+          "Configuration validation",
+          "Production-ready output",
+          "Custom integrations"
+        ],
+        "cta": "View Manufacturing solutions",
+        "highlight": true
+      },
+      {
+        "id": "configurators",
+        "name": "CPQ & Configure-to-Production",
+        "tagline": "Full configurators for complex products",
+        "price": null,
+        "priceDisplay": "Price on request",
+        "priceNote": "Custom—price on request. Book an intake to assess your use case.",
+        "features": [
+          "CPQ (Configure-Price-Quote) standard",
+          "C2P (Configure-to-Production) advanced",
+          "3D visualization",
+          "Rule engine for validation",
+          "Multi-level BOM output",
+          "Full ERP/PLM integration"
+        ],
+        "cta": "Book intake for Configurators"
+      }
+    ],
+    "disclaimer": "All prices are from-prices and exclude VAT. Final price depends on scope, number of integrations, and custom requirements.",
+    "cta": "Book an intake",
+    "ctaSecondary": "Calculate your ROI"
+  },
+  "industries": {
+    "title": "Industries we serve every day",
+    "intro": "Pick your sector for concrete use-cases and expected KPIs.",
+    "sectors": [
+      {
+        "slug": "services",
+        "name": "Services",
+        "problem": "Teams drown in emails and ad-hoc WhatsApp threads.",
+        "usecases": [
+          "Inbox triage from quote to task",
+          "WhatsApp appointments & reminders"
+        ],
+        "kpi": "+30% more completed engagements within 6 weeks"
+      },
+      {
+        "slug": "retail-ecommerce",
+        "name": "Retail & e-commerce",
+        "problem": "Support and sales blur, so follow-ups drop.",
+        "usecases": [
+          "Lead-to-chat → order automation",
+          "Support triage + RMA updates"
+        ],
+        "kpi": "-45% ticket handling time, +18% repeat orders"
+      },
+      {
+        "slug": "construction",
+        "name": "Construction",
+        "problem": "Scheduling and materials live in spreadsheets and phone calls.",
+        "usecases": [
+          "Scheduling on-site measurements via WhatsApp",
+          "Auto-batching material orders"
+        ],
+        "kpi": "-4 hours planning per project, +12% margin"
+      }
+    ],
+    "cta": "Curious? Book a free intake."
+  },
+  "security": {
+    "title": "Security & compliance",
+    "sections": [
+      {
+        "title": "Data location & processing",
+        "copy": "We host primarily within the EU and document every data flow."
+      },
+      {
+        "title": "Consent & logging",
+        "copy": "Consent flows and logging included; audit trails available within 24 hours."
+      },
+      {
+        "title": "DPA per tool",
+        "copy": "We deliver DPAs per vendor and enforce contractual usage."
+      },
+      {
+        "title": "Access & retention",
+        "copy": "Least-privilege access, automatic revocation, retention per process."
+      }
+    ],
+    "cta": "Request our security overview (PDF)."
+  },
+  "integrations": {
+    "title": "Integrations we connect daily",
+    "subtitle": "We plug into where your teams already work.",
+    "items": [
+      "Gmail / Outlook",
+      "ClickUp",
+      "Trello",
+      "WhatsApp Cloud API",
+      "Make",
+      "Zapier",
+      "n8n"
+    ]
+  },
+  "insights": {
+    "title": "Insights",
+    "subtitle": "Punchy playbooks with ready-to-ship flows and measurement plans.",
+    "posts": [
+      {
+        "slug": "whatsapp-first-funnels",
+        "title": "WhatsApp-first funnels live in 5 days",
+        "summary": "Leverage intake scripts, follow-up flows, and KPI dashboards to speed sales.",
+        "cta": "Read the playbook"
+      },
+      {
+        "slug": "inbox-to-action",
+        "title": "Inbox-to-Action blueprint",
+        "summary": "Build an intake that turns email into ClickUp or Trello tasks automatically.",
+        "cta": "Read the playbook"
+      },
+      {
+        "slug": "support-bots",
+        "title": "Support bots with human hand-off",
+        "summary": "Combine RAG, Zendesk macros, and WhatsApp updates for delighted customers.",
+        "cta": "Read the playbook"
+      }
+    ],
+    "detailPlaceholder": "This insight is a work in progress. We're collecting the latest results and screenshots so you can see exactly how onboarding, automation, and KPI tracking come together. Leave your email via the intake and you'll receive the finished version first.",
+    "detailInvite": "Want to discuss how this flow fits your organisation? Book an intake and we will walk through your stack and processes."
+  },
+  "blueprint": {
+    "title": "Inbox-to-Action Blueprint",
+    "subtitle": "Download the PDF with checklists for intake, build, and adoption.",
+    "description": "Everything you need to turn emails and WhatsApp into action automatically.",
+    "bullets": [
+      "Intake checklist for discovery and system audit",
+      "Blueprint template covering flows, triggers, and KPIs",
+      "Adoption plan + training checklist for your team"
+    ],
+    "cta": "Get the blueprint"
+  },
+  "roi": {
+    "title": "ROI calculator",
+    "subtitle": "Estimate automation impact for your team in under 2 minutes.",
+    "steps": [
+      "Enter volumes and current handling time",
+      "Pick the processes we automate",
+      "See projected savings and revenue lift instantly"
+    ],
+    "cta": "Start the calculator"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Answers to the most common questions.",
+    "questions": [
+      {
+        "q": "How long does a typical project take?",
+        "a": "Most engagements go live within 2-6 weeks depending on scope. We work in two-week sprints with weekly demos."
+      },
+      {
+        "q": "Which systems do you integrate?",
+        "a": "We work daily with Zapier, Make, n8n, WhatsApp Cloud API, ClickUp, Trello, Airtable, and custom APIs. If your stack isn't listed, there's a good chance we can still connect it."
+      },
+      {
+        "q": "What happens after go-live?",
+        "a": "You receive documentation, logging, and monitoring. We train your team and optionally stay on retainer for optimisations or new flows."
+      },
+      {
+        "q": "How do you handle security?",
+        "a": "We document data flows, deliver DPAs per vendor, and bake in logging and access management. More details are in the security overview."
+      },
+      {
+        "q": "Can you work with our internal team?",
+        "a": "Absolutely. We design blueprints and flows so your team can maintain or extend them after handover."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to get started?",
+    "subtitle": "Book a free intake and see how automation lifts your team.",
+    "button": "Book an intake"
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "We respond within 24 hours. Pick your preferred channel.",
+    "channels": {
+      "whatsapp": {
+        "title": "WhatsApp",
+        "tagline": "Fastest reply (08:30-19:00 CET)",
+        "body": "Drop us a message. Within 10 minutes we share an intake or follow-up questions."
+      },
+      "email": {
+        "title": "Email",
+        "tagline": "For detailed requests",
+        "body": "Send documentation, use-cases, or NDA requests to our team."
+      },
+      "call": {
+        "title": "Book a call",
+        "tagline": "30 minutes via Google Meet",
+        "body": "Pick a slot for a deep dive into your processes and tooling."
+      }
+    },
+    "formIntro": "Share your goal, current tools, and desired timeline. We'll reply with an intake plan within 24 hours."
+  },
+  "footer": {
+    "tagline": "Smart automation for Dutch SMEs.",
+    "rights": "All rights reserved",
+    "company": "Company",
+    "services": "Services",
+    "resources": "Resources",
+    "legal": "Legal",
+    "security": "Security overview",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "whatsapp": {
+    "label": "Ask via WhatsApp"
+  },
+  "language": {
+    "switcher": "Language",
+    "nl": "Nederlands",
+    "en": "English"
+  },
+  "demo": {
+    "title": "Watch the 90-second demo",
+    "subtitle": "See how inbox, AI agent, and WhatsApp follow-up work together in one flow.",
+    "cta": "Book an intake"
+  },
+  "cookie": {
+    "message": "We use cookies to improve your experience. You can manage your preferences.",
+    "accept": "Accept",
+    "reject": "Reject",
+    "settings": "Settings"
+  },
+  "trust": {
+    "title": "Secure and GDPR-compliant",
+    "items": [
+      "EU hosting",
+      "DPA available",
+      "n8n self-host option"
+    ]
+  },
+  "solutions": {
+    "title": "Solutions for every scale",
+    "subtitle": "From quick wins to full production integration",
+    "cta": "Not sure? Book an intake.",
+    "light": {
+      "title": "Light Automations",
+      "subtitle": "Fast micro-automations for immediate impact",
+      "description": "Small, focused automations that go live within days and deliver immediate results.",
+      "price": "999",
+      "useCases": [
+        {
+          "name": "Inbox-to-Action",
+          "description": "Emails automatically to tasks in ClickUp/Trello/Teams",
+          "example": "All emails with 'quote' → high priority task within 30 sec"
+        },
+        {
+          "name": "Leads-to-Booking",
+          "description": "Website leads directly to calendar + WhatsApp confirmation",
+          "example": "Form submission → calendar link + WhatsApp within 2 min"
+        },
+        {
+          "name": "WhatsApp Helpdesk",
+          "description": "FAQ bot + forward to team with context",
+          "example": "62% questions answered directly, rest with full context"
+        },
+        {
+          "name": "Invoice Robot",
+          "description": "Automatically process and book invoices",
+          "example": "PDF → data extraction → booking in Exact within 5 min"
+        }
+      ],
+      "includes": [
+        "Setup + configuration",
+        "Training (2 hours)",
+        "Support 30/60/90 days",
+        "Documentation + runbook"
+      ],
+      "cta": "View Light pricing"
+    },
+    "manufacturing": {
+      "title": "Sales→BOM & Drawing Packages",
+      "subtitle": "Production-ready solutions for manufacturing",
+      "description": "Translate sales configurations directly to production documents: BOMs, drawings, and ERP integrations.",
+      "price": "1999",
+      "useCases": [
+        {
+          "name": "Sales→BOM Bridge",
+          "description": "Configurator output → multi-level BOM for production",
+          "example": "Sales fills configurator → complete BOM in ERP within minutes"
+        },
+        {
+          "name": "Drawing Pack Generator",
+          "description": "Automatically generate technical drawings per order",
+          "example": "Order configuration → PDF drawing set + DXF/STEP files"
+        },
+        {
+          "name": "ERP connectors",
+          "description": "Integrations with Exact, SAP, Odoo, and more",
+          "example": "Order → items, BOMs, routing automatically in ERP"
+        }
+      ],
+      "features": [
+        "Multi-level BOM structure",
+        "Validation rules engine",
+        "Template-based drawings",
+        "ERP/PLM integrations",
+        "Production-ready output",
+        "Version control"
+      ],
+      "kpis": {
+        "title": "Typical results",
+        "items": [
+          "85% fewer production errors",
+          "4x faster from order to production",
+          "60% engineering time savings"
+        ]
+      },
+      "cta": "Book intake"
+    },
+    "configurators": {
+      "title": "CPQ & Configure-to-Production",
+      "subtitle": "Full configurators for complex products",
+      "description": "Custom configurators that automate everything from sales to production. For products with complex rules and variants.",
+      "price": null,
+      "types": [
+        {
+          "name": "CPQ (Configure-Price-Quote)",
+          "description": "Standard configurator with pricing and quote generation",
+          "features": [
+            "Visual configurator interface",
+            "Rule engine for validation",
+            "Dynamic pricing",
+            "PDF quote generation",
+            "CRM integration",
+            "Approval workflows"
+          ]
+        },
+        {
+          "name": "C2P (Configure-to-Production)",
+          "description": "Advanced: from configuration to complete production documents",
+          "features": [
+            "All CPQ features +",
+            "Multi-level BOM output",
+            "Technical drawings",
+            "CNC/CAM files",
+            "Material calculation",
+            "Full ERP/PLM/MES integration"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "industry": "Machinery",
+          "challenge": "Complex machines with 1000+ variants",
+          "solution": "C2P configurator: customer configures → complete BOM + drawings + CNC files"
+        },
+        {
+          "industry": "Furniture",
+          "challenge": "Custom cabinets with many options",
+          "solution": "CPQ with 3D preview → quote + production instructions"
+        }
+      ],
+      "priceNote": "Custom—price on request. Book an intake to assess your use case.",
+      "cta": "Book intake for Configurators"
+    }
+  },
+  "roiCalculator": {
+    "title": "ROI Calculator",
+    "subtitle": "Calculate the impact of automation on your team",
+    "presets": {
+      "light": "Light Automation",
+      "manufacturing": "Manufacturing",
+      "c2p": "Configure-to-Production"
+    },
+    "inputs": {
+      "teamSize": "Team size (people)",
+      "hourlyRate": "Hourly rate (€)",
+      "hoursSavedPerWeek": "Hours saved per week",
+      "adoption": "Adoption (%)"
+    },
+    "outputs": {
+      "weeklySavings": "Weekly savings",
+      "monthlySavings": "Monthly savings",
+      "annualSavings": "Annual savings",
+      "hoursSavedAnnually": "Hours saved annually"
+    },
+    "cta": {
+      "primary": "Book an intake",
+      "secondary": "Export as CSV",
+      "email": "Email me my calculation"
+    },
+    "hints": {
+      "teamSize": "Number of people working with the process",
+      "hourlyRate": "Average hourly rate of the team",
+      "hoursSavedPerWeek": "How many hours per week you save per person",
+      "adoption": "What percentage of the team uses the solution"
+    },
+    "methodology": {
+      "title": "How do we calculate ROI?",
+      "description": "Our calculator uses a conservative formula based on 100+ projects.",
+      "formula": "Weekly savings = Team size × Hourly rate × Hours saved × Adoption"
+    },
+    "validation": {
+      "teamSize": "Team size must be between 1 and 1000",
+      "hourlyRate": "Hourly rate must be between €10 and €500",
+      "hoursSavedPerWeek": "Hours saved must be between 0.5 and 40",
+      "adoption": "Adoption must be between 10% and 100%"
+    },
+    "error": {
+      "submit": "Something went wrong. Please try again."
+    },
+    "privacy": "We don't share your data. See our privacy policy.",
+    "emailConsent": "I want to receive my calculation by email"
+  }
+}
