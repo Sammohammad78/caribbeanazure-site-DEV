@@ -78,7 +78,7 @@ export default async function LightAutomationsPage({ params }: { params: { local
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500"></span>
                   </span>
-                  {locale === 'nl' ? 'Tier 1' : 'Tier 1'}
+                  {tCommon('tier1')}
                 </div>
                 <h1 className="text-balance text-fluid-h1 font-bold">
                   {t('title')}
@@ -93,7 +93,7 @@ export default async function LightAutomationsPage({ params }: { params: { local
                     {tCommon('from')} {formatCurrency(999, locale)}
                   </div>
                   <p className="text-sm text-[color:var(--fg-muted)]">
-                    {tCommon('exclVat')} · {locale === 'nl' ? 'exacte prijs afhankelijk van scope' : 'exact price depends on scope'}
+                    {tCommon('exclVat')} · {tCommon('exactPriceNote')}
                   </p>
                   <div className="flex gap-3">
                     <Button asChild size="lg">
@@ -104,7 +104,7 @@ export default async function LightAutomationsPage({ params }: { params: { local
                     </Button>
                     <Button asChild size="lg" variant="outline">
                       <Link href={`/${locale}/oplossingen`}>
-                        {locale === 'nl' ? 'Bekijk alle oplossingen' : 'View all solutions'}
+                        {tCommon('viewAllSolutions')}
                       </Link>
                     </Button>
                   </div>
@@ -132,12 +132,10 @@ export default async function LightAutomationsPage({ params }: { params: { local
             <div className="container-custom">
               <div className="mb-12 text-center">
                 <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                  {locale === 'nl' ? 'Concrete use-cases' : 'Concrete use cases'}
+                  {tCommon('concreteUseCases')}
                 </h2>
                 <p className="mt-4 text-lg text-[color:var(--fg-subtle)]">
-                  {locale === 'nl'
-                    ? 'Kleine automaties die binnen dagen live gaan en direct resultaat opleveren'
-                    : 'Small automations that go live within days and deliver immediate results'}
+                  {t('description')}
                 </p>
               </div>
 
@@ -158,7 +156,7 @@ export default async function LightAutomationsPage({ params }: { params: { local
                       <CardContent className="mt-4 p-0">
                         <div className="rounded-lg bg-[color:color-mix(in_oklab,var(--fg)_5%,transparent)] p-4">
                           <p className="text-sm font-medium text-[color:var(--fg-muted)]">
-                            {locale === 'nl' ? 'Voorbeeld:' : 'Example:'}
+                            {tCommon('example')}
                           </p>
                           <p className="mt-1 text-sm text-[color:var(--fg-subtle)]">
                             {useCase.example}
@@ -179,7 +177,7 @@ export default async function LightAutomationsPage({ params }: { params: { local
                 <Card className="rounded-2xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-8">
                   <CardHeader className="p-0">
                     <CardTitle className="text-2xl">
-                      {locale === 'nl' ? 'Inbegrepen bij elke Light Automation' : 'Included with every Light Automation'}
+                      {tCommon('includedWithEvery')} {t('title')}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="mt-6 space-y-4 p-0">
@@ -202,23 +200,21 @@ export default async function LightAutomationsPage({ params }: { params: { local
             <div className="container-custom">
               <div className="rounded-3xl border border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] bg-gradient-to-br from-[color:var(--panel)] to-[color:color-mix(in_oklab,var(--brand)_5%,transparent)] p-12 text-center">
                 <h2 className="text-2xl font-bold md:text-3xl">
-                  {locale === 'nl' ? 'Klaar voor meer?' : 'Ready for more?'}
+                  {tCommon('readyForMore')}
                 </h2>
                 <p className="mx-auto mt-4 max-w-2xl text-lg text-[color:var(--fg-subtle)]">
-                  {locale === 'nl'
-                    ? 'Complexere processen nodig? Bekijk onze Manufacturing en Configurator oplossingen.'
-                    : 'Need more complex processes? Check out our Manufacturing and Configurator solutions.'}
+                  {tCommon('needMoreComplex')}
                 </p>
                 <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                   <Button asChild size="lg" variant="outline">
                     <Link href={`/${locale}/oplossingen/maakindustrie`}>
-                      {locale === 'nl' ? 'Manufacturing oplossingen' : 'Manufacturing solutions'}
+                      {tCommon('manufacturingSolutions')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                   <Button asChild size="lg" variant="outline">
                     <Link href={`/${locale}/oplossingen/configurators`}>
-                      {locale === 'nl' ? 'Configurator oplossingen' : 'Configurator solutions'}
+                      {tCommon('configuratorSolutions')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
