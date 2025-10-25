@@ -560,6 +560,26 @@
       "n8n self-host optie"
     ]
   },
+  "common": {
+    "from": "vanaf",
+    "learnMore": "Meer informatie",
+    "bookIntake": "Plan een intake",
+    "popular": "Populair",
+    "recommended": "Aanbevolen",
+    "priceOnRequest": "Prijs op aanvraag",
+    "month": "maand",
+    "months": "maanden",
+    "exclVat": "excl. btw",
+    "viewAllPricing": "Bekijk alle tarieven",
+    "calculateROI": "Bereken jouw ROI",
+    "example": "Voorbeeld:",
+    "included": "Inbegrepen bij elke",
+    "readyForMore": "Klaar voor meer?",
+    "submitting": "Bezig...",
+    "people": "personen",
+    "hours": "uur",
+    "hoursPerYear": "uur/jaar"
+  },
   "solutions": {
     "title": "Oplossingen voor elke schaal",
     "subtitle": "Van snelle wins tot volledige productie-integratie",

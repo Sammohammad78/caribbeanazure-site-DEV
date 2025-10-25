@@ -8,9 +8,10 @@ import { Calculator, TrendingUp, Clock, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { useLocale } from 'next-intl'
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts'
+import { formatMonths } from '@/lib/format'
 
 export function ROICalculator() {
-  const locale = useLocale()
+  const locale = useLocale() as 'nl' | 'en'
   const [teamSize, setTeamSize] = useState(10)
   const [hoursPerWeek, setHoursPerWeek] = useState(20)
   const [hourlyRate, setHourlyRate] = useState(50)
@@ -226,7 +227,7 @@ export function ROICalculator() {
                       Terugverdiend in
                     </p>
                     <p className="mt-2 text-3xl font-bold text-body">
-                      {paybackMonths} maanden
+                      {paybackMonths} {formatMonths(paybackMonths, locale)}
                     </p>
                   </div>
                 </div>
@@ -291,7 +292,7 @@ export function ROICalculator() {
                 </ResponsiveContainer>
               </div>
               <p className="mt-4 text-sm text-[color:var(--fg-subtle)]">
-                Breakeven punt na <span className="font-semibold text-[color:var(--brand)]">{paybackMonths} maanden</span>.
+                Breakeven punt na <span className="font-semibold text-[color:var(--brand)]">{paybackMonths} {formatMonths(paybackMonths, locale)}</span>.
                 Totale besparing na 2 jaar: <span className="font-semibold text-[color:var(--brand)]">{formatCurrency(automationSavings * 2)}</span>
               </p>
             </CardPremium>

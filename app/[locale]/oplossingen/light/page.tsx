@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 
 export default async function LightAutomationsPage({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'solutions.light' })
+  const tCommon = await getTranslations({ locale: params.locale, namespace: 'common' })
   const locale = params.locale as 'nl' | 'en'
 
   const useCases = [
@@ -90,22 +91,21 @@ export default async function LightAutomationsPage({ params }: { params: { local
                 {/* Pricing */}
                 <div className="mt-8 inline-flex flex-col items-center gap-4 rounded-2xl border border-[color:color-mix(in_oklab,var(--accent)_25%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-6">
                   <div className="text-4xl font-bold text-[color:var(--brand)]">
-                    {locale === 'nl' ? 'vanaf ' : 'from '}
-                    {formatCurrency(999, locale)}
+                    {tCommon('from')} {formatCurrency(999, locale)}
                   </div>
                   <p className="text-sm text-[color:var(--fg-muted)]">
-                    {locale === 'nl' ? 'excl. btw · exacte prijs afhankelijk van scope' : 'excl. VAT · exact price depends on scope'}
+                    {tCommon('exclVat')} · {locale === 'nl' ? 'exacte prijs afhankelijk van scope' : 'exact price depends on scope'}
                   </p>
                   <div className="flex gap-3">
                     <Button asChild size="lg">
                       <Link href={`/${locale}/contact`}>
-                        {locale === 'nl' ? 'Plan een intake' : 'Book an intake'}
+                        {tCommon('bookIntake')}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                     <Button asChild size="lg" variant="outline">
                       <Link href={`/${locale}/tarieven`}>
-                        {locale === 'nl' ? 'Bekijk alle tarieven' : 'View all pricing'}
+                        {tCommon('viewAllPricing')}
                       </Link>
                     </Button>
                   </div>

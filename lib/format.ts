@@ -68,3 +68,31 @@ export function formatPriceFrom(amount: number, locale: 'nl' | 'en' = 'nl'): str
 export function getPriceOnRequest(locale: 'nl' | 'en' = 'nl'): string {
   return locale === 'nl' ? 'Prijs op aanvraag' : 'Price on request'
 }
+
+/**
+ * Format month with correct pluralization
+ * NL: 1 maand, 2 maanden
+ * EN: 1 month, 2 months
+ */
+export function formatMonths(count: number, locale: 'nl' | 'en' = 'nl'): string {
+  if (locale === 'nl') {
+    return count === 1 ? 'maand' : 'maanden'
+  }
+  return count === 1 ? 'month' : 'months'
+}
+
+/**
+ * Format percentage with locale-specific decimal separator
+ * NL: 4,5%, EN: 4.5%
+ */
+export function formatPercent(
+  value: number,
+  locale: 'nl' | 'en' = 'nl',
+  options?: Intl.NumberFormatOptions
+): string {
+  return new Intl.NumberFormat(locale === 'nl' ? 'nl-NL' : 'en-US', {
+    style: 'percent',
+    maximumFractionDigits: 1,
+    ...options,
+  }).format(value / 100)
+}

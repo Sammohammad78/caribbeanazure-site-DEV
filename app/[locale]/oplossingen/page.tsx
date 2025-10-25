@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 
 export default async function OplossingenPage({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'solutions' })
+  const tCommon = await getTranslations({ locale: params.locale, namespace: 'common' })
   const locale = params.locale as 'nl' | 'en'
 
   const solutions = [
@@ -31,7 +32,7 @@ export default async function OplossingenPage({ params }: { params: { locale: st
       subtitle: t('light.subtitle'),
       description: t('light.description'),
       price: formatCurrency(999, locale),
-      priceLabel: locale === 'nl' ? 'vanaf' : 'from',
+      priceLabel: tCommon('from'),
       href: `/${locale}/oplossingen/light`,
       color: 'from-amber-500 to-orange-500',
     },
@@ -42,7 +43,7 @@ export default async function OplossingenPage({ params }: { params: { locale: st
       subtitle: t('manufacturing.subtitle'),
       description: t('manufacturing.description'),
       price: formatCurrency(1999, locale),
-      priceLabel: locale === 'nl' ? 'vanaf' : 'from',
+      priceLabel: tCommon('from'),
       href: `/${locale}/oplossingen/maakindustrie`,
       color: 'from-blue-500 to-cyan-500',
       featured: true,
@@ -112,7 +113,7 @@ export default async function OplossingenPage({ params }: { params: { locale: st
 
                         {solution.featured && (
                           <span className="inline-flex max-w-max items-center rounded-full bg-[linear-gradient(135deg,var(--brand)_0%,var(--accent)_100%)] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">
-                            {locale === 'nl' ? 'Populair' : 'Popular'}
+                            {tCommon('popular')}
                           </span>
                         )}
 
@@ -147,7 +148,7 @@ export default async function OplossingenPage({ params }: { params: { locale: st
                           size="lg"
                         >
                           <Link href={solution.href}>
-                            {locale === 'nl' ? 'Meer informatie' : 'Learn more'}
+                            {tCommon('learnMore')}
                             <ArrowRight className="ml-2 h-4 w-4" />
                           </Link>
                         </Button>
@@ -162,7 +163,7 @@ export default async function OplossingenPage({ params }: { params: { locale: st
                 <p className="text-lg text-[color:var(--fg-subtle)]">{t('cta')}</p>
                 <Button asChild size="lg" variant="outline" className="mt-4">
                   <Link href={`/${locale}/contact`}>
-                    {locale === 'nl' ? 'Plan een intake' : 'Book an intake'}
+                    {tCommon('bookIntake')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

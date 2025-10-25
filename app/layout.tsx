@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Script from 'next/script'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import "./globals.css"
 import { ThemeProvider } from "@/components/providers/theme-provider"
 import { SkipToContent } from "@/components/layout/skip-to-content"
@@ -55,6 +56,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           {children}
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   )
