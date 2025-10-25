@@ -24,6 +24,9 @@ export default async function OplossingenPage({ params }: { params: { locale: st
   const tCommon = await getTranslations({ locale: params.locale, namespace: 'common' })
   const locale = params.locale as 'nl' | 'en'
 
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => (locale === 'nl' ? `/${slug}` : `/en/${slug}`)
+
   const solutions = [
     {
       id: 'light',
@@ -33,7 +36,7 @@ export default async function OplossingenPage({ params }: { params: { locale: st
       description: t('light.description'),
       price: formatCurrency(999, locale),
       priceLabel: tCommon('from'),
-      href: `/${locale}/oplossingen/light`,
+      href: buildHref('oplossingen/light'),
       color: 'from-amber-500 to-orange-500',
     },
     {
@@ -44,7 +47,7 @@ export default async function OplossingenPage({ params }: { params: { locale: st
       description: t('manufacturing.description'),
       price: formatCurrency(1999, locale),
       priceLabel: tCommon('from'),
-      href: `/${locale}/oplossingen/maakindustrie`,
+      href: buildHref('oplossingen/maakindustrie'),
       color: 'from-blue-500 to-cyan-500',
       featured: true,
     },
@@ -56,7 +59,7 @@ export default async function OplossingenPage({ params }: { params: { locale: st
       description: t('configurators.description'),
       price: getPriceOnRequest(locale),
       priceLabel: null,
-      href: `/${locale}/oplossingen/configurators`,
+      href: buildHref('oplossingen/configurators'),
       color: 'from-purple-500 to-pink-500',
     },
   ]
@@ -162,7 +165,7 @@ export default async function OplossingenPage({ params }: { params: { locale: st
               <div className="mt-12 text-center">
                 <p className="text-lg text-[color:var(--fg-subtle)]">{t('cta')}</p>
                 <Button asChild size="lg" variant="outline" className="mt-4">
-                  <Link href={`/${locale}/contact`}>
+                  <Link href={buildHref('contact')}>
                     {tCommon('bookIntake')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

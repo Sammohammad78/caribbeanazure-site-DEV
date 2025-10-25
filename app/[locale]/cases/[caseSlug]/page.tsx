@@ -30,6 +30,9 @@ export default async function CaseDetailPage({
     getTranslations({ locale, namespace: 'cta' })
   ])
 
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => (locale === 'nl' ? `/${slug}` : `/en/${slug}`)
+
   const structure = casesT.raw('structure') as Record<string, string>
 
   let data: CaseDetail | undefined
@@ -91,7 +94,7 @@ export default async function CaseDetailPage({
             <h2 className="text-3xl font-semibold">{structure.next}</h2>
             <p className="max-w-2xl text-base text-white/85">{structure.cta}</p>
             <Button asChild size="lg">
-              <a href={`/${locale}/contact`}>{ctaT('button')}</a>
+              <a href={buildHref('contact')}>{ctaT('button')}</a>
             </Button>
           </div>
         </section>

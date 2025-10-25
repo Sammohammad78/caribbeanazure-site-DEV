@@ -12,6 +12,9 @@ export default async function AboutPage({ params }: { params: { locale: string }
   const t = await getTranslations({ locale: params.locale, namespace: 'about' })
   const locale = params.locale
 
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => (locale === 'nl' ? `/${slug}` : `/en/${slug}`)
+
   return (
     <>
       <div className="relative">
@@ -87,7 +90,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
                 {/* CTA */}
                 <div className="mt-10 text-center">
                   <Button size="lg" asChild>
-                    <Link href={`/${locale}/contact`}>
+                    <Link href={buildHref('contact')}>
                       {t('cta')}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>

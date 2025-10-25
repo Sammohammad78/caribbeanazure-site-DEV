@@ -27,8 +27,11 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Updated navigation with new IA structure
-  const buildHref = (slug: string) => (slug ? `/${locale}/${slug}` : `/${locale}`)
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => {
+    const path = slug ? `/${slug}` : '/'
+    return locale === 'nl' ? path : `/en${path}`
+  }
 
   const navItems = [
     { href: buildHref(''), label: t('nav.home') },
@@ -78,11 +81,11 @@ export function Header() {
 
           {/* Language Switcher, Theme Toggle & CTA */}
           <div className="flex items-center gap-3">
-            <LanguageSwitcher className="hidden md:flex" />
+            <LanguageSwitcher />
             <ThemeToggle className="hidden md:inline-flex" />
 
             <Button asChild size="sm" className="hidden md:inline-flex">
-              <Link href={`/${locale}/contact`}>
+              <Link href={buildHref('contact')}>
                 {t('common.bookIntake')}
               </Link>
             </Button>
@@ -112,7 +115,6 @@ export function Header() {
       >
         <nav className="container-custom flex flex-col gap-4 py-6">
           <div className="flex items-center justify-end gap-3">
-            <LanguageSwitcher />
             <ThemeToggle />
           </div>
 
