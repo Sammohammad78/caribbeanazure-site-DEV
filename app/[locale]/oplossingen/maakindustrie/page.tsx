@@ -8,7 +8,6 @@ import Link from 'next/link'
 import { BackgroundEngine } from '@/components/backgrounds/BackgroundEngine'
 import { backgroundThemes } from '@/lib/backgroundThemes'
 import { TrustStrip } from '@/components/sections/trust-strip'
-import { RoiCalculator } from '@/components/roi/RoiCalculator'
 import { formatCurrency } from '@/lib/format'
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
@@ -210,30 +209,6 @@ export default async function ManufacturingPage({ params }: { params: { locale: 
                     ))}
                   </CardContent>
                 </Card>
-              </div>
-            </div>
-          </section>
-
-          {/* ROI Calculator */}
-          <section className="section-padding-y">
-            <div className="container-custom">
-              <div className="mx-auto max-w-4xl text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                  {locale === 'nl' ? 'Bereken jouw ROI' : 'Calculate your ROI'}
-                </h2>
-                <p className="mt-4 text-lg text-[color:var(--fg-subtle)]">
-                  {locale === 'nl'
-                    ? 'Typisch bespaart Manufacturing Automation 60% engineering tijd'
-                    : 'Typically Manufacturing Automation saves 60% engineering time'}
-                </p>
-              </div>
-              <div className="mx-auto max-w-4xl">
-                <RoiCalculator
-                  variant="card"
-                  preset="manufacturing"
-                  showExport
-                  showMethodNote
-                />
               </div>
             </div>
           </section>
