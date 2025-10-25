@@ -62,7 +62,7 @@ export function HeroEnhanced() {
 
             {/* Heading */}
             <motion.h1
-              className="text-balance text-fluid-h1 font-bold bg-[linear-gradient(135deg,var(--fg)_0%,var(--brand)_50%,var(--accent)_100%)] bg-clip-text text-transparent"
+              className="text-balance text-4xl font-bold tracking-tight bg-[linear-gradient(135deg,var(--fg)_0%,var(--brand)_50%,var(--accent)_100%)] bg-clip-text text-transparent md:text-5xl lg:text-6xl"
               style={{
                 textShadow: '0 0 80px rgba(37, 99, 235, 0.15)',
               }}
