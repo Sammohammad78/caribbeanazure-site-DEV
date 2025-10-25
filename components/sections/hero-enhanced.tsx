@@ -105,7 +105,7 @@ export function HeroEnhanced() {
                 className="w-full min-w-[220px] sm:w-auto"
                 asChild
               >
-                <Link href={`/${locale}/diensten`}>
+                <Link href={`/${locale}/oplossingen`}>
                   Bekijk onze aanpak
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>

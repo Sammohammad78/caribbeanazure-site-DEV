@@ -86,16 +86,16 @@ export function Footer() {
 
           <div className="text-xs text-[color:var(--fg-muted)] max-w-3xl">
             {locale === 'nl'
-              ? 'Caribbean Azure werkt onafhankelijk en noemt geen klant- of werkgeversnamen. We communiceren alleen resultaten die we feitelijk kunnen aantonen.'
-              : 'Caribbean Azure operates independently and does not mention client or employer names. We only communicate results we can factually demonstrate.'}
+              ? 'Caribbean Azure rapporteert resultaten altijd met toestemming en in samenwerking met de klant. Namen worden alleen gebruikt na expliciete goedkeuring.'
+              : 'Caribbean Azure reports results with client permission and collaboration. Names are only used after explicit approval.'}
           </div>
 
-          {/* KvK and BTW */}
-          <div className="text-xs text-[color:var(--fg-muted)] flex flex-wrap gap-x-4 gap-y-2">
-            <span>KvK: 12345678</span>
-            <span>BTW: NL123456789B01</span>
+          {/* KvK and BTW - Hidden until real values available */}
+          {/* <div className="text-xs text-[color:var(--fg-muted)] flex flex-wrap gap-x-4 gap-y-2">
+            <span>KvK: [TBD]</span>
+            <span>BTW: [TBD]</span>
             <span>© {currentYear} Caribbean Azure</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
@@ -119,10 +119,13 @@ function FooterColumn({
           <li key={link.href}>
             <Link
               href={link.href}
-              className="lift-hover inline-flex items-center gap-2 text-sm font-medium text-[color:var(--fg-subtle)] transition-all duration-200 hover:text-[color:var(--fg)]"
+              className="group inline-flex items-center gap-2 text-sm font-medium text-[color:var(--fg-subtle)] transition-colors duration-200 hover:text-[color:var(--brand)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--brand)] focus-visible:ring-offset-2 rounded px-1 py-0.5"
             >
-              <span className="h-1 w-1 rounded-full bg-[color:var(--accent)]" />
-              {link.label}
+              <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--accent)] transition-all duration-200 group-hover:bg-[color:var(--brand)] group-hover:scale-125" />
+              <span className="relative">
+                {link.label}
+                <span className="absolute -bottom-0.5 left-0 right-0 h-[1px] bg-[color:var(--brand)] scale-x-0 transition-transform duration-200 group-hover:scale-x-100" />
+              </span>
             </Link>
           </li>
         ))}

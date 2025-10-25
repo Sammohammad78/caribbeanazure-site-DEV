@@ -21,7 +21,7 @@ export function ServicesGrid() {
         <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => {
             const Icon = icons[index % icons.length]
-            const href = `/${locale}/diensten`
+            const href = `/${locale}/contact`
             return (
               <Link key={service.title} href={href} className="group h-full">
                 <Card className="card-gradient-stripe relative h-full overflow-hidden transition-all duration-300 ease-out">

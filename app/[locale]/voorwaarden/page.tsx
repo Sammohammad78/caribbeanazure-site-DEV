@@ -53,7 +53,7 @@ export default function TermsPage() {
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-[color:var(--fg-subtle)]">
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li><strong>Opdrachtnemer:</strong> Caribbean Azure, KvK 12345678, gevestigd te Nederland</li>
+                      <li><strong>Opdrachtnemer:</strong> Caribbean Azure, gevestigd te Nederland</li>
                       <li><strong>Opdrachtgever:</strong> De natuurlijke of rechtspersoon die met opdrachtnemer een overeenkomst aangaat</li>
                       <li><strong>Diensten:</strong> Alle werkzaamheden die opdrachtnemer uitvoert, waaronder automatisering, webontwikkeling, AI-integraties, consultancy en training</li>
                       <li><strong>Deliverable:</strong> Een concreet opgeleverd product of resultaat zoals een workflow, dashboard, website of rapportage</li>

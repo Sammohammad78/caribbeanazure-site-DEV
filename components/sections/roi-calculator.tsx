@@ -40,8 +40,14 @@ export function ROICalculator() {
   }
 
   const formatNumber = (value: number) => {
+    // For ROI %, don't use thousand separators - just show clean number
+    if (value > 1000) {
+      // Show as multiplier for very large ROI (e.g., "40× return")
+      return `${Math.round(value / 100)}×`
+    }
     return new Intl.NumberFormat('nl-NL', {
-      maximumFractionDigits: 0
+      maximumFractionDigits: 1,
+      useGrouping: false // NO thousand separators for percentages
     }).format(value)
   }
 
