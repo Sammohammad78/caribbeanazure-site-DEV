@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 
 export default async function ConfiguratorsPage({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'solutions.configurators' })
+  const tCommon = await getTranslations({ locale: params.locale, namespace: 'common' })
   const locale = params.locale as 'nl' | 'en'
 
   const configuratorTypes = [
@@ -83,9 +84,9 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
             <div className="container-custom">
               <div className="mx-auto max-w-3xl text-center">
                 <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 px-4 py-2 text-sm font-medium text-[color:var(--brand)]">
-                  {locale === 'nl' ? 'Tier 3 · Maatwerk' : 'Tier 3 · Custom'}
+                  {tCommon('tier3Custom')}
                 </div>
-                <h1 className="text-balance text-fluid-h1 font-bold">
+                <h1 className="text-balance text-4xl font-bold md:text-5xl lg:text-6xl">
                   {t('title')}
                 </h1>
                 <p className="mx-auto mt-6 max-w-2xl text-fluid-body text-[color:var(--fg-subtle)]">
@@ -93,7 +94,7 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
                 </p>
 
                 {/* Pricing */}
-                <div className="mt-8 inline-flex flex-col items-center gap-4 rounded-2xl border border-[color:color-mix(in_oklab,var(--fg)_20%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-6">
+                <div className="mt-8 inline-flex flex-col items-center gap-4 rounded-3xl border border-[color:color-mix(in_oklab,var(--fg)_20%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-8">
                   <div className="text-3xl font-bold text-[color:var(--brand)]">
                     {getPriceOnRequest(locale)}
                   </div>
@@ -131,13 +132,11 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
           <section className="section-padding-y bg-[color:color-mix(in_oklab,var(--panel)_30%,transparent)]">
             <div className="container-custom">
               <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                  {locale === 'nl' ? 'Twee niveaus van configuratie' : 'Two levels of configuration'}
+                <h2 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
+                  {tCommon('twoLevelsConfig')}
                 </h2>
                 <p className="mt-4 text-lg text-[color:var(--fg-subtle)]">
-                  {locale === 'nl'
-                    ? 'Van standaard CPQ tot volledige productie-integratie'
-                    : 'From standard CPQ to full production integration'}
+                  {tCommon('cpqToProduction')}
                 </p>
               </div>
 
@@ -145,7 +144,7 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
                 {configuratorTypes.map((type, idx) => {
                   const Icon = type.icon
                   return (
-                    <Card key={idx} className="rounded-2xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-8">
+                    <Card key={idx} className="rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-8">
                       <CardHeader className="p-0">
                         <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 text-white shadow-lg">
                           <Icon className="h-7 w-7" />
@@ -176,13 +175,11 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
           <section className="section-padding-y">
             <div className="container-custom">
               <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-                  {locale === 'nl' ? 'Concrete voorbeelden' : 'Concrete examples'}
+                <h2 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
+                  {tCommon('concreteExamples')}
                 </h2>
                 <p className="mt-4 text-lg text-[color:var(--fg-subtle)]">
-                  {locale === 'nl'
-                    ? 'Zo werken configurators in de praktijk'
-                    : 'How configurators work in practice'}
+                  {tCommon('howConfiguratorsWork')}
                 </p>
               </div>
 
@@ -190,9 +187,9 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
                 {examples.map((example, idx) => {
                   const Icon = example.icon
                   return (
-                    <Card key={idx} className="rounded-2xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-6">
+                    <Card key={idx} className="rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] p-8">
                       <CardHeader className="p-0">
-                        <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 text-white">
+                        <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 text-white">
                           <Icon className="h-6 w-6" />
                         </div>
                         <CardTitle className="text-xl">{example.industry}</CardTitle>
@@ -200,7 +197,7 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
                       <CardContent className="mt-4 space-y-4 p-0">
                         <div>
                           <p className="text-sm font-semibold text-[color:var(--fg-muted)]">
-                            {locale === 'nl' ? 'Uitdaging:' : 'Challenge:'}
+                            {tCommon('challenge')}
                           </p>
                           <p className="mt-1 text-sm text-[color:var(--fg-subtle)]">
                             {example.challenge}
@@ -208,7 +205,7 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
                         </div>
                         <div>
                           <p className="text-sm font-semibold text-[color:var(--fg-muted)]">
-                            {locale === 'nl' ? 'Oplossing:' : 'Solution:'}
+                            {tCommon('solution')}
                           </p>
                           <p className="mt-1 text-sm text-[color:var(--fg-subtle)]">
                             {example.solution}
@@ -227,12 +224,10 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
             <div className="container-custom">
               <div className="rounded-3xl bg-gradient-to-br from-[color:var(--brand-600)] to-[color:var(--brand-400)] p-12 text-center text-white shadow-2xl">
                 <h2 className="text-3xl font-bold md:text-4xl">
-                  {locale === 'nl' ? 'Klaar voor een configurator?' : 'Ready for a configurator?'}
+                  {tCommon('readyForConfigurator')}
                 </h2>
                 <p className="mx-auto mt-4 max-w-2xl text-lg opacity-90">
-                  {locale === 'nl'
-                    ? 'Plan een intake om jouw product, varianten en productieproces door te nemen. We beoordelen samen of een configurator de beste oplossing is.'
-                    : 'Book an intake to discuss your product, variants, and production process. We\'ll assess together whether a configurator is the best solution.'}
+                  {tCommon('bookIntakeConfigurator')}
                 </p>
                 <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                   <Button asChild size="lg" variant="secondary">
@@ -243,7 +238,7 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
                   </Button>
                   <Button asChild size="lg" variant="outline" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
                     <Link href={`/${locale}/cases`}>
-                      {locale === 'nl' ? 'Bekijk cases' : 'View cases'}
+                      {tCommon('viewCases')}
                     </Link>
                   </Button>
                 </div>
