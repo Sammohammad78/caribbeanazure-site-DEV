@@ -35,7 +35,18 @@
     "submitting": "Submitting...",
     "people": "people",
     "hours": "hours",
-    "hoursPerYear": "hours/year"
+    "hoursPerYear": "hours/year",
+    "viewAllSolutions": "View all solutions",
+    "tier1": "Tier 1",
+    "tier2": "Tier 2",
+    "tier3": "Tier 3",
+    "exactPriceNote": "exact price depends on scope",
+    "concreteUseCases": "Concrete use cases",
+    "includedWithEvery": "Included with every",
+    "manufacturingSolutions": "Manufacturing solutions",
+    "configuratorSolutions": "Configurator solutions",
+    "needFullConfig": "Need full product configuration?",
+    "needMoreComplex": "Need more complex processes? Check out our Manufacturing and Configurator solutions."
   },
   "hero": {
     "title": "From request to production—automated for manufacturing SMEs",

@@ -578,7 +578,18 @@
     "submitting": "Bezig...",
     "people": "personen",
     "hours": "uur",
-    "hoursPerYear": "uur/jaar"
+    "hoursPerYear": "uur/jaar",
+    "viewAllSolutions": "Bekijk alle oplossingen",
+    "tier1": "Tier 1",
+    "tier2": "Tier 2",
+    "tier3": "Tier 3",
+    "exactPriceNote": "exacte prijs afhankelijk van scope",
+    "concreteUseCases": "Concrete use-cases",
+    "includedWithEvery": "Inbegrepen bij elke",
+    "manufacturingSolutions": "Manufacturing oplossingen",
+    "configuratorSolutions": "Configurator oplossingen",
+    "needFullConfig": "Volledige product configuratie nodig?",
+    "needMoreComplex": "Complexere processen nodig? Bekijk onze Manufacturing en Configurator oplossingen."
   },
   "solutions": {
     "title": "Oplossingen voor elke schaal",
