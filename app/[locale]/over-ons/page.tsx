@@ -20,7 +20,9 @@ const howWeWork = [
   { step: "4", title: "Kennisoverdracht", description: "Jouw team leert het te begrijpen en te beheren" },
 ]
 
-export default function AboutPage() {
+export default function AboutPage({ params }: { params: { locale: string } }) {
+  const locale = params.locale
+
   return (
     <>
       <div className="relative">
@@ -35,7 +37,7 @@ export default function AboutPage() {
           <section className="section-padding-y">
             <div className="container-custom">
               <div className="mx-auto max-w-3xl">
-                <h1 className="text-balance text-4xl font-bold tracking-tight md:text-5xl">
+                <h1 className="text-balance text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
                   Over ons
                 </h1>
                 <p className="mt-6 text-lg leading-relaxed text-[color:var(--fg-subtle)]">
@@ -83,7 +85,7 @@ export default function AboutPage() {
 
                 <div className="grid gap-6 md:grid-cols-2">
                   {howWeWork.map((phase) => (
-                    <Card key={phase.step} className="border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)]">
+                    <Card key={phase.step} className="rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-8">
                       <CardHeader>
                         <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-[color:var(--brand)] text-lg font-bold text-white">
                           {phase.step}
@@ -98,7 +100,7 @@ export default function AboutPage() {
                 {/* CTA */}
                 <div className="mt-10 text-center">
                   <Button size="lg" asChild>
-                    <Link href="/nl/contact">
+                    <Link href={`/${locale}/contact`}>
                       Plan een korte intake
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
