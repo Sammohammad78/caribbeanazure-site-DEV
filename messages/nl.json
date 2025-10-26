@@ -18,14 +18,16 @@
     "terms": "Voorwaarden"
   },
   "hero": {
-    "title": "Van aanvraag tot productie—geautomatiseerd voor MKB-makers",
-    "qualifier": "",
-    "subtitle": "Snelle micro-automaties (Tier 1), productie-klare Sales→BOM & tekenpakketten (Tier 2), en configure-to-order configurators (Tier 3). GDPR-proof, met n8n self-host optie.",
+    "badge": "Caribbean Azure · Automatisering Studio",
+    "title": "Automatiseer je werk. Versnel je groei.",
+    "subtitle": "Wij ontwerpen praktische automatiseringen voor teams die",
+    "subtitleHighlight1": "minder willen klikken",
+    "subtitleHighlight2": "meer willen leveren",
+    "subtitleAnd": "en",
     "cta": {
-      "primary": "Plan een intake",
-      "secondary": "Bereken jouw ROI"
-    },
-    "trustedBy": "Vertrouwd door 50+ MKB-bedrijven"
+      "primary": "Plan een korte intake",
+      "secondary": "Bekijk onze aanpak"
+    }
   },
   "outcomes": {
     "label": "Typische uitkomsten",

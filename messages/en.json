@@ -17,6 +17,18 @@
     "cookies": "Cookies",
     "terms": "Terms"
   },
+  "hero": {
+    "badge": "Caribbean Azure · Automation Studio",
+    "title": "Automate your work. Accelerate your growth.",
+    "subtitle": "We design practical automations for teams that want to",
+    "subtitleHighlight1": "click less",
+    "subtitleHighlight2": "deliver more",
+    "subtitleAnd": "and",
+    "cta": {
+      "primary": "Book a short intake",
+      "secondary": "View our approach"
+    }
+  },
   "common": {
     "from": "from",
     "learnMore": "Learn more",
