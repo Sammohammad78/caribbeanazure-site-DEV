@@ -5,14 +5,21 @@ import { Button } from '@/components/ui/button'
 import { MagneticButton } from '@/components/ui/button-magnetic'
 import { CapabilitiesStrip } from '@/components/ui/capabilities-strip'
 import { ArrowRight } from 'lucide-react'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 export function HeroEnhanced() {
   const locale = useLocale()
+  const t = useTranslations('hero')
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => {
+    const path = slug ? `/${slug}` : '/'
+    return locale === 'nl' ? path : `/en${path}`
+  }
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -57,7 +64,7 @@ export function HeroEnhanced() {
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
-              Caribbean Azure · Automatisering Studio
+              {t('badge')}
             </motion.div>
 
             {/* Heading */}
@@ -70,7 +77,7 @@ export function HeroEnhanced() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Automatiseer je werk. Versnel je groei.
+              {t('title')}
             </motion.h1>
 
             {/* Subtitle */}
@@ -80,9 +87,9 @@ export function HeroEnhanced() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              Wij ontwerpen praktische automatiseringen voor teams die{' '}
-              <span className="font-semibold text-[color:var(--brand)]">minder willen klikken</span> en{' '}
-              <span className="font-semibold text-[color:var(--accent)]">meer willen leveren</span>.
+              {t('subtitle')}{' '}
+              <span className="font-semibold text-[color:var(--brand)]">{t('subtitleHighlight1')}</span> {t('subtitleAnd')}{' '}
+              <span className="font-semibold text-[color:var(--accent)]">{t('subtitleHighlight2')}</span>.
             </motion.p>
 
             {/* CTAs */}
@@ -92,9 +99,9 @@ export function HeroEnhanced() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Link href={`/${locale}/contact`}>
+              <Link href={buildHref('contact')}>
                 <MagneticButton className="w-full min-w-[220px] sm:w-auto">
-                  Plan een korte intake
+                  {t('cta.primary')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </MagneticButton>
               </Link>
@@ -105,8 +112,8 @@ export function HeroEnhanced() {
                 className="w-full min-w-[220px] sm:w-auto"
                 asChild
               >
-                <Link href={`/${locale}/oplossingen`}>
-                  Bekijk onze aanpak
+                <Link href={buildHref('oplossingen')}>
+                  {t('cta.secondary')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
