@@ -802,5 +802,113 @@
     "cta": "Plan een korte intake",
     "complianceTitle": "Onafhankelijkheid & Compliance",
     "complianceText": "Caribbean Azure werkt onafhankelijk en noemt geen klant- of werkgeversnamen. We communiceren alleen resultaten die we feitelijk kunnen aantonen."
+  },
+  "terms": {
+    "badge": "Algemene Voorwaarden",
+    "title": "Algemene voorwaarden",
+    "updated": "Laatst bijgewerkt: 24 oktober 2025",
+    "intro": "Deze algemene voorwaarden zijn van toepassing op alle overeenkomsten tussen Caribbean Azure en de opdrachtgever.",
+    "article1": {
+      "title": "Artikel 1 – Definities",
+      "items": [
+        "<strong>Opdrachtnemer:</strong> Caribbean Azure, gevestigd te Nederland",
+        "<strong>Opdrachtgever:</strong> De natuurlijke of rechtspersoon die met opdrachtnemer een overeenkomst aangaat",
+        "<strong>Diensten:</strong> Alle werkzaamheden die opdrachtnemer uitvoert, waaronder automatisering, webontwikkeling, AI-integraties, consultancy en training",
+        "<strong>Deliverable:</strong> Een concreet opgeleverd product of resultaat zoals een workflow, dashboard, website of rapportage",
+        "<strong>Blueprint:</strong> Een visueel plan met flowcharts, datastromen en technische specificaties"
+      ]
+    },
+    "article2": {
+      "title": "Artikel 2 – Toepasselijkheid",
+      "paragraphs": [
+        "2.1. Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, offertes en overeenkomsten tussen opdrachtnemer en opdrachtgever.",
+        "2.2. Afwijkingen van deze voorwaarden zijn alleen geldig indien schriftelijk overeengekomen.",
+        "2.3. De toepasselijkheid van eventuele inkoop- of andere voorwaarden van opdrachtgever wordt uitdrukkelijk van de hand gewezen.",
+        "2.4. Indien één of meerdere bepalingen in deze algemene voorwaarden nietig zijn, blijven de overige bepalingen volledig van kracht."
+      ]
+    },
+    "article3": {
+      "title": "Artikel 3 – Offerte en totstandkoming",
+      "paragraphs": [
+        "3.1. Alle offertes zijn vrijblijvend en 30 dagen geldig, tenzij anders vermeld.",
+        "3.2. Een overeenkomst komt tot stand na schriftelijke bevestiging door opdrachtnemer of bij aanvang van werkzaamheden.",
+        "3.3. Prijzen in offertes zijn exclusief BTW, tenzij anders vermeld.",
+        "3.4. Indien de opdrachtgever niet akkoord gaat met een offerte, vervalt deze automatisch na 30 dagen."
+      ]
+    },
+    "article4": {
+      "title": "Artikel 4 – Uitvoering van de opdracht",
+      "paragraphs": [
+        "4.1. Opdrachtnemer voert de overeenkomst naar beste kunnen uit, conform de state-of-the-art in de branche.",
+        "4.2. Opgeleverde deliverables worden getest voorafgaand aan oplevering. Opdrachtgever heeft 5 werkdagen om feedback te geven.",
+        "4.3. Opdrachtgever verstrekt tijdig alle benodigde informatie, toegangen en medewerking. Vertraging door de opdrachtgever kan leiden tot aanpassing van planning en kosten.",
+        "4.4. Opdrachtnemer heeft het recht om derden in te schakelen bij de uitvoering van de opdracht.",
+        "4.5. Genoemde doorlooptijden zijn indicatief en geen fatale termijnen, tenzij uitdrukkelijk schriftelijk anders overeengekomen."
+      ]
+    },
+    "article5": {
+      "title": "Artikel 5 – Prijzen en betaling",
+      "paragraphs": [
+        "5.1. Alle prijzen zijn exclusief BTW en exclusief kosten voor externe tools (zoals Zapier, Make, API-licenties).",
+        "5.2. Betaling dient te geschieden binnen 14 dagen na factuurdatum, tenzij anders overeengekomen.",
+        "5.3. Bij projecten boven €5.000 kan opdrachtnemer een voorschotfactuur van 30% sturen bij ondertekening.",
+        "5.4. Bij overschrijding van de betalingstermijn is opdrachtgever in verzuim zonder nadere ingebrekestelling. Opdrachtnemer heeft het recht 1% rente per maand in rekening te brengen.",
+        "5.5. Alle kosten van incasso, zowel gerechtelijk als buitengerechtelijk, komen voor rekening van de opdrachtgever."
+      ]
+    },
+    "article6": {
+      "title": "Artikel 6 – Intellectueel eigendom",
+      "paragraphs": [
+        "6.1. Alle intellectuele eigendomsrechten op door opdrachtnemer ontwikkelde of geleverde werken berusten bij opdrachtnemer, tenzij schriftelijk anders overeengekomen.",
+        "6.2. Opdrachtgever verkrijgt een niet-exclusief, niet-overdraagbaar gebruiksrecht op de opgeleverde deliverables voor eigen gebruik binnen de organisatie.",
+        "6.3. Het is opdrachtgever niet toegestaan de geleverde werken te verveelvoudigen, te verkopen of ter beschikking te stellen aan derden zonder voorafgaande schriftelijke toestemming van opdrachtnemer.",
+        "6.4. Maatwerk code en scripts blijven eigendom van opdrachtnemer, maar opdrachtgever krijgt volledige toegang en wijzigingsrechten voor intern gebruik.",
+        "6.5. Herbruikbare componenten, templates en frameworks die opdrachtnemer heeft ontwikkeld blijven eigendom van opdrachtnemer en mogen worden hergebruikt voor andere projecten."
+      ]
+    },
+    "article7": {
+      "title": "Artikel 7 – Aansprakelijkheid",
+      "paragraphs": [
+        "7.1. Opdrachtnemer is uitsluitend aansprakelijk voor directe schade die het gevolg is van opzet of bewuste roekeloosheid van opdrachtnemer.",
+        "7.2. Aansprakelijkheid voor indirecte schade, waaronder gevolgschade, gederfde winst, gemiste besparingen en schade door bedrijfsstagnatie, is uitgesloten.",
+        "7.3. De aansprakelijkheid van opdrachtnemer is beperkt tot maximaal het factuurbedrag van de betreffende opdracht, met een maximum van €25.000.",
+        "7.4. Opdrachtgever is verantwoordelijk voor het maken van back-ups van eigen data en systemen. Opdrachtnemer is niet aansprakelijk voor dataverlies.",
+        "7.5. Opdrachtnemer is niet aansprakelijk voor storingen, uitval of wijzigingen in externe systemen en API's van derden (zoals Zapier, Make, ClickUp, Google, Microsoft)."
+      ]
+    },
+    "article8": {
+      "title": "Artikel 8 – Garantie en onderhoud",
+      "paragraphs": [
+        "8.1. Opdrachtnemer garandeert dat opgeleverde deliverables voldoen aan de in het blueprint beschreven specificaties.",
+        "8.2. Gedurende de overeengekomen support-periode (standaard 30 dagen na oplevering) lost opdrachtnemer bugs en functionele problemen kosteloos op.",
+        "8.3. Na afloop van de support-periode kunnen bugs en aanpassingen worden gefactureerd op basis van uurtarief of via een support-abonnement.",
+        "8.4. De garantie vervalt indien opdrachtgever of derden zonder toestemming wijzigingen hebben aangebracht in de opgeleverde systemen."
+      ]
+    },
+    "article9": {
+      "title": "Artikel 9 – Geheimhouding",
+      "paragraphs": [
+        "9.1. Beide partijen verplichten zich tot geheimhouding van alle vertrouwelijke informatie die zij in het kader van de overeenkomst van elkaar hebben verkregen.",
+        "9.2. Opdrachtnemer mag de naam van opdrachtgever en een algemene beschrijving van het project gebruiken voor referentiedoeleinden, tenzij schriftelijk anders overeengekomen.",
+        "9.3. Op verzoek van opdrachtgever kan een aparte Non-Disclosure Agreement (NDA) worden afgesloten voorafgaand aan de offerte-fase."
+      ]
+    },
+    "article10": {
+      "title": "Artikel 10 – Ontbinding en opzegging",
+      "paragraphs": [
+        "10.1. Beide partijen kunnen de overeenkomst schriftelijk opzeggen met een opzegtermijn van 30 dagen, tenzij anders overeengekomen.",
+        "10.2. Bij voortijdige beëindiging door opdrachtgever blijft deze verplicht tot betaling van reeds verrichte werkzaamheden en gemaakte kosten.",
+        "10.3. Opdrachtnemer heeft het recht de overeenkomst met onmiddellijke ingang te beëindigen indien opdrachtgever zijn betalingsverplichtingen niet nakomt of failliet wordt verklaard.",
+        "10.4. Bij retainer-overeenkomsten geldt een opzegtermijn van 60 dagen tegen het einde van een kalendermaand."
+      ]
+    },
+    "article11": {
+      "title": "Artikel 11 – Toepasselijk recht en geschillen",
+      "paragraphs": [
+        "11.1. Op alle overeenkomsten tussen opdrachtnemer en opdrachtgever is uitsluitend Nederlands recht van toepassing.",
+        "11.2. Geschillen worden voorgelegd aan de bevoegde rechter in het arrondissement waar opdrachtnemer is gevestigd.",
+        "11.3. Partijen zullen eerst trachten een geschil in onderling overleg op te lossen alvorens een beroep te doen op de rechter."
+      ]
+    }
   }
 }
