@@ -897,5 +897,125 @@
         "11.3. Parties will first attempt to resolve a dispute through mutual consultation before resorting to court."
       ]
     }
+  },
+  "privacy": {
+    "badge": "Privacy Policy",
+    "title": "Privacy Policy",
+    "updated": "Last updated: October 24, 2025",
+    "intro": "Caribbean Azure respects your privacy and processes your data in accordance with GDPR. This policy explains what data we collect, why, and how you can exercise your rights.",
+    "section1": {
+      "title": "1. Who is responsible?",
+      "controller": "<strong>Data Controller:</strong><br />Caribbean Azure<br />Email: privacy@caribbeanazure.com",
+      "text": "Caribbean Azure is responsible for processing personal data as described in this privacy policy."
+    },
+    "section2": {
+      "title": "2. What data do we collect?",
+      "viaForms": "Via contact forms:",
+      "viaFormsItems": [
+        "Name",
+        "Email address",
+        "Phone number (optional)",
+        "Company name (optional)",
+        "Message or question",
+        "ROI calculator results (if completed)"
+      ],
+      "automatic": "Automatically collected:",
+      "automaticItems": [
+        "IP address (anonymized)",
+        "Browser type and version",
+        "Pages visited and timestamps",
+        "Referrer URL"
+      ],
+      "summary": "We only collect <strong>data that you actively provide</strong> or that is necessary for the website to function."
+    },
+    "section3": {
+      "title": "3. Why do we process your data?",
+      "contact": "Contact and quote requests:",
+      "contactItems": [
+        "To answer your question",
+        "To prepare a quote or proposal",
+        "To inform you about our services (only if you give permission)"
+      ],
+      "analytics": "Website analytics:",
+      "analyticsItems": [
+        "To understand how visitors use the website",
+        "To improve user experience",
+        "To identify technical issues"
+      ],
+      "legal": "<strong>Legal basis:</strong> We process your data based on your consent, performance of a contract, or legitimate interest (analytics)."
+    },
+    "section4": {
+      "title": "4. How long do we keep your data?",
+      "items": [
+        "<strong>Contact forms:</strong> 2 years after last contact (unless there is an agreement)",
+        "<strong>Customer data:</strong> 7 years after end of agreement (legal retention requirement)",
+        "<strong>Analytics data:</strong> 14 months (anonymized)",
+        "<strong>Marketing consent:</strong> Until you withdraw it"
+      ],
+      "deletion": "After the retention period, we permanently delete your data, unless a legal retention obligation applies."
+    },
+    "section5": {
+      "title": "5. Do we share your data with third parties?",
+      "intro": "We <strong>never</strong> sell or rent your data to third parties. We only share data with parties that help us deliver our services:",
+      "processors": "Processors (sub-processors):",
+      "processorsList": [
+        "<strong>Vercel:</strong> Website hosting (EU/US, GDPR-compliant)",
+        "<strong>Resend:</strong> Email delivery (EU, GDPR-compliant)",
+        "<strong>ClickUp:</strong> CRM and project management (US, GDPR-compliant)",
+        "<strong>Plausible Analytics:</strong> Privacy-friendly analytics (EU)"
+      ],
+      "dpa": "We have concluded a data processing agreement with all processors in accordance with GDPR. More details can be found on our <a href=\"/security\" class=\"text-[color:var(--brand)] hover:underline\">/security page</a>."
+    },
+    "section6": {
+      "title": "6. Your rights",
+      "intro": "You have the following rights under GDPR:",
+      "rights": [
+        "<strong>Right of access:</strong> You may request what data we have about you",
+        "<strong>Right to rectification:</strong> You can have incorrect data corrected",
+        "<strong>Right to erasure:</strong> You can request deletion of your data",
+        "<strong>Right to restriction:</strong> You can request to limit processing",
+        "<strong>Right to data portability:</strong> You can request your data in a structured format",
+        "<strong>Right to object:</strong> You can object to processing",
+        "<strong>Right to withdraw consent:</strong> If we work based on consent"
+      ],
+      "exercise": "To exercise your rights, send an email to <a href=\"mailto:privacy@caribbeanazure.com\" class=\"text-[color:var(--brand)] hover:underline\">privacy@caribbeanazure.com</a>. We respond within 30 days.",
+      "complaint": "Don't agree with how we process your data? You can file a complaint with the <a href=\"https://autoriteitpersoonsgegevens.nl\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[color:var(--brand)] hover:underline\">Dutch Data Protection Authority</a>."
+    },
+    "section7": {
+      "title": "7. Security",
+      "intro": "We take security seriously and implement appropriate technical and organizational measures:",
+      "measures": [
+        "HTTPS/TLS encryption for all data in transit",
+        "Access control and authorization (Role-Based Access Control)",
+        "Data is encrypted at rest where possible",
+        "Logging and monitoring of system activity",
+        "Regular security updates and patches"
+      ],
+      "moreInfo": "More details about our security measures can be found on the <a href=\"/security\" class=\"text-[color:var(--brand)] hover:underline\">/security page</a>."
+    },
+    "section8": {
+      "title": "8. Cookies and tracking",
+      "intro": "This website uses cookies. You can adjust your preferences via the cookie banner that appears on your first visit, or via the settings at the bottom of this page.",
+      "functional": "Functional cookies (always active):",
+      "functionalItems": [
+        "Cookie consent preferences",
+        "Session cookies for contact forms"
+      ],
+      "analyticsLabel": "Analytics cookies (optional):",
+      "analyticsItems": [
+        "Plausible Analytics (privacy-friendly, no personal data)"
+      ],
+      "noTracking": "We do <strong>not</strong> use Google Analytics, Facebook Pixel, or other invasive tracking tools."
+    },
+    "section9": {
+      "title": "9. Changes",
+      "text1": "We may update this privacy policy. The most recent version can always be found on this page. The date of the last change is at the top of this document.",
+      "text2": "For major changes, we will inform you via email (if we have your email address)."
+    },
+    "section10": {
+      "title": "10. Contact",
+      "intro": "Do you have questions about this privacy policy or want to exercise your rights?",
+      "details": "<strong>Email:</strong> <a href=\"mailto:privacy@caribbeanazure.com\" class=\"text-[color:var(--brand)] hover:underline\">privacy@caribbeanazure.com</a><br /><strong>Postal address:</strong> Caribbean Azure, [Address to be filled in], Netherlands"
+    }
   }
 }

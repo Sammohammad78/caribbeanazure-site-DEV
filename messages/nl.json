@@ -912,5 +912,125 @@
         "11.3. Partijen zullen eerst trachten een geschil in onderling overleg op te lossen alvorens een beroep te doen op de rechter."
       ]
     }
+  },
+  "privacy": {
+    "badge": "Privacy Policy",
+    "title": "Privacyverklaring",
+    "updated": "Laatst bijgewerkt: 24 oktober 2025",
+    "intro": "Caribbean Azure respecteert je privacy en verwerkt je gegevens conform de AVG. Deze verklaring legt uit welke gegevens we verzamelen, waarom, en hoe je je rechten uitoefent.",
+    "section1": {
+      "title": "1. Wie is verantwoordelijk?",
+      "controller": "<strong>Verwerkingsverantwoordelijke:</strong><br />Caribbean Azure<br />E-mail: privacy@caribbeanazure.com",
+      "text": "Caribbean Azure is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in deze privacyverklaring."
+    },
+    "section2": {
+      "title": "2. Welke gegevens verzamelen we?",
+      "viaForms": "Via contactformulieren:",
+      "viaFormsItems": [
+        "Naam",
+        "E-mailadres",
+        "Telefoonnummer (optioneel)",
+        "Bedrijfsnaam (optioneel)",
+        "Bericht of vraag",
+        "ROI calculator resultaten (indien ingevuld)"
+      ],
+      "automatic": "Automatisch verzameld:",
+      "automaticItems": [
+        "IP-adres (geanonimiseerd)",
+        "Browser type en versie",
+        "Bezochte pagina's en tijdstip",
+        "Referrer URL"
+      ],
+      "summary": "We verzamelen <strong>alleen gegevens die je actief invult</strong> of die noodzakelijk zijn voor de werking van de website."
+    },
+    "section3": {
+      "title": "3. Waarom verwerken we je gegevens?",
+      "contact": "Contact en offerte-aanvragen:",
+      "contactItems": [
+        "Om je vraag te beantwoorden",
+        "Om een offerte of voorstel op te stellen",
+        "Om je te informeren over onze diensten (alleen als je hiervoor toestemming geeft)"
+      ],
+      "analytics": "Website analytics:",
+      "analyticsItems": [
+        "Om te begrijpen hoe bezoekers de website gebruiken",
+        "Om de gebruikerservaring te verbeteren",
+        "Om technische problemen te identificeren"
+      ],
+      "legal": "<strong>Rechtsgrond:</strong> We verwerken je gegevens op basis van je toestemming, uitvoering van een overeenkomst, of gerechtvaardigd belang (analytics)."
+    },
+    "section4": {
+      "title": "4. Hoe lang bewaren we je gegevens?",
+      "items": [
+        "<strong>Contactformulieren:</strong> 2 jaar na laatste contact (tenzij er een overeenkomst is)",
+        "<strong>Klantgegevens:</strong> 7 jaar na einde overeenkomst (wettelijke bewaarplicht)",
+        "<strong>Analytics data:</strong> 14 maanden (geanonimiseerd)",
+        "<strong>Marketing toestemming:</strong> Tot je deze intrekt"
+      ],
+      "deletion": "Na afloop van de bewaartermijn verwijderen we je gegevens definitief, tenzij een wettelijke bewaarplicht van toepassing is."
+    },
+    "section5": {
+      "title": "5. Delen we je gegevens met derden?",
+      "intro": "We verkopen of verhuren je gegevens <strong>nooit</strong> aan derden. We delen alleen gegevens met partijen die ons helpen onze diensten te leveren:",
+      "processors": "Verwerkers (sub-processors):",
+      "processorsList": [
+        "<strong>Vercel:</strong> Website hosting (EU/VS, AVG-conform)",
+        "<strong>Resend:</strong> E-mail verzending (EU, AVG-conform)",
+        "<strong>ClickUp:</strong> CRM en projectmanagement (VS, AVG-conform)",
+        "<strong>Plausible Analytics:</strong> Privacy-vriendelijke analytics (EU)"
+      ],
+      "dpa": "Met alle verwerkers hebben we een verwerkersovereenkomst afgesloten conform de AVG. Meer details vind je op onze <a href=\"/security\" class=\"text-[color:var(--brand)] hover:underline\">/security pagina</a>."
+    },
+    "section6": {
+      "title": "6. Jouw rechten",
+      "intro": "Je hebt de volgende rechten onder de AVG:",
+      "rights": [
+        "<strong>Recht op inzage:</strong> Je mag vragen welke gegevens we van je hebben",
+        "<strong>Recht op rectificatie:</strong> Je kunt onjuiste gegevens laten corrigeren",
+        "<strong>Recht op verwijdering:</strong> Je kunt vragen om je gegevens te verwijderen",
+        "<strong>Recht op beperking:</strong> Je kunt verzoeken om verwerking te beperken",
+        "<strong>Recht op dataportabiliteit:</strong> Je kunt je gegevens in een gestructureerd formaat opvragen",
+        "<strong>Recht van bezwaar:</strong> Je kunt bezwaar maken tegen verwerking",
+        "<strong>Recht om toestemming in te trekken:</strong> Als we werken op basis van toestemming"
+      ],
+      "exercise": "Om je rechten uit te oefenen, stuur een e-mail naar <a href=\"mailto:privacy@caribbeanazure.com\" class=\"text-[color:var(--brand)] hover:underline\">privacy@caribbeanazure.com</a>. We reageren binnen 30 dagen.",
+      "complaint": "Ben je het niet eens met hoe we je gegevens verwerken? Je kunt een klacht indienen bij de <a href=\"https://autoriteitpersoonsgegevens.nl\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[color:var(--brand)] hover:underline\">Autoriteit Persoonsgegevens</a>."
+    },
+    "section7": {
+      "title": "7. Beveiliging",
+      "intro": "We nemen beveiliging serieus en implementeren passende technische en organisatorische maatregelen:",
+      "measures": [
+        "HTTPS/TLS encryptie voor alle data in transit",
+        "Toegangscontrole en autorisatie (Role-Based Access Control)",
+        "Gegevens worden versleuteld opgeslagen waar mogelijk",
+        "Logging en monitoring van systeemactiviteit",
+        "Regelmatige beveiligingsupdates en patches"
+      ],
+      "moreInfo": "Meer details over onze beveiligingsmaatregelen vind je op de <a href=\"/security\" class=\"text-[color:var(--brand)] hover:underline\">/security pagina</a>."
+    },
+    "section8": {
+      "title": "8. Cookies en tracking",
+      "intro": "Deze website gebruikt cookies. Je kunt je voorkeuren aanpassen via de cookie-banner die bij je eerste bezoek verschijnt, of via de instellingen onderaan deze pagina.",
+      "functional": "Functionele cookies (altijd actief):",
+      "functionalItems": [
+        "Cookie consent voorkeuren",
+        "Sessie cookies voor contactformulieren"
+      ],
+      "analyticsLabel": "Analytics cookies (optioneel):",
+      "analyticsItems": [
+        "Plausible Analytics (privacy-vriendelijk, geen persoonlijke data)"
+      ],
+      "noTracking": "We gebruiken <strong>geen</strong> Google Analytics, Facebook Pixel of andere invasieve tracking tools."
+    },
+    "section9": {
+      "title": "9. Wijzigingen",
+      "text1": "We kunnen deze privacyverklaring aanpassen. De meest recente versie vind je altijd op deze pagina. De datum van de laatste wijziging staat bovenaan dit document.",
+      "text2": "Bij grote wijzigingen informeren we je via e-mail (als we je e-mailadres hebben)."
+    },
+    "section10": {
+      "title": "10. Contact",
+      "intro": "Heb je vragen over deze privacyverklaring of wil je je rechten uitoefenen?",
+      "details": "<strong>E-mail:</strong> <a href=\"mailto:privacy@caribbeanazure.com\" class=\"text-[color:var(--brand)] hover:underline\">privacy@caribbeanazure.com</a><br /><strong>Postadres:</strong> Caribbean Azure, [Adres invullen], Nederland"
+    }
   }
 }

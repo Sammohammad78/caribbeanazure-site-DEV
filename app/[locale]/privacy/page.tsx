@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
@@ -5,7 +6,18 @@ import { BackgroundEngine } from '@/components/backgrounds/BackgroundEngine'
 import { backgroundThemes } from '@/lib/backgroundThemes'
 import { Shield, Lock, Eye, Database, Mail, FileText } from 'lucide-react'
 
-export default function PrivacyPage() {
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale: params.locale, namespace: 'privacy' })
+
+  return {
+    title: `${t('title')} · Caribbean Azure`,
+    description: t('intro'),
+  }
+}
+
+export default async function PrivacyPage({ params }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale: params.locale, namespace: 'privacy' })
+
   return (
     <>
       <div className="relative">
@@ -22,16 +34,16 @@ export default function PrivacyPage() {
               <div className="mx-auto max-w-4xl text-center">
                 <div className="inline-flex items-center gap-3 rounded-full border border-[color:color-mix(in_oklab,var(--brand)_20%,transparent)] bg-[color:color-mix(in_oklab,var(--brand-soft)_40%,transparent)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--brand)]">
                   <Shield className="h-4 w-4" />
-                  Privacy Policy
+                  {t('badge')}
                 </div>
                 <h1 className="mt-8 text-balance text-4xl font-bold tracking-tight md:text-5xl">
-                  Privacyverklaring
+                  {t('title')}
                 </h1>
                 <p className="mt-6 text-lg text-[color:var(--fg-subtle)]">
-                  Laatst bijgewerkt: 24 oktober 2025
+                  {t('updated')}
                 </p>
                 <p className="mt-4 text-base text-[color:var(--fg-subtle)]">
-                  Caribbean Azure respecteert je privacy en verwerkt je gegevens conform de AVG. Deze verklaring legt uit welke gegevens we verzamelen, waarom, en hoe je je rechten uitoefent.
+                  {t('intro')}
                 </p>
               </div>
             </div>
@@ -48,18 +60,12 @@ export default function PrivacyPage() {
                       <FileText className="h-6 w-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl">1. Wie is verantwoordelijk?</CardTitle>
+                      <CardTitle className="text-2xl">{t('section1.title')}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-[color:var(--fg-subtle)]">
-                    <p>
-                      <strong>Verwerkingsverantwoordelijke:</strong><br />
-                      Caribbean Azure<br />
-                      E-mail: privacy@caribbeanazure.com
-                    </p>
-                    <p>
-                      Caribbean Azure is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in deze privacyverklaring.
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: t('section1.controller') }} />
+                    <p>{t('section1.text')}</p>
                   </CardContent>
                 </Card>
 
@@ -70,33 +76,27 @@ export default function PrivacyPage() {
                       <Database className="h-6 w-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl">2. Welke gegevens verzamelen we?</CardTitle>
+                      <CardTitle className="text-2xl">{t('section2.title')}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-[color:var(--fg-subtle)]">
                     <div>
-                      <p className="font-semibold text-body mb-2">Via contactformulieren:</p>
+                      <p className="font-semibold text-body mb-2">{t('section2.viaForms')}</p>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Naam</li>
-                        <li>E-mailadres</li>
-                        <li>Telefoonnummer (optioneel)</li>
-                        <li>Bedrijfsnaam (optioneel)</li>
-                        <li>Bericht of vraag</li>
-                        <li>ROI calculator resultaten (indien ingevuld)</li>
+                        {t.raw('section2.viaFormsItems').map((item: string, idx: number) => (
+                          <li key={idx}>{item}</li>
+                        ))}
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold text-body mb-2">Automatisch verzameld:</p>
+                      <p className="font-semibold text-body mb-2">{t('section2.automatic')}</p>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>IP-adres (geanonimiseerd)</li>
-                        <li>Browser type en versie</li>
-                        <li>Bezochte pagina's en tijdstip</li>
-                        <li>Referrer URL</li>
+                        {t.raw('section2.automaticItems').map((item: string, idx: number) => (
+                          <li key={idx}>{item}</li>
+                        ))}
                       </ul>
                     </div>
-                    <p>
-                      We verzamelen <strong>alleen gegevens die je actief invult</strong> of die noodzakelijk zijn voor de werking van de website.
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: t('section2.summary') }} />
                   </CardContent>
                 </Card>
 
@@ -107,29 +107,27 @@ export default function PrivacyPage() {
                       <Eye className="h-6 w-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl">3. Waarom verwerken we je gegevens?</CardTitle>
+                      <CardTitle className="text-2xl">{t('section3.title')}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-[color:var(--fg-subtle)]">
                     <div>
-                      <p className="font-semibold text-body mb-2">Contact en offerte-aanvragen:</p>
+                      <p className="font-semibold text-body mb-2">{t('section3.contact')}</p>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Om je vraag te beantwoorden</li>
-                        <li>Om een offerte of voorstel op te stellen</li>
-                        <li>Om je te informeren over onze diensten (alleen als je hiervoor toestemming geeft)</li>
+                        {t.raw('section3.contactItems').map((item: string, idx: number) => (
+                          <li key={idx}>{item}</li>
+                        ))}
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold text-body mb-2">Website analytics:</p>
+                      <p className="font-semibold text-body mb-2">{t('section3.analytics')}</p>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Om te begrijpen hoe bezoekers de website gebruiken</li>
-                        <li>Om de gebruikerservaring te verbeteren</li>
-                        <li>Om technische problemen te identificeren</li>
+                        {t.raw('section3.analyticsItems').map((item: string, idx: number) => (
+                          <li key={idx}>{item}</li>
+                        ))}
                       </ul>
                     </div>
-                    <p>
-                      <strong>Rechtsgrond:</strong> We verwerken je gegevens op basis van je toestemming, uitvoering van een overeenkomst, of gerechtvaardigd belang (analytics).
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: t('section3.legal') }} />
                   </CardContent>
                 </Card>
 
@@ -140,19 +138,16 @@ export default function PrivacyPage() {
                       <Lock className="h-6 w-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl">4. Hoe lang bewaren we je gegevens?</CardTitle>
+                      <CardTitle className="text-2xl">{t('section4.title')}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-[color:var(--fg-subtle)]">
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li><strong>Contactformulieren:</strong> 2 jaar na laatste contact (tenzij er een overeenkomst is)</li>
-                      <li><strong>Klantgegevens:</strong> 7 jaar na einde overeenkomst (wettelijke bewaarplicht)</li>
-                      <li><strong>Analytics data:</strong> 14 maanden (geanonimiseerd)</li>
-                      <li><strong>Marketing toestemming:</strong> Tot je deze intrekt</li>
+                      {t.raw('section4.items').map((item: string, idx: number) => (
+                        <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                      ))}
                     </ul>
-                    <p>
-                      Na afloop van de bewaartermijn verwijderen we je gegevens definitief, tenzij een wettelijke bewaarplicht van toepassing is.
-                    </p>
+                    <p>{t('section4.deletion')}</p>
                   </CardContent>
                 </Card>
 
@@ -163,25 +158,20 @@ export default function PrivacyPage() {
                       <Mail className="h-6 w-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl">5. Delen we je gegevens met derden?</CardTitle>
+                      <CardTitle className="text-2xl">{t('section5.title')}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-[color:var(--fg-subtle)]">
-                    <p>
-                      We verkopen of verhuren je gegevens <strong>nooit</strong> aan derden. We delen alleen gegevens met partijen die ons helpen onze diensten te leveren:
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: t('section5.intro') }} />
                     <div>
-                      <p className="font-semibold text-body mb-2">Verwerkers (sub-processors):</p>
+                      <p className="font-semibold text-body mb-2">{t('section5.processors')}</p>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li><strong>Vercel:</strong> Website hosting (EU/VS, AVG-conform)</li>
-                        <li><strong>Resend:</strong> E-mail verzending (EU, AVG-conform)</li>
-                        <li><strong>ClickUp:</strong> CRM en projectmanagement (VS, AVG-conform)</li>
-                        <li><strong>Plausible Analytics:</strong> Privacy-vriendelijke analytics (EU)</li>
+                        {t.raw('section5.processorsList').map((item: string, idx: number) => (
+                          <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                        ))}
                       </ul>
                     </div>
-                    <p>
-                      Met alle verwerkers hebben we een verwerkersovereenkomst afgesloten conform de AVG. Meer details vind je op onze <a href="/security" className="text-[color:var(--brand)] hover:underline">/security pagina</a>.
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: t('section5.dpa') }} />
                   </CardContent>
                 </Card>
 
@@ -192,55 +182,39 @@ export default function PrivacyPage() {
                       <Shield className="h-6 w-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl">6. Jouw rechten</CardTitle>
+                      <CardTitle className="text-2xl">{t('section6.title')}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-[color:var(--fg-subtle)]">
-                    <p>
-                      Je hebt de volgende rechten onder de AVG:
-                    </p>
+                    <p>{t('section6.intro')}</p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li><strong>Recht op inzage:</strong> Je mag vragen welke gegevens we van je hebben</li>
-                      <li><strong>Recht op rectificatie:</strong> Je kunt onjuiste gegevens laten corrigeren</li>
-                      <li><strong>Recht op verwijdering:</strong> Je kunt vragen om je gegevens te verwijderen</li>
-                      <li><strong>Recht op beperking:</strong> Je kunt verzoeken om verwerking te beperken</li>
-                      <li><strong>Recht op dataportabiliteit:</strong> Je kunt je gegevens in een gestructureerd formaat opvragen</li>
-                      <li><strong>Recht van bezwaar:</strong> Je kunt bezwaar maken tegen verwerking</li>
-                      <li><strong>Recht om toestemming in te trekken:</strong> Als we werken op basis van toestemming</li>
+                      {t.raw('section6.rights').map((item: string, idx: number) => (
+                        <li key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                      ))}
                     </ul>
-                    <p>
-                      Om je rechten uit te oefenen, stuur een e-mail naar <a href="mailto:privacy@caribbeanazure.nl" className="text-[color:var(--brand)] hover:underline">privacy@caribbeanazure.nl</a>. We reageren binnen 30 dagen.
-                    </p>
-                    <p>
-                      Ben je het niet eens met hoe we je gegevens verwerken? Je kunt een klacht indienen bij de <a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" className="text-[color:var(--brand)] hover:underline">Autoriteit Persoonsgegevens</a>.
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: t('section6.exercise') }} />
+                    <p dangerouslySetInnerHTML={{ __html: t('section6.complaint') }} />
                   </CardContent>
                 </Card>
 
                 {/* Section 7 */}
                 <Card className="rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)] p-8">
                   <CardHeader className="flex flex-row items-start gap-4 pb-6">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[color:color-mix(in_oklab,var(--brand-soft)_65%,transparent)] text-[color:var(--brand)]">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] text-[color:var(--brand)]">
                       <Lock className="h-6 w-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl">7. Beveiliging</CardTitle>
+                      <CardTitle className="text-2xl">{t('section7.title')}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-[color:var(--fg-subtle)]">
-                    <p>
-                      We nemen beveiliging serieus en implementeren passende technische en organisatorische maatregelen:
-                    </p>
+                    <p>{t('section7.intro')}</p>
                     <ul className="list-disc list-inside space-y-1 ml-4">
-                      <li>HTTPS/TLS encryptie voor alle data in transit</li>
-                      <li>Toegangscontrole en autorisatie (Role-Based Access Control)</li>
-                      <li>Gegevens worden versleuteld opgeslagen waar mogelijk</li>
-                      <li>Logging en monitoring van systeemactiviteit</li>
-                      <li>Regelmatige beveiligingsupdates en patches</li>
+                      {t.raw('section7.measures').map((item: string, idx: number) => (
+                        <li key={idx}>{item}</li>
+                      ))}
                     </ul>
-                    <p>
-                      Meer details over onze beveiligingsmaatregelen vind je op de <a href="/security" className="text-[color:var(--brand)] hover:underline">/security pagina</a>.
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: t('section7.moreInfo') }} />
                   </CardContent>
                 </Card>
 
@@ -251,29 +225,28 @@ export default function PrivacyPage() {
                       <FileText className="h-6 w-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl">8. Cookies en tracking</CardTitle>
+                      <CardTitle className="text-2xl">{t('section8.title')}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-[color:var(--fg-subtle)]">
-                    <p>
-                      Deze website gebruikt cookies. Je kunt je voorkeuren aanpassen via de cookie-banner die bij je eerste bezoek verschijnt, of via de instellingen onderaan deze pagina.
-                    </p>
+                    <p>{t('section8.intro')}</p>
                     <div>
-                      <p className="font-semibold text-body mb-2">Functionele cookies (altijd actief):</p>
+                      <p className="font-semibold text-body mb-2">{t('section8.functional')}</p>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Cookie consent voorkeuren</li>
-                        <li>Sessie cookies voor contactformulieren</li>
+                        {t.raw('section8.functionalItems').map((item: string, idx: number) => (
+                          <li key={idx}>{item}</li>
+                        ))}
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold text-body mb-2">Analytics cookies (optioneel):</p>
+                      <p className="font-semibold text-body mb-2">{t('section8.analyticsLabel')}</p>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Plausible Analytics (privacy-vriendelijk, geen persoonlijke data)</li>
+                        {t.raw('section8.analyticsItems').map((item: string, idx: number) => (
+                          <li key={idx}>{item}</li>
+                        ))}
                       </ul>
                     </div>
-                    <p>
-                      We gebruiken <strong>geen</strong> Google Analytics, Facebook Pixel of andere invasieve tracking tools.
-                    </p>
+                    <p dangerouslySetInnerHTML={{ __html: t('section8.noTracking') }} />
                   </CardContent>
                 </Card>
 
@@ -284,16 +257,12 @@ export default function PrivacyPage() {
                       <FileText className="h-6 w-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl">9. Wijzigingen</CardTitle>
+                      <CardTitle className="text-2xl">{t('section9.title')}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-[color:var(--fg-subtle)]">
-                    <p>
-                      We kunnen deze privacyverklaring aanpassen. De meest recente versie vind je altijd op deze pagina. De datum van de laatste wijziging staat bovenaan dit document.
-                    </p>
-                    <p>
-                      Bij grote wijzigingen informeren we je via e-mail (als we je e-mailadres hebben).
-                    </p>
+                    <p>{t('section9.text1')}</p>
+                    <p>{t('section9.text2')}</p>
                   </CardContent>
                 </Card>
 
@@ -304,17 +273,12 @@ export default function PrivacyPage() {
                       <Mail className="h-6 w-6" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl">10. Contact</CardTitle>
+                      <CardTitle className="text-2xl">{t('section10.title')}</CardTitle>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4 text-sm text-[color:var(--fg-subtle)]">
-                    <p>
-                      Heb je vragen over deze privacyverklaring of wil je je rechten uitoefenen?
-                    </p>
-                    <p>
-                      <strong>E-mail:</strong> <a href="mailto:privacy@caribbeanazure.nl" className="text-[color:var(--brand)] hover:underline">privacy@caribbeanazure.nl</a><br />
-                      <strong>Postadres:</strong> Caribbean Azure, [Adres invullen], Nederland
-                    </p>
+                    <p>{t('section10.intro')}</p>
+                    <p dangerouslySetInnerHTML={{ __html: t('section10.details') }} />
                   </CardContent>
                 </Card>
               </div>
