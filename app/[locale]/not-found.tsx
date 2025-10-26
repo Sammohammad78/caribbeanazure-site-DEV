@@ -10,10 +10,16 @@ import { useLocale } from 'next-intl'
 export default function NotFound() {
   const locale = useLocale()
 
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => {
+    const path = slug ? `/${slug}` : '/'
+    return locale === 'nl' ? path : `/en${path}`
+  }
+
   const suggestions = [
-    { href: `/${locale}`, label: locale === 'nl' ? 'Homepage' : 'Home', icon: Home },
-    { href: `/${locale}/oplossingen`, label: locale === 'nl' ? 'Oplossingen' : 'Solutions', icon: Search },
-    { href: `/${locale}/contact`, label: 'Contact', icon: ArrowLeft },
+    { href: buildHref(''), label: locale === 'nl' ? 'Homepage' : 'Home', icon: Home },
+    { href: buildHref('oplossingen'), label: locale === 'nl' ? 'Oplossingen' : 'Solutions', icon: Search },
+    { href: buildHref('contact'), label: 'Contact', icon: ArrowLeft },
   ]
 
   return (
@@ -66,7 +72,7 @@ export default function NotFound() {
                 {locale === 'nl' ? (
                   <>
                     Blijft het probleem? Neem{' '}
-                    <Link href={`/${locale}/contact`} className="text-[color:var(--brand)] hover:underline">
+                    <Link href={buildHref('contact')} className="text-[color:var(--brand)] hover:underline">
                       contact met ons op
                     </Link>
                     .
@@ -74,7 +80,7 @@ export default function NotFound() {
                 ) : (
                   <>
                     Still having issues?{' '}
-                    <Link href={`/${locale}/contact`} className="text-[color:var(--brand)] hover:underline">
+                    <Link href={buildHref('contact')} className="text-[color:var(--brand)] hover:underline">
                       Contact us
                     </Link>
                     .

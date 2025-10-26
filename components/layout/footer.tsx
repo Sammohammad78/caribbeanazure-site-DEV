@@ -8,6 +8,9 @@ export function Footer() {
   const locale = useLocale()
   const currentYear = new Date().getFullYear()
 
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => (locale === 'nl' ? `/${slug}` : `/en/${slug}`)
+
   const localizedSlugs = {
     about: locale === 'nl' ? 'over-ons' : 'over-ons',
     solutions: 'oplossingen',
@@ -17,16 +20,16 @@ export function Footer() {
 
   const footerLinks = {
     company: [
-      { href: `/${locale}/${localizedSlugs.about}`, label: t('nav.about') },
-      { href: `/${locale}/${localizedSlugs.cases}`, label: t('nav.cases') },
-      { href: `/${locale}/${localizedSlugs.contact}`, label: t('nav.contact') },
+      { href: buildHref(localizedSlugs.about), label: t('nav.about') },
+      { href: buildHref(localizedSlugs.cases), label: t('nav.cases') },
+      { href: buildHref(localizedSlugs.contact), label: t('nav.contact') },
     ],
     solutions: [
-      { href: `/${locale}/${localizedSlugs.solutions}`, label: t('nav.solutions') },
+      { href: buildHref(localizedSlugs.solutions), label: t('nav.solutions') },
     ],
     legal: [
-      { href: `/${locale}/privacy`, label: t('footer.privacy') },
-      { href: `/${locale}/${locale === 'nl' ? 'voorwaarden' : 'voorwaarden'}`, label: t('footer.terms') },
+      { href: buildHref('privacy'), label: t('footer.privacy') },
+      { href: buildHref('voorwaarden'), label: t('footer.terms') },
     ],
   }
 

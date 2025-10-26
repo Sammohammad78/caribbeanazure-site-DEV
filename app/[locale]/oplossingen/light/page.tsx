@@ -24,6 +24,9 @@ export default async function LightAutomationsPage({ params }: { params: { local
   const tCommon = await getTranslations({ locale: params.locale, namespace: 'common' })
   const locale = params.locale as 'nl' | 'en'
 
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => (locale === 'nl' ? `/${slug}` : `/en/${slug}`)
+
   const useCases = [
     {
       icon: Mail,
@@ -97,13 +100,13 @@ export default async function LightAutomationsPage({ params }: { params: { local
                   </p>
                   <div className="flex gap-3">
                     <Button asChild size="lg">
-                      <Link href={`/${locale}/contact`}>
+                      <Link href={buildHref('contact')}>
                         {tCommon('bookIntake')}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </Button>
                     <Button asChild size="lg" variant="outline">
-                      <Link href={`/${locale}/oplossingen`}>
+                      <Link href={buildHref('oplossingen')}>
                         {tCommon('viewAllSolutions')}
                       </Link>
                     </Button>
@@ -207,13 +210,13 @@ export default async function LightAutomationsPage({ params }: { params: { local
                 </p>
                 <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                   <Button asChild size="lg" variant="outline">
-                    <Link href={`/${locale}/oplossingen/maakindustrie`}>
+                    <Link href={buildHref('oplossingen/maakindustrie')}>
                       {tCommon('manufacturingSolutions')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                   <Button asChild size="lg" variant="outline">
-                    <Link href={`/${locale}/oplossingen/configurators`}>
+                    <Link href={buildHref('oplossingen/configurators')}>
                       {tCommon('configuratorSolutions')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>

@@ -24,6 +24,9 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
   const tCommon = await getTranslations({ locale: params.locale, namespace: 'common' })
   const locale = params.locale as 'nl' | 'en'
 
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => (locale === 'nl' ? `/${slug}` : `/en/${slug}`)
+
   const configuratorTypes = [
     {
       icon: Settings,
@@ -103,7 +106,7 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
                   </p>
                   <div className="flex gap-3">
                     <Button asChild size="lg">
-                      <Link href={`/${locale}/contact`}>
+                      <Link href={buildHref('contact')}>
                         {t('cta')}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -231,13 +234,13 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
                 </p>
                 <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                   <Button asChild size="lg" variant="secondary">
-                    <Link href={`/${locale}/contact`}>
+                    <Link href={buildHref('contact')}>
                       {t('cta')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
-                    <Link href={`/${locale}/cases`}>
+                    <Link href={buildHref('cases')}>
                       {tCommon('viewCases')}
                     </Link>
                   </Button>
