@@ -608,7 +608,52 @@
     "readyForConfigurator": "Klaar voor een configurator?",
     "bookIntakeConfigurator": "Plan een intake om jouw product, varianten en productieproces door te nemen. We beoordelen samen of een configurator de beste oplossing is.",
     "viewCases": "Bekijk cases",
-    "cpqConfigDescription": "Bekijk onze CPQ & Configure-to-Production oplossingen voor complexe producten met duizenden varianten."
+    "cpqConfigDescription": "Bekijk onze CPQ & Configure-to-Production oplossingen voor complexe producten met duizenden varianten.",
+    "roiCalculator": {
+      "badge": "ROI Calculator",
+      "title": "Wat levert automatisering jou op?",
+      "subtitle": "Bereken in 60 seconden hoeveel tijd en geld je bespaart met automation",
+      "input": {
+        "title": "Je situatie",
+        "description": "Pas de schuifjes aan naar je huidige situatie",
+        "teamSize": {
+          "label": "Teamgrootte",
+          "min": "1 persoon",
+          "max": "50+ mensen"
+        },
+        "hoursPerWeek": {
+          "label": "Uren handmatig werk per week",
+          "min": "5 uur/week",
+          "max": "40 uur/week"
+        },
+        "hourlyRate": {
+          "label": "Gemiddeld uurtarief",
+          "min": "€25/uur",
+          "max": "€150/uur"
+        }
+      },
+      "results": {
+        "yearlySavings": "Jaarlijkse besparing",
+        "roi": "ROI (eerste jaar)",
+        "payback": "Terugverdiend in",
+        "investment": "Investering"
+      },
+      "graph": {
+        "title": "Cumulatieve besparing (24 maanden)",
+        "xAxisLabel": "Maanden",
+        "tooltipMonth": "Maand",
+        "breakevenText": "Breakeven punt na",
+        "totalSavingsText": "Totale besparing na 2 jaar:"
+      },
+      "cta": {
+        "button": "Ontvang je persoonlijke blueprint",
+        "footer": "Vrijblijvend gesprek · Reactie binnen 24 uur"
+      },
+      "disclaimer": {
+        "bold": "Let op:",
+        "text": "De berekening is een voorbeeld en geen garantie. Werkelijke resultaten variëren per proces en organisatie."
+      }
+    }
   },
   "solutions": {
     "title": "Oplossingen voor elke schaal",

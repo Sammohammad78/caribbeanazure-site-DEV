@@ -75,7 +75,52 @@
     "readyForConfigurator": "Ready for a configurator?",
     "bookIntakeConfigurator": "Book an intake to discuss your product, variants, and production process. We'll assess together whether a configurator is the best solution.",
     "viewCases": "View cases",
-    "cpqConfigDescription": "Check out our CPQ & Configure-to-Production solutions for complex products with thousands of variants."
+    "cpqConfigDescription": "Check out our CPQ & Configure-to-Production solutions for complex products with thousands of variants.",
+    "roiCalculator": {
+      "badge": "ROI Calculator",
+      "title": "What does automation deliver for you?",
+      "subtitle": "Calculate in 60 seconds how much time and money you save with automation",
+      "input": {
+        "title": "Your situation",
+        "description": "Adjust the sliders to match your current situation",
+        "teamSize": {
+          "label": "Team size",
+          "min": "1 person",
+          "max": "50+ people"
+        },
+        "hoursPerWeek": {
+          "label": "Hours of manual work per week",
+          "min": "5 hours/week",
+          "max": "40 hours/week"
+        },
+        "hourlyRate": {
+          "label": "Average hourly rate",
+          "min": "€25/hour",
+          "max": "€150/hour"
+        }
+      },
+      "results": {
+        "yearlySavings": "Annual savings",
+        "roi": "ROI (first year)",
+        "payback": "Paid back in",
+        "investment": "Investment"
+      },
+      "graph": {
+        "title": "Cumulative savings (24 months)",
+        "xAxisLabel": "Months",
+        "tooltipMonth": "Month",
+        "breakevenText": "Breakeven point after",
+        "totalSavingsText": "Total savings after 2 years:"
+      },
+      "cta": {
+        "button": "Get your personal blueprint",
+        "footer": "No-obligation conversation · Response within 24 hours"
+      },
+      "disclaimer": {
+        "bold": "Note:",
+        "text": "The calculation is an example and not a guarantee. Actual results vary per process and organization."
+      }
+    }
   },
   "hero": {
     "title": "From request to production—automated for manufacturing SMEs",
