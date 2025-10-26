@@ -653,6 +653,36 @@
         "bold": "Let op:",
         "text": "De berekening is een voorbeeld en geen garantie. Werkelijke resultaten variëren per proces en organisatie."
       }
+    },
+    "contactForm": {
+      "fields": {
+        "name": {
+          "label": "Naam",
+          "placeholder": "Uw naam",
+          "required": "Naam moet minimaal 2 karakters zijn"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "uw.email@voorbeeld.nl",
+          "invalid": "Ongeldig emailadres"
+        },
+        "phone": {
+          "label": "Telefoon (optioneel)",
+          "placeholder": "+31 6 1234 5678"
+        },
+        "message": {
+          "label": "Bericht",
+          "placeholder": "Vertel ons waar we u mee kunnen helpen...",
+          "required": "Bericht moet minimaal 10 karakters zijn"
+        }
+      },
+      "status": {
+        "success": "Bedankt! We nemen spoedig contact op.",
+        "error": "Er ging iets mis. Probeer het opnieuw.",
+        "sending": "Verzenden..."
+      },
+      "submit": "Verstuur",
+      "requiredField": "*"
     }
   },
   "solutions": {

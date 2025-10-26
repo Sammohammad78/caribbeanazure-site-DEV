@@ -1,26 +1,34 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Card } from '@/components/ui/card'
 import { Loader2, CheckCircle2, AlertCircle } from 'lucide-react'
 
-const contactSchema = z.object({
-  name: z.string().min(2, 'Naam moet minimaal 2 karakters zijn'),
-  email: z.string().email('Ongeldig emailadres'),
-  phone: z.string().optional(),
-  message: z.string().min(10, 'Bericht moet minimaal 10 karakters zijn'),
-})
-
-type ContactFormData = z.infer<typeof contactSchema>
+type ContactFormData = {
+  name: string
+  email: string
+  phone?: string
+  message: string
+}
 
 export function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const t = useTranslations('common.contactForm')
+
+  // Create schema with translated error messages
+  const contactSchema = useMemo(() => z.object({
+    name: z.string().min(2, t('fields.name.required')),
+    email: z.string().email(t('fields.email.invalid')),
+    phone: z.string().optional(),
+    message: z.string().min(10, t('fields.message.required')),
+  }), [t])
 
   const {
     register,
@@ -62,12 +70,12 @@ export function ContactForm() {
         {/* Name */}
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium">
-            Naam *
+            {t('fields.name.label')} {t('requiredField')}
           </label>
           <Input
             id="name"
             {...register('name')}
-            placeholder="Uw naam"
+            placeholder={t('fields.name.placeholder')}
             disabled={status === 'loading'}
           />
           {errors.name && (
@@ -78,13 +86,13 @@ export function ContactForm() {
         {/* Email */}
         <div className="space-y-2">
           <label htmlFor="email" className="text-sm font-medium">
-            Email *
+            {t('fields.email.label')} {t('requiredField')}
           </label>
           <Input
             id="email"
             type="email"
             {...register('email')}
-            placeholder="uw.email@voorbeeld.nl"
+            placeholder={t('fields.email.placeholder')}
             disabled={status === 'loading'}
           />
           {errors.email && (
@@ -95,13 +103,13 @@ export function ContactForm() {
         {/* Phone */}
         <div className="space-y-2">
           <label htmlFor="phone" className="text-sm font-medium">
-            Telefoon (optioneel)
+            {t('fields.phone.label')}
           </label>
           <Input
             id="phone"
             type="tel"
             {...register('phone')}
-            placeholder="+31 6 1234 5678"
+            placeholder={t('fields.phone.placeholder')}
             disabled={status === 'loading'}
           />
         </div>
@@ -109,12 +117,12 @@ export function ContactForm() {
         {/* Message */}
         <div className="space-y-2">
           <label htmlFor="message" className="text-sm font-medium">
-            Bericht *
+            {t('fields.message.label')} {t('requiredField')}
           </label>
           <Textarea
             id="message"
             {...register('message')}
-            placeholder="Vertel ons waar we u mee kunnen helpen..."
+            placeholder={t('fields.message.placeholder')}
             rows={6}
             disabled={status === 'loading'}
           />
@@ -128,7 +136,7 @@ export function ContactForm() {
           <div className="flex items-center space-x-2 rounded-lg bg-accent/10 p-4 text-accent">
             <CheckCircle2 className="h-5 w-5" />
             <p className="text-sm font-medium">
-              Bedankt! We nemen spoedig contact op.
+              {t('status.success')}
             </p>
           </div>
         )}
@@ -137,7 +145,7 @@ export function ContactForm() {
           <div className="flex items-center space-x-2 rounded-lg bg-destructive/10 p-4 text-destructive">
             <AlertCircle className="h-5 w-5" />
             <p className="text-sm font-medium">
-              Er ging iets mis. Probeer het opnieuw.
+              {t('status.error')}
             </p>
           </div>
         )}
@@ -147,10 +155,10 @@ export function ContactForm() {
           {status === 'loading' ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Verzenden...
+              {t('status.sending')}
             </>
           ) : (
-            'Verstuur'
+            t('submit')
           )}
         </Button>
       </form>
