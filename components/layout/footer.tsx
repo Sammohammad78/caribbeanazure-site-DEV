@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
-import { Mail, Phone, MessageCircle } from 'lucide-react'
+import { Mail, Phone, MessageCircle, Shield } from 'lucide-react'
 import { siteConfig } from '@/config/site'
 
 export function Footer() {
@@ -23,7 +23,10 @@ export function Footer() {
       { href: buildHref(localizedSlugs.contact), label: t('nav.contact') },
     ],
     solutions: [
-      { href: buildHref(localizedSlugs.solutions), label: t('nav.solutions') },
+      { href: buildHref('oplossingen'), label: t('footer.solutions.overview') },
+      { href: buildHref('oplossingen/light'), label: t('footer.solutions.light') },
+      { href: buildHref('oplossingen/maakindustrie'), label: t('footer.solutions.manufacturing') },
+      { href: buildHref('oplossingen/configurators'), label: t('footer.solutions.configurators') },
     ],
     legal: [
       { href: buildHref('privacy'), label: t('footer.privacy') },
@@ -85,10 +88,29 @@ export function Footer() {
             <p className="text-sm text-[color:var(--fg-muted)]">{t('footer.tagline')}</p>
           </div>
 
-          <div className="text-xs text-[color:var(--fg-muted)] max-w-3xl">
-            {locale === 'nl'
-              ? 'Caribbean Azure rapporteert resultaten altijd met toestemming en in samenwerking met de klant. Namen worden alleen gebruikt na expliciete goedkeuring.'
-              : 'Caribbean Azure reports results with client permission and collaboration. Names are only used after explicit approval.'}
+          <div className="space-y-3">
+            <div className="text-xs text-[color:var(--fg-muted)] max-w-3xl">
+              {locale === 'nl'
+                ? 'Caribbean Azure rapporteert resultaten altijd met toestemming en in samenwerking met de klant. Namen worden alleen gebruikt na expliciete goedkeuring.'
+                : 'Caribbean Azure reports results with client permission and collaboration. Names are only used after explicit approval.'}
+            </div>
+
+            {/* GDPR Compliance Notice */}
+            <div className="flex items-start gap-2 text-xs text-[color:var(--fg-muted)] max-w-3xl">
+              <Shield className="h-3.5 w-3.5 flex-shrink-0 mt-0.5 text-[color:var(--brand)]" />
+              <p>
+                {locale === 'nl'
+                  ? 'AVG-compliant. Wij verwerken uw gegevens conform de Algemene Verordening Gegevensbescherming. Zie ons '
+                  : 'GDPR compliant. We process your data in accordance with the General Data Protection Regulation. See our '}
+                <Link
+                  href={buildHref('privacy')}
+                  className="text-[color:var(--brand)] hover:underline"
+                >
+                  {locale === 'nl' ? 'privacybeleid' : 'privacy policy'}
+                </Link>
+                {locale === 'nl' ? ' voor details.' : ' for details.'}
+              </p>
+            </div>
           </div>
 
           {/* KvK and BTW - Hidden until real values available */}

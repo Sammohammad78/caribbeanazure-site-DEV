@@ -641,7 +641,13 @@
     "legal": "Legal",
     "security": "Security overview",
     "privacy": "Privacy",
-    "terms": "Terms"
+    "terms": "Terms",
+    "solutions": {
+      "overview": "All Solutions",
+      "light": "Light Automations",
+      "manufacturing": "Sales→BOM & Drawing Packages",
+      "configurators": "CPQ & Configurators"
+    }
   },
   "whatsapp": {
     "label": "Ask via WhatsApp"
@@ -1116,7 +1122,7 @@
     "section10": {
       "title": "10. Contact",
       "intro": "Do you have questions about this privacy policy or want to exercise your rights?",
-      "details": "<strong>Email:</strong> <a href=\"mailto:privacy@caribbeanazure.com\" class=\"text-[color:var(--brand)] hover:underline\">privacy@caribbeanazure.com</a><br /><strong>Postal address:</strong> Caribbean Azure, [Address to be filled in], Netherlands"
+      "details": "<strong>Email:</strong> <a href=\"mailto:privacy@caribbeanazure.com\" class=\"text-[color:var(--brand)] hover:underline\">privacy@caribbeanazure.com</a><br /><strong>Correspondence address:</strong> Caribbean Azure, Netherlands"
     }
   },
   "casesPage": {
