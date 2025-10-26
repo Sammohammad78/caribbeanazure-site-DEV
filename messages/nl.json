@@ -1100,5 +1100,47 @@
         ]
       }
     ]
+  },
+  "contactPage": {
+    "badge": "Neem contact op",
+    "title": "Laten we kennismaken",
+    "subtitle": "Mail, bel of app ons. We reageren binnen 24 uur.",
+    "contactMethods": {
+      "title": "Hoe je ons bereikt",
+      "whatsapp": {
+        "title": "WhatsApp",
+        "tagline": "Snelste reactietijd",
+        "body": "Stuur ons een bericht via WhatsApp voor directe vragen of een snelle intake.",
+        "button": "Start WhatsApp chat"
+      },
+      "email": {
+        "title": "E-mail",
+        "tagline": "Voor uitgebreide vragen",
+        "body": "Stuur ons een e-mail en we reageren binnen 24 uur."
+      },
+      "phone": {
+        "title": "Telefoon",
+        "tagline": "Voor directe gesprekken",
+        "body": "Bel ons tijdens kantooruren (09:00-17:00) voor een adviesgesprek."
+      }
+    },
+    "form": {
+      "title": "Stuur ons een bericht",
+      "description": "Deel je vraag en we nemen snel contact op."
+    },
+    "infoCards": {
+      "responseTime": {
+        "title": "Reactietijd",
+        "description": "We reageren binnen 24 uur op WhatsApp en e-mail. Telefonisch zijn we bereikbaar op werkdagen tussen 09:00-17:00."
+      },
+      "location": {
+        "title": "Locatie",
+        "description": "We werken remote-first, maar komen wekelijks samen in Amsterdam. Voor on-site workshops komen we graag naar jullie toe."
+      },
+      "noObligations": {
+        "title": "Geen verplichtingen",
+        "description": "Het eerste gesprek is altijd vrijblijvend. We bespreken je uitdaging en adviseren of automatisering impact kan maken."
+      }
+    }
   }
 }
