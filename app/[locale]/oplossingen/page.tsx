@@ -9,13 +9,39 @@ import { BackgroundEngine } from '@/components/backgrounds/BackgroundEngine'
 import { backgroundThemes } from '@/lib/backgroundThemes'
 import { TrustStrip } from '@/components/sections/trust-strip'
 import { formatCurrency, getPriceOnRequest } from '@/lib/format'
+import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: 'solutions' })
+  const locale = params.locale
 
   return {
     title: `${t('title')} · Caribbean Azure`,
     description: t('subtitle'),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+      },
+    },
+    alternates: {
+      canonical: `https://www.caribbeanazure.com${locale === 'en' ? '/en' : ''}/oplossingen`,
+      languages: {
+        'nl-NL': 'https://www.caribbeanazure.com/oplossingen',
+        'en-US': 'https://www.caribbeanazure.com/en/oplossingen',
+      },
+    },
+    openGraph: {
+      title: `${t('title')} · Caribbean Azure`,
+      description: t('subtitle'),
+      url: `https://www.caribbeanazure.com${locale === 'en' ? '/en' : ''}/oplossingen`,
+      siteName: 'Caribbean Azure',
+      locale: locale === 'nl' ? 'nl_NL' : 'en_US',
+      type: 'website',
+    },
   }
 }
 
@@ -26,6 +52,12 @@ export default async function OplossingenPage({ params }: { params: { locale: st
 
   // Build locale-aware href (NL at root, EN with /en prefix)
   const buildHref = (slug: string) => (locale === 'nl' ? `/${slug}` : `/en/${slug}`)
+
+  // Breadcrumb for SEO
+  const breadcrumbItems = [
+    { name: locale === 'nl' ? 'Home' : 'Home', url: 'https://www.caribbeanazure.com' + (locale === 'en' ? '/en' : '') },
+    { name: t('title'), url: 'https://www.caribbeanazure.com' + buildHref('oplossingen') },
+  ]
 
   const solutions = [
     {
@@ -66,6 +98,9 @@ export default async function OplossingenPage({ params }: { params: { locale: st
 
   return (
     <>
+      {/* Breadcrumb Schema for SEO */}
+      <BreadcrumbSchema items={breadcrumbItems} />
+
       <div className="relative">
         {/* 3D Background */}
         <div className="fixed inset-0 -z-10">

@@ -11,6 +11,17 @@ export const metadata: Metadata = {
     "Slimme automatisering die waarde oplevert. AI-workflows die tijd besparen en omzet verhogen.",
   keywords: ["AI", "automatisering", "integratie", "chatbots", "Nederland"],
   metadataBase: new URL('https://www.caribbeanazure.com'),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: "Caribbean Azure | Slimme AI Automatisering",
     description: "Slimme automatisering die waarde oplevert. AI-workflows die tijd besparen en omzet verhogen.",
@@ -32,6 +43,13 @@ export const metadata: Metadata = {
     title: "Caribbean Azure | Slimme AI Automatisering",
     description: "Slimme automatisering die waarde oplevert. AI-workflows die tijd besparen en omzet verhogen.",
     images: ['/api/og'],
+  },
+  alternates: {
+    canonical: 'https://www.caribbeanazure.com',
+    languages: {
+      'nl-NL': 'https://www.caribbeanazure.com',
+      'en-US': 'https://www.caribbeanazure.com/en',
+    },
   },
 }
 
