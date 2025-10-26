@@ -36,7 +36,7 @@ export function Header() {
   const navItems = [
     { href: buildHref(''), label: t('nav.home') },
     { href: buildHref('oplossingen'), label: t('nav.solutions') },
-    { href: buildHref('cases'), label: t('nav.cases') },
+    { href: buildHref('over-ons'), label: t('nav.about') },
     { href: buildHref('contact'), label: t('nav.contact') },
   ]
 

@@ -3,7 +3,7 @@ import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { ArrowRight, Zap, Factory, Settings } from 'lucide-react'
+import { ArrowRight, Zap, Factory, Settings, TrendingUp, Clock, Users, BarChart3 } from 'lucide-react'
 import Link from 'next/link'
 import { BackgroundEngine } from '@/components/backgrounds/BackgroundEngine'
 import { backgroundThemes } from '@/lib/backgroundThemes'
@@ -160,9 +160,164 @@ export default async function OplossingenPage({ params }: { params: { locale: st
                   )
                 })}
               </div>
+            </div>
+          </section>
+
+          {/* Case Studies Section */}
+          <section className="section-padding-y bg-[color:color-mix(in_oklab,var(--panel)_40%,transparent)]">
+            <div className="container-custom">
+              <div className="mb-12 text-center">
+                <h2 className="h2-fluid mb-4">{t('caseStudies.title')}</h2>
+                <p className="copy-18 mx-auto max-w-2xl text-[color:var(--fg-subtle)]">
+                  {t('caseStudies.subtitle')}
+                </p>
+              </div>
+
+              <div className="grid gap-8 lg:grid-cols-3">
+                {/* Case 1: Fintech Onboarding → Light */}
+                <Card className="group rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] bg-[color:color-mix(in_oklab,var(--bg)_85%,transparent)] p-8 transition-all duration-300 hover:shadow-lg">
+                  <CardHeader className="space-y-3 p-0">
+                    <span className="copy-12 font-semibold uppercase tracking-[0.24em] text-[color:var(--fg-muted)]">
+                      {t('caseStudies.case1.sector')}
+                    </span>
+                    <CardTitle className="h-24">
+                      {t('caseStudies.case1.client')}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="mt-6 space-y-4 p-0">
+                    <p className="copy-14 text-[color:var(--fg-subtle)]">
+                      {t('caseStudies.case1.challenge')}
+                    </p>
+
+                    {/* Results */}
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[color:color-mix(in_oklab,var(--accent)_15%,transparent)] text-[color:var(--accent)]">
+                          <Clock className="h-4 w-4" />
+                        </div>
+                        <p className="copy-14 font-semibold leading-relaxed">
+                          {t('caseStudies.case1.result1')}
+                        </p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[color:color-mix(in_oklab,var(--brand)_15%,transparent)] text-[color:var(--brand)]">
+                          <Users className="h-4 w-4" />
+                        </div>
+                        <p className="copy-14 font-semibold leading-relaxed">
+                          {t('caseStudies.case1.result2')}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+
+                  <CardFooter className="mt-6 p-0">
+                    <Button asChild variant="ghost" size="sm" className="group-hover:text-[color:var(--brand)]">
+                      <Link href={buildHref('oplossingen/light')}>
+                        {t('caseStudies.viewSolution')}
+                        <ArrowRight className="ml-2 h-3 w-3" />
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+
+                {/* Case 2: SaaS Support → Manufacturing */}
+                <Card className="group rounded-3xl border-[color:color-mix(in_oklab,var(--accent)_25%,transparent)] bg-[color:color-mix(in_oklab,var(--bg)_85%,transparent)] p-8 ring-2 ring-[color:var(--accent)]/20 transition-all duration-300 hover:shadow-xl">
+                  <CardHeader className="space-y-3 p-0">
+                    <span className="copy-12 font-semibold uppercase tracking-[0.24em] text-[color:var(--fg-muted)]">
+                      {t('caseStudies.case2.sector')}
+                    </span>
+                    <CardTitle className="h-24">
+                      {t('caseStudies.case2.client')}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="mt-6 space-y-4 p-0">
+                    <p className="copy-14 text-[color:var(--fg-subtle)]">
+                      {t('caseStudies.case2.challenge')}
+                    </p>
+
+                    {/* Results */}
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[color:color-mix(in_oklab,var(--accent)_15%,transparent)] text-[color:var(--accent)]">
+                          <BarChart3 className="h-4 w-4" />
+                        </div>
+                        <p className="copy-14 font-semibold leading-relaxed">
+                          {t('caseStudies.case2.result1')}
+                        </p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[color:color-mix(in_oklab,var(--brand)_15%,transparent)] text-[color:var(--brand)]">
+                          <Clock className="h-4 w-4" />
+                        </div>
+                        <p className="copy-14 font-semibold leading-relaxed">
+                          {t('caseStudies.case2.result2')}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+
+                  <CardFooter className="mt-6 p-0">
+                    <Button asChild variant="ghost" size="sm" className="group-hover:text-[color:var(--brand)]">
+                      <Link href={buildHref('oplossingen/maakindustrie')}>
+                        {t('caseStudies.viewSolution')}
+                        <ArrowRight className="ml-2 h-3 w-3" />
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+
+                {/* Case 3: E-commerce Inventory → Configurators */}
+                <Card className="group rounded-3xl border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] bg-[color:color-mix(in_oklab,var(--bg)_85%,transparent)] p-8 transition-all duration-300 hover:shadow-lg">
+                  <CardHeader className="space-y-3 p-0">
+                    <span className="copy-12 font-semibold uppercase tracking-[0.24em] text-[color:var(--fg-muted)]">
+                      {t('caseStudies.case3.sector')}
+                    </span>
+                    <CardTitle className="h-24">
+                      {t('caseStudies.case3.client')}
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="mt-6 space-y-4 p-0">
+                    <p className="copy-14 text-[color:var(--fg-subtle)]">
+                      {t('caseStudies.case3.challenge')}
+                    </p>
+
+                    {/* Results */}
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[color:color-mix(in_oklab,var(--accent)_15%,transparent)] text-[color:var(--accent)]">
+                          <TrendingUp className="h-4 w-4" />
+                        </div>
+                        <p className="copy-14 font-semibold leading-relaxed">
+                          {t('caseStudies.case3.result1')}
+                        </p>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-[color:color-mix(in_oklab,var(--brand)_15%,transparent)] text-[color:var(--brand)]">
+                          <Clock className="h-4 w-4" />
+                        </div>
+                        <p className="copy-14 font-semibold leading-relaxed">
+                          {t('caseStudies.case3.result2')}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+
+                  <CardFooter className="mt-6 p-0">
+                    <Button asChild variant="ghost" size="sm" className="group-hover:text-[color:var(--brand)]">
+                      <Link href={buildHref('oplossingen/configurators')}>
+                        {t('caseStudies.viewSolution')}
+                        <ArrowRight className="ml-2 h-3 w-3" />
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </div>
 
               {/* Not Sure CTA */}
-              <div className="mt-12 text-center">
+              <div className="mt-16 text-center">
                 <p className="text-lg text-[color:var(--fg-subtle)]">{t('cta')}</p>
                 <Button asChild size="lg" variant="outline" className="mt-4">
                   <Link href={buildHref('contact')}>
