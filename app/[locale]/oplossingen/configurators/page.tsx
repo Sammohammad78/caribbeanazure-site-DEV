@@ -240,7 +240,7 @@ export default async function ConfiguratorsPage({ params }: { params: { locale: 
                     </Link>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="border-white/20 bg-white/10 text-white hover:bg-white/20">
-                    <Link href={buildHref('cases')}>
+                    <Link href={buildHref('oplossingen')}>
                       {tCommon('viewCases')}
                     </Link>
                   </Button>

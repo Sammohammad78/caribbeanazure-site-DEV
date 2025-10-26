@@ -284,7 +284,7 @@ export function getThemeForPage(pathname: string): BackgroundTheme {
   if (pathname.includes('/diensten') || pathname.includes('/services'))
     return backgroundThemes.services
   if (pathname.includes('/over') || pathname.includes('/about')) return backgroundThemes.about
-  if (pathname.includes('/cases')) return backgroundThemes.cases
+  if (pathname.includes('/oplossingen') || pathname.includes('/solutions')) return backgroundThemes.cases
   if (pathname.includes('/contact')) return backgroundThemes.contact
 
   return backgroundThemes.default
