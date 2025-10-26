@@ -64,7 +64,17 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden items-center gap-7 text-sm font-medium md:flex">
             {navItems.map((item) => {
-              const isActive = pathname === item.href || (item.href !== `/${locale}` && pathname.startsWith(item.href))
+              // FIXED: Proper active state detection
+              // For home page, only match exact path (not subpaths)
+              // For other pages, match exact path or sub-paths
+              const isHomePage = item.href === `/${locale}` || item.href === '/nl' || item.href === '/en'
+              const normalizedPathname = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname
+              const normalizedHref = item.href.endsWith('/') && item.href !== '/' ? item.href.slice(0, -1) : item.href
+
+              const isActive = isHomePage
+                ? normalizedPathname === normalizedHref
+                : normalizedPathname === normalizedHref || normalizedPathname.startsWith(normalizedHref + '/')
+
               return (
                 <Link
                   key={item.href}

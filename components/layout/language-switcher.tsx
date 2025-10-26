@@ -2,9 +2,8 @@
 
 import { useLocale } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
-import { Globe } from 'lucide-react'
+import { Languages } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { locales, localeNames } from '@/lib/i18n'
 
 interface LanguageSwitcherProps {
   className?: string
@@ -15,7 +14,10 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   const router = useRouter()
   const pathname = usePathname()
 
-  const switchLocale = (newLocale: string) => {
+  const switchLocale = () => {
+    // Toggle between nl and en
+    const newLocale = locale === 'nl' ? 'en' : 'nl'
+
     // Remove current locale prefix from pathname
     const pathWithoutLocale = pathname.replace(`/${locale}`, '') || ''
 
@@ -29,30 +31,21 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
   }
 
   return (
-    <div className={cn('flex items-center gap-2', className)}>
-      <Globe
-        className="h-4 w-4 text-[color:var(--fg-muted)]"
-        aria-hidden="true"
-      />
-      <div className="flex items-center gap-1">
-        {locales.map((loc) => (
-          <button
-            key={loc}
-            onClick={() => switchLocale(loc)}
-            className={cn(
-              'rounded-lg px-2.5 py-1.5 text-xs font-medium transition-all duration-200',
-              'focus:outline-none focus:ring-2 focus:ring-[color:var(--accent)] focus:ring-offset-2',
-              locale === loc
-                ? 'bg-[color:var(--accent)] text-white shadow-sm'
-                : 'text-[color:var(--fg-muted)] hover:bg-[color:color-mix(in_oklab,var(--fg)_8%,transparent)] hover:text-[color:var(--fg)]'
-            )}
-            aria-label={`Switch to ${localeNames[loc]}`}
-            aria-current={locale === loc ? 'true' : 'false'}
-          >
-            {loc.toUpperCase()}
-          </button>
-        ))}
-      </div>
-    </div>
+    <button
+      onClick={switchLocale}
+      className={cn(
+        'inline-flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-medium transition-all duration-200',
+        'border border-[color:color-mix(in_oklab,var(--fg)_12%,transparent)]',
+        'bg-[color:color-mix(in_oklab,var(--panel)_70%,transparent)]',
+        'text-[color:var(--fg-muted)] hover:text-[color:var(--fg)]',
+        'hover:border-[color:color-mix(in_oklab,var(--accent)_25%,transparent)]',
+        'focus:outline-none focus:ring-2 focus:ring-[color:var(--accent)] focus:ring-offset-2',
+        className
+      )}
+      aria-label={`Switch to ${locale === 'nl' ? 'English' : 'Nederlands'}`}
+    >
+      <Languages className="h-3.5 w-3.5" aria-hidden="true" />
+      <span>{locale.toUpperCase()}</span>
+    </button>
   )
 }
