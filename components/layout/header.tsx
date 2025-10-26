@@ -41,10 +41,18 @@ export function Header() {
   ]
 
   return (
-    <header className={cn(
-      "sticky top-0 z-50 w-full border-b border-[color:color-mix(in_oklab,var(--fg)_10%,transparent)] bg-[color:color-mix(in_oklab,var(--bg)_82%,transparent)]/90 backdrop-blur-xl supports-[backdrop-filter]:bg-[color:color-mix(in_oklab,var(--bg)_75%,transparent)]/85 transition-shadow duration-200",
-      isScrolled && "shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
-    )}>
+    <>
+      {/* Skip to main content - WCAG 2.2 AA */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-[color:var(--brand)] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[color:var(--brand)]"
+      >
+        {locale === 'nl' ? 'Spring naar hoofdinhoud' : 'Skip to main content'}
+      </a>
+      <header className={cn(
+        "sticky top-0 z-50 w-full border-b border-[color:color-mix(in_oklab,var(--fg)_10%,transparent)] bg-[color:color-mix(in_oklab,var(--bg)_82%,transparent)]/90 backdrop-blur-xl supports-[backdrop-filter]:bg-[color:color-mix(in_oklab,var(--bg)_75%,transparent)]/85 transition-shadow duration-200",
+        isScrolled && "shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+      )}>
       <div className="container-custom">
         <div className="flex h-20 items-center justify-between gap-4">
           {/* Logo */}
@@ -131,5 +139,6 @@ export function Header() {
         </nav>
       </div>
     </header>
+    </>
   )
 }
