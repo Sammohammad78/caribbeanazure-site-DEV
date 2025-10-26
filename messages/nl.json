@@ -809,6 +809,32 @@
       ],
       "priceNote": "Maatwerk—prijs op aanvraag. Laat uw use-case beoordelen in een intake.",
       "cta": "Plan intake voor Configurators"
+    },
+    "caseStudies": {
+      "title": "Bewezen resultaten",
+      "subtitle": "Concrete cases met meetbare impact",
+      "viewSolution": "Bekijk deze oplossing",
+      "case1": {
+        "sector": "Financiële dienstverlening",
+        "client": "Top-3 Nederlandse bank",
+        "challenge": "Het onboarden van nieuwe zakelijke klanten kostte 14 dagen door handmatige checks, documentverificatie en goedkeuringsprocessen.",
+        "result1": "89% sneller onboarden (van 14 naar 1,5 dag)",
+        "result2": "67% minder handmatige handelingen"
+      },
+      "case2": {
+        "sector": "SaaS / Communication Platform",
+        "client": "EU CPaaS scale-up (40M+ API calls/maand)",
+        "challenge": "Support team kreeg 200+ vragen per dag. 60% waren veelgestelde vragen over API documentatie, rate limits en billing. Response tijd: 8 uur.",
+        "result1": "71% van vragen automatisch opgelost",
+        "result2": "6,2 uur sneller response (van 8u → 1u 48min)"
+      },
+      "case3": {
+        "sector": "E-commerce / Groothandel",
+        "client": "B2B webshop (15.000+ SKUs)",
+        "challenge": "Voorraadgegevens in 3 systemen (ERP, webshop, magazijn) waren vaak niet gesynchroniseerd. Dit leidde tot overselling en handmatige correcties.",
+        "result1": "94% minder overselling incidenten",
+        "result2": "12 uur per week bespaard op handmatige sync"
+      }
     }
   },
   "roiCalculator": {

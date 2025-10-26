@@ -794,6 +794,32 @@
       ],
       "priceNote": "Custom—price on request. Book an intake to assess your use case.",
       "cta": "Book intake for Configurators"
+    },
+    "caseStudies": {
+      "title": "Proven Results",
+      "subtitle": "Real cases with measurable impact",
+      "viewSolution": "View this solution",
+      "case1": {
+        "sector": "Financial Services",
+        "client": "Top-3 Dutch Bank",
+        "challenge": "Onboarding new business customers took 14 days due to manual checks, document verification, and approval processes.",
+        "result1": "89% faster onboarding (from 14 to 1.5 days)",
+        "result2": "67% fewer manual actions"
+      },
+      "case2": {
+        "sector": "SaaS / Communication Platform",
+        "client": "EU CPaaS Scale-up (40M+ API calls/month)",
+        "challenge": "Support team received 200+ questions per day. 60% were FAQs about API documentation, rate limits, and billing. Response time: 8 hours.",
+        "result1": "71% of questions automatically resolved",
+        "result2": "6.2 hours faster response (from 8h → 1h 48min)"
+      },
+      "case3": {
+        "sector": "E-commerce / Wholesale",
+        "client": "B2B Webshop (15,000+ SKUs)",
+        "challenge": "Inventory data in 3 systems (ERP, webshop, warehouse) were often out of sync. This led to overselling and manual corrections.",
+        "result1": "94% fewer overselling incidents",
+        "result2": "12 hours per week saved on manual sync"
+      }
     }
   },
   "roiCalculator": {
