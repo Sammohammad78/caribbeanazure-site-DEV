@@ -13,10 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Primary Dutch routes
   const nlRoutes = [
     { path: '', priority: 1.0, frequency: 'weekly' as const },
+    { path: '/oplossingen', priority: 0.9, frequency: 'weekly' as const },
     { path: '/diensten', priority: 0.9, frequency: 'weekly' as const },
     { path: '/prijzen', priority: 0.9, frequency: 'weekly' as const },
     { path: '/roi', priority: 0.9, frequency: 'weekly' as const },
-    { path: '/cases', priority: 0.8, frequency: 'monthly' as const },
     { path: '/over-ons', priority: 0.8, frequency: 'monthly' as const },
     { path: '/contact', priority: 0.8, frequency: 'monthly' as const },
     { path: '/security', priority: 0.7, frequency: 'monthly' as const },
@@ -34,7 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/services', priority: 0.8, frequency: 'weekly' as const },
     { path: '/pricing', priority: 0.8, frequency: 'weekly' as const },
     { path: '/roi', priority: 0.8, frequency: 'weekly' as const },
-    { path: '/cases', priority: 0.7, frequency: 'monthly' as const },
     { path: '/about', priority: 0.7, frequency: 'monthly' as const },
     { path: '/contact', priority: 0.7, frequency: 'monthly' as const },
     { path: '/security', priority: 0.6, frequency: 'monthly' as const },

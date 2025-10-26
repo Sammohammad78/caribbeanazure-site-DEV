@@ -14,14 +14,12 @@ export function Footer() {
   const localizedSlugs = {
     about: locale === 'nl' ? 'over-ons' : 'over-ons',
     solutions: 'oplossingen',
-    cases: 'cases',
     contact: 'contact',
   }
 
   const footerLinks = {
     company: [
       { href: buildHref(localizedSlugs.about), label: t('nav.about') },
-      { href: buildHref(localizedSlugs.cases), label: t('nav.cases') },
       { href: buildHref(localizedSlugs.contact), label: t('nav.contact') },
     ],
     solutions: [
