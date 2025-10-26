@@ -1017,5 +1017,73 @@
       "intro": "Do you have questions about this privacy policy or want to exercise your rights?",
       "details": "<strong>Email:</strong> <a href=\"mailto:privacy@caribbeanazure.com\" class=\"text-[color:var(--brand)] hover:underline\">privacy@caribbeanazure.com</a><br /><strong>Postal address:</strong> Caribbean Azure, [Address to be filled in], Netherlands"
     }
+  },
+  "casesPage": {
+    "title": "Cases: measurable impact",
+    "subtitle": "How we help SMEs and scale-ups with process automation and AI. All cases are anonymized to ensure confidentiality.",
+    "caseLabel": "Case",
+    "sectionProblem": "Problem",
+    "sectionApproach": "Approach",
+    "sectionResults": "Results",
+    "cta": {
+      "title": "Do you recognize these challenges?",
+      "description": "Schedule a no-obligation 45-minute conversation. We'll discuss your situation and share concrete quick wins you can apply immediately.",
+      "buttonIntake": "Schedule an intake",
+      "buttonROI": "Calculate your ROI",
+      "footer": "Response within 24 hours · No obligations"
+    },
+    "caseStudies": [
+      {
+        "id": "fintech-onboarding",
+        "client": "Top-3 Dutch bank",
+        "sector": "Financial services",
+        "challenge": "Onboarding new business customers took 14 days due to manual checks, document verification, and approval processes. This led to customer frustration and increased drop-off rates.",
+        "approach": [
+          "Built: AI document parser for Chamber of Commerce extracts and identity documents with 98% accuracy",
+          "Integrated: Real-time Chamber of Commerce API check + AML screening via external providers",
+          "Automated: Approval workflow with intelligent routing based on risk score",
+          "Set up: Dashboard for compliance team with real-time status insights"
+        ],
+        "results": [
+          "89% faster onboarding (from 14 to 1.5 days)",
+          "67% fewer manual actions",
+          "34% higher conversion through faster processing"
+        ]
+      },
+      {
+        "id": "saas-customer-support",
+        "client": "EU CPaaS scale-up (40M+ API calls/month)",
+        "sector": "SaaS / Communication Platform",
+        "challenge": "Support team received 200+ questions per day via email, Slack, and tickets. 60% were frequently asked questions about API documentation, rate limits, and billing. Average response time: 8 hours.",
+        "approach": [
+          "Built: AI chatbot trained on 2 years of support tickets + API docs",
+          "Integrated: Slack, Intercom, and ticketing system (Zendesk) via unified interface",
+          "Automated: Intelligent triage (simple → bot, complex → human with context)",
+          "Set up: Self-service portal for API key management and usage dashboards"
+        ],
+        "results": [
+          "71% of questions automatically resolved",
+          "6.2 hours faster response (from 8h → 1h 48min)",
+          "3 FTE freed up for proactive support"
+        ]
+      },
+      {
+        "id": "ecommerce-inventory",
+        "client": "B2B webshop (15,000+ SKUs)",
+        "sector": "E-commerce / Wholesale",
+        "challenge": "Inventory data in 3 systems (ERP, webshop, warehouse) was often not synchronized. This led to overselling, disappointed customers, and manual corrections by the team.",
+        "approach": [
+          "Built: Real-time sync between ERP (Exact), Shopify, and WMS with conflict resolution",
+          "Automated: Daily inventory reporting + alerts for deviations >5%",
+          "Integrated: Automatic price adjustments based on inventory levels and season",
+          "Set up: Predictive reordering dashboard based on historical sales"
+        ],
+        "results": [
+          "94% fewer overselling incidents",
+          "12 hours per week saved on manual sync",
+          "18% higher inventory turnover through smarter purchasing"
+        ]
+      }
+    ]
   }
 }

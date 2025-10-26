@@ -1032,5 +1032,73 @@
       "intro": "Heb je vragen over deze privacyverklaring of wil je je rechten uitoefenen?",
       "details": "<strong>E-mail:</strong> <a href=\"mailto:privacy@caribbeanazure.com\" class=\"text-[color:var(--brand)] hover:underline\">privacy@caribbeanazure.com</a><br /><strong>Postadres:</strong> Caribbean Azure, [Adres invullen], Nederland"
     }
+  },
+  "casesPage": {
+    "title": "Cases: meetbare impact",
+    "subtitle": "Hoe we MKB en scale-ups helpen met procesautomatisering en AI. Alle cases zijn geanonimiseerd om vertrouwelijkheid te waarborgen.",
+    "caseLabel": "Case",
+    "sectionProblem": "Probleem",
+    "sectionApproach": "Aanpak",
+    "sectionResults": "Resultaat",
+    "cta": {
+      "title": "Herken je deze uitdagingen?",
+      "description": "Plan een vrijblijvend gesprek van 45 minuten. We bespreken je situatie en delen concrete quick wins die je direct kunt toepassen.",
+      "buttonIntake": "Plan een intake",
+      "buttonROI": "Bereken je ROI",
+      "footer": "Reactie binnen 24 uur · Geen verplichtingen"
+    },
+    "caseStudies": [
+      {
+        "id": "fintech-onboarding",
+        "client": "Top-3 Nederlandse bank",
+        "sector": "Financiële dienstverlening",
+        "challenge": "Het onboarden van nieuwe zakelijke klanten kostte 14 dagen door handmatige checks, documentverificatie en goedkeuringsprocessen. Dit leidde tot frustratie bij klanten en verhoogde drop-off rates.",
+        "approach": [
+          "Gebouwd: AI document parser voor KVK-uittreksels en identiteitsbewijzen met 98% nauwkeurigheid",
+          "Geïntegreerd: Realtime KVK API check + AML screening via externe providers",
+          "Geautomatiseerd: Goedkeuringsworkflow met intelligente routing op basis van risicoscore",
+          "Opgezet: Dashboard voor compliance team met real-time inzicht in status"
+        ],
+        "results": [
+          "89% sneller onboarden (van 14 naar 1,5 dag)",
+          "67% minder handmatige handelingen",
+          "34% hogere conversie door snellere afhandeling"
+        ]
+      },
+      {
+        "id": "saas-customer-support",
+        "client": "EU CPaaS scale-up (40M+ API calls/maand)",
+        "sector": "SaaS / Communication Platform",
+        "challenge": "Support team kreeg 200+ vragen per dag via e-mail, Slack en tickets. 60% waren veelgestelde vragen over API documentatie, rate limits en billing. Gemiddelde response tijd: 8 uur.",
+        "approach": [
+          "Gebouwd: AI chatbot getraind op 2 jaar support tickets + API docs",
+          "Geïntegreerd: Slack, Intercom en ticketing systeem (Zendesk) via unified interface",
+          "Geautomatiseerd: Intelligente triage (simpel → bot, complex → mens met context)",
+          "Opgezet: Self-service portal voor API key management en usage dashboards"
+        ],
+        "results": [
+          "71% van vragen automatisch opgelost",
+          "6,2 uur sneller response (van 8u → 1u 48min)",
+          "3 FTE vrijgespeeld voor proactieve support"
+        ]
+      },
+      {
+        "id": "ecommerce-inventory",
+        "client": "B2B webshop (15.000+ SKUs)",
+        "sector": "E-commerce / Groothandel",
+        "challenge": "Voorraadgegevens in 3 systemen (ERP, webshop, magazijn) waren vaak niet gesynchroniseerd. Dit leidde tot overselling, teleurgestelde klanten en handmatige correcties door het team.",
+        "approach": [
+          "Gebouwd: Real-time sync tussen ERP (Exact), Shopify en WMS met conflict resolution",
+          "Geautomatiseerd: Dagelijkse voorraadrapportage + alerts bij afwijkingen >5%",
+          "Geïntegreerd: Automatische prijsaanpassingen op basis van voorraadniveaus en seizoen",
+          "Opgezet: Predictive reordering dashboard op basis van historische verkoop"
+        ],
+        "results": [
+          "94% minder overselling incidenten",
+          "12 uur per week bespaard op handmatige sync",
+          "18% hogere voorraadrotatie door slimmere inkoop"
+        ]
+      }
+    ]
   }
 }
