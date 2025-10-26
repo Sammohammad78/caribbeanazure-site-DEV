@@ -16,6 +16,12 @@ export function ROICalculator() {
   const [hoursPerWeek, setHoursPerWeek] = useState(20)
   const [hourlyRate, setHourlyRate] = useState(50)
 
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => {
+    const path = slug ? `/${slug}` : '/'
+    return locale === 'nl' ? path : `/en${path}`
+  }
+
   // Calculations
   const yearlyWaste = teamSize * hoursPerWeek * hourlyRate * 48 // 48 work weeks
   const automationSavings = yearlyWaste * 0.6 // 60% reduction
@@ -305,7 +311,7 @@ export function ROICalculator() {
 
             {/* CTA */}
             <div className="text-center">
-              <Link href={`/${locale}/contact?roi=${Math.round(roi)}&savings=${Math.round(automationSavings)}`}>
+              <Link href={`${buildHref('contact')}?roi=${Math.round(roi)}&savings=${Math.round(automationSavings)}`}>
                 <MagneticButton className="w-full min-w-[280px]">
                   Ontvang je persoonlijke blueprint
                   <ArrowRight className="size-5" />
