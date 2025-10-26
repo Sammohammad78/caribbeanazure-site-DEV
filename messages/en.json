@@ -777,5 +777,113 @@
     "cta": "Book a short intake",
     "complianceTitle": "Independence & Compliance",
     "complianceText": "Caribbean Azure operates independently and does not mention client or employer names. We only communicate results we can factually demonstrate."
+  },
+  "terms": {
+    "badge": "Terms & Conditions",
+    "title": "Terms and conditions",
+    "updated": "Last updated: October 24, 2025",
+    "intro": "These general terms and conditions apply to all agreements between Caribbean Azure and the client.",
+    "article1": {
+      "title": "Article 1 – Definitions",
+      "items": [
+        "<strong>Contractor:</strong> Caribbean Azure, based in the Netherlands",
+        "<strong>Client:</strong> The natural or legal person entering into an agreement with the contractor",
+        "<strong>Services:</strong> All work performed by the contractor, including automation, web development, AI integrations, consultancy, and training",
+        "<strong>Deliverable:</strong> A concrete delivered product or result such as a workflow, dashboard, website, or report",
+        "<strong>Blueprint:</strong> A visual plan with flowcharts, data flows, and technical specifications"
+      ]
+    },
+    "article2": {
+      "title": "Article 2 – Applicability",
+      "paragraphs": [
+        "2.1. These general terms and conditions apply to all offers, quotations, and agreements between contractor and client.",
+        "2.2. Deviations from these terms are only valid if agreed upon in writing.",
+        "2.3. The applicability of any purchasing or other terms and conditions of the client is expressly rejected.",
+        "2.4. If one or more provisions in these general terms and conditions are void, the remaining provisions remain fully effective."
+      ]
+    },
+    "article3": {
+      "title": "Article 3 – Quotation and formation",
+      "paragraphs": [
+        "3.1. All quotations are non-binding and valid for 30 days, unless stated otherwise.",
+        "3.2. An agreement is concluded after written confirmation by the contractor or upon commencement of work.",
+        "3.3. Prices in quotations are exclusive of VAT, unless stated otherwise.",
+        "3.4. If the client does not agree with a quotation, it automatically expires after 30 days."
+      ]
+    },
+    "article4": {
+      "title": "Article 4 – Execution of the assignment",
+      "paragraphs": [
+        "4.1. The contractor will execute the agreement to the best of its ability, in accordance with state-of-the-art practices in the industry.",
+        "4.2. Delivered deliverables are tested prior to delivery. The client has 5 working days to provide feedback.",
+        "4.3. The client provides all necessary information, access, and cooperation in a timely manner. Delays caused by the client may lead to adjustments in planning and costs.",
+        "4.4. The contractor has the right to engage third parties in the execution of the assignment.",
+        "4.5. Stated lead times are indicative and not strict deadlines, unless expressly agreed upon in writing."
+      ]
+    },
+    "article5": {
+      "title": "Article 5 – Prices and payment",
+      "paragraphs": [
+        "5.1. All prices are exclusive of VAT and exclusive of costs for external tools (such as Zapier, Make, API licenses).",
+        "5.2. Payment must be made within 14 days after the invoice date, unless otherwise agreed.",
+        "5.3. For projects above €5,000, the contractor may send a down payment invoice of 30% upon signing.",
+        "5.4. If the payment term is exceeded, the client is in default without further notice. The contractor has the right to charge 1% interest per month.",
+        "5.5. All collection costs, both judicial and extrajudicial, are at the expense of the client."
+      ]
+    },
+    "article6": {
+      "title": "Article 6 – Intellectual property",
+      "paragraphs": [
+        "6.1. All intellectual property rights to works developed or delivered by the contractor rest with the contractor, unless agreed otherwise in writing.",
+        "6.2. The client obtains a non-exclusive, non-transferable right of use for the delivered deliverables for internal use within the organization.",
+        "6.3. The client is not permitted to reproduce, sell, or make the delivered works available to third parties without prior written permission from the contractor.",
+        "6.4. Custom code and scripts remain the property of the contractor, but the client receives full access and modification rights for internal use.",
+        "6.5. Reusable components, templates, and frameworks developed by the contractor remain the contractor's property and may be reused for other projects."
+      ]
+    },
+    "article7": {
+      "title": "Article 7 – Liability",
+      "paragraphs": [
+        "7.1. The contractor is only liable for direct damage resulting from intent or willful recklessness on the part of the contractor.",
+        "7.2. Liability for indirect damage, including consequential damage, lost profits, missed savings, and damage due to business interruption, is excluded.",
+        "7.3. The contractor's liability is limited to a maximum of the invoice amount for the relevant assignment, with a maximum of €25,000.",
+        "7.4. The client is responsible for making backups of their own data and systems. The contractor is not liable for data loss.",
+        "7.5. The contractor is not liable for outages, failures, or changes in external systems and APIs of third parties (such as Zapier, Make, ClickUp, Google, Microsoft)."
+      ]
+    },
+    "article8": {
+      "title": "Article 8 – Warranty and maintenance",
+      "paragraphs": [
+        "8.1. The contractor guarantees that delivered deliverables meet the specifications described in the blueprint.",
+        "8.2. During the agreed support period (standard 30 days after delivery), the contractor fixes bugs and functional issues free of charge.",
+        "8.3. After the support period expires, bugs and adjustments can be invoiced based on hourly rate or via a support subscription.",
+        "8.4. The warranty expires if the client or third parties have made changes to the delivered systems without permission."
+      ]
+    },
+    "article9": {
+      "title": "Article 9 – Confidentiality",
+      "paragraphs": [
+        "9.1. Both parties commit to confidentiality of all confidential information obtained from each other in the context of the agreement.",
+        "9.2. The contractor may use the client's name and a general description of the project for reference purposes, unless agreed otherwise in writing.",
+        "9.3. At the client's request, a separate Non-Disclosure Agreement (NDA) can be concluded prior to the quotation phase."
+      ]
+    },
+    "article10": {
+      "title": "Article 10 – Termination and cancellation",
+      "paragraphs": [
+        "10.1. Both parties can terminate the agreement in writing with a notice period of 30 days, unless otherwise agreed.",
+        "10.2. In case of early termination by the client, the client remains obligated to pay for work already performed and costs incurred.",
+        "10.3. The contractor has the right to terminate the agreement with immediate effect if the client fails to meet payment obligations or is declared bankrupt.",
+        "10.4. For retainer agreements, a notice period of 60 days applies at the end of a calendar month."
+      ]
+    },
+    "article11": {
+      "title": "Article 11 – Applicable law and disputes",
+      "paragraphs": [
+        "11.1. All agreements between contractor and client are exclusively governed by Dutch law.",
+        "11.2. Disputes will be submitted to the competent court in the district where the contractor is located.",
+        "11.3. Parties will first attempt to resolve a dispute through mutual consultation before resorting to court."
+      ]
+    }
   }
 }
