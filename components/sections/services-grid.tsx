@@ -10,6 +10,12 @@ export function ServicesGrid() {
   const locale = useLocale()
   const services = t.raw('items') as Array<{ title: string; description: string }>
 
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => {
+    const path = slug ? `/${slug}` : '/'
+    return locale === 'nl' ? path : `/en${path}`
+  }
+
   return (
     <section className="section-padding-y">
       <div className="container-custom">
@@ -21,9 +27,8 @@ export function ServicesGrid() {
         <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {services.map((service, index) => {
             const Icon = icons[index % icons.length]
-            const href = `/${locale}/contact`
             return (
-              <Link key={service.title} href={href} className="group h-full">
+              <Link key={service.title} href={buildHref('contact')} className="group h-full">
                 <Card className="card-gradient-stripe relative h-full overflow-hidden transition-all duration-300 ease-out">
                   <CardHeader className="space-y-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[color:color-mix(in_oklab,var(--brand-soft)_65%,transparent)] text-[color:var(--brand)] transition-all duration-300 group-hover:bg-[linear-gradient(135deg,var(--brand)_0%,var(--accent)_100%)] group-hover:text-white">

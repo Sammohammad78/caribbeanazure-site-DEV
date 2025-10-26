@@ -11,6 +11,12 @@ export function UseCasesSection() {
   const t = useTranslations('useCases')
   const locale = useLocale()
 
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => {
+    const path = slug ? `/${slug}` : '/'
+    return locale === 'nl' ? path : `/en${path}`
+  }
+
   const useCases = [
     {
       title: t('items.0.title'),
@@ -129,7 +135,7 @@ export function UseCasesSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <Button asChild size="lg">
-            <Link href={`/${locale}/contact`}>
+            <Link href={buildHref('contact')}>
               {t('cta')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

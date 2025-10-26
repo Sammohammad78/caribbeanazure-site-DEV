@@ -608,7 +608,82 @@
     "readyForConfigurator": "Klaar voor een configurator?",
     "bookIntakeConfigurator": "Plan een intake om jouw product, varianten en productieproces door te nemen. We beoordelen samen of een configurator de beste oplossing is.",
     "viewCases": "Bekijk cases",
-    "cpqConfigDescription": "Bekijk onze CPQ & Configure-to-Production oplossingen voor complexe producten met duizenden varianten."
+    "cpqConfigDescription": "Bekijk onze CPQ & Configure-to-Production oplossingen voor complexe producten met duizenden varianten.",
+    "roiCalculator": {
+      "badge": "ROI Calculator",
+      "title": "Wat levert automatisering jou op?",
+      "subtitle": "Bereken in 60 seconden hoeveel tijd en geld je bespaart met automation",
+      "input": {
+        "title": "Je situatie",
+        "description": "Pas de schuifjes aan naar je huidige situatie",
+        "teamSize": {
+          "label": "Teamgrootte",
+          "min": "1 persoon",
+          "max": "50+ mensen"
+        },
+        "hoursPerWeek": {
+          "label": "Uren handmatig werk per week",
+          "min": "5 uur/week",
+          "max": "40 uur/week"
+        },
+        "hourlyRate": {
+          "label": "Gemiddeld uurtarief",
+          "min": "€25/uur",
+          "max": "€150/uur"
+        }
+      },
+      "results": {
+        "yearlySavings": "Jaarlijkse besparing",
+        "roi": "ROI (eerste jaar)",
+        "payback": "Terugverdiend in",
+        "investment": "Investering"
+      },
+      "graph": {
+        "title": "Cumulatieve besparing (24 maanden)",
+        "xAxisLabel": "Maanden",
+        "tooltipMonth": "Maand",
+        "breakevenText": "Breakeven punt na",
+        "totalSavingsText": "Totale besparing na 2 jaar:"
+      },
+      "cta": {
+        "button": "Ontvang je persoonlijke blueprint",
+        "footer": "Vrijblijvend gesprek · Reactie binnen 24 uur"
+      },
+      "disclaimer": {
+        "bold": "Let op:",
+        "text": "De berekening is een voorbeeld en geen garantie. Werkelijke resultaten variëren per proces en organisatie."
+      }
+    },
+    "contactForm": {
+      "fields": {
+        "name": {
+          "label": "Naam",
+          "placeholder": "Uw naam",
+          "required": "Naam moet minimaal 2 karakters zijn"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "uw.email@voorbeeld.nl",
+          "invalid": "Ongeldig emailadres"
+        },
+        "phone": {
+          "label": "Telefoon (optioneel)",
+          "placeholder": "+31 6 1234 5678"
+        },
+        "message": {
+          "label": "Bericht",
+          "placeholder": "Vertel ons waar we u mee kunnen helpen...",
+          "required": "Bericht moet minimaal 10 karakters zijn"
+        }
+      },
+      "status": {
+        "success": "Bedankt! We nemen spoedig contact op.",
+        "error": "Er ging iets mis. Probeer het opnieuw.",
+        "sending": "Verzenden..."
+      },
+      "submit": "Verstuur",
+      "requiredField": "*"
+    }
   },
   "solutions": {
     "title": "Oplossingen voor elke schaal",
@@ -1031,6 +1106,116 @@
       "title": "10. Contact",
       "intro": "Heb je vragen over deze privacyverklaring of wil je je rechten uitoefenen?",
       "details": "<strong>E-mail:</strong> <a href=\"mailto:privacy@caribbeanazure.com\" class=\"text-[color:var(--brand)] hover:underline\">privacy@caribbeanazure.com</a><br /><strong>Postadres:</strong> Caribbean Azure, [Adres invullen], Nederland"
+    }
+  },
+  "casesPage": {
+    "title": "Cases: meetbare impact",
+    "subtitle": "Hoe we MKB en scale-ups helpen met procesautomatisering en AI. Alle cases zijn geanonimiseerd om vertrouwelijkheid te waarborgen.",
+    "caseLabel": "Case",
+    "sectionProblem": "Probleem",
+    "sectionApproach": "Aanpak",
+    "sectionResults": "Resultaat",
+    "cta": {
+      "title": "Herken je deze uitdagingen?",
+      "description": "Plan een vrijblijvend gesprek van 45 minuten. We bespreken je situatie en delen concrete quick wins die je direct kunt toepassen.",
+      "buttonIntake": "Plan een intake",
+      "buttonROI": "Bereken je ROI",
+      "footer": "Reactie binnen 24 uur · Geen verplichtingen"
+    },
+    "caseStudies": [
+      {
+        "id": "fintech-onboarding",
+        "client": "Top-3 Nederlandse bank",
+        "sector": "Financiële dienstverlening",
+        "challenge": "Het onboarden van nieuwe zakelijke klanten kostte 14 dagen door handmatige checks, documentverificatie en goedkeuringsprocessen. Dit leidde tot frustratie bij klanten en verhoogde drop-off rates.",
+        "approach": [
+          "Gebouwd: AI document parser voor KVK-uittreksels en identiteitsbewijzen met 98% nauwkeurigheid",
+          "Geïntegreerd: Realtime KVK API check + AML screening via externe providers",
+          "Geautomatiseerd: Goedkeuringsworkflow met intelligente routing op basis van risicoscore",
+          "Opgezet: Dashboard voor compliance team met real-time inzicht in status"
+        ],
+        "results": [
+          "89% sneller onboarden (van 14 naar 1,5 dag)",
+          "67% minder handmatige handelingen",
+          "34% hogere conversie door snellere afhandeling"
+        ]
+      },
+      {
+        "id": "saas-customer-support",
+        "client": "EU CPaaS scale-up (40M+ API calls/maand)",
+        "sector": "SaaS / Communication Platform",
+        "challenge": "Support team kreeg 200+ vragen per dag via e-mail, Slack en tickets. 60% waren veelgestelde vragen over API documentatie, rate limits en billing. Gemiddelde response tijd: 8 uur.",
+        "approach": [
+          "Gebouwd: AI chatbot getraind op 2 jaar support tickets + API docs",
+          "Geïntegreerd: Slack, Intercom en ticketing systeem (Zendesk) via unified interface",
+          "Geautomatiseerd: Intelligente triage (simpel → bot, complex → mens met context)",
+          "Opgezet: Self-service portal voor API key management en usage dashboards"
+        ],
+        "results": [
+          "71% van vragen automatisch opgelost",
+          "6,2 uur sneller response (van 8u → 1u 48min)",
+          "3 FTE vrijgespeeld voor proactieve support"
+        ]
+      },
+      {
+        "id": "ecommerce-inventory",
+        "client": "B2B webshop (15.000+ SKUs)",
+        "sector": "E-commerce / Groothandel",
+        "challenge": "Voorraadgegevens in 3 systemen (ERP, webshop, magazijn) waren vaak niet gesynchroniseerd. Dit leidde tot overselling, teleurgestelde klanten en handmatige correcties door het team.",
+        "approach": [
+          "Gebouwd: Real-time sync tussen ERP (Exact), Shopify en WMS met conflict resolution",
+          "Geautomatiseerd: Dagelijkse voorraadrapportage + alerts bij afwijkingen >5%",
+          "Geïntegreerd: Automatische prijsaanpassingen op basis van voorraadniveaus en seizoen",
+          "Opgezet: Predictive reordering dashboard op basis van historische verkoop"
+        ],
+        "results": [
+          "94% minder overselling incidenten",
+          "12 uur per week bespaard op handmatige sync",
+          "18% hogere voorraadrotatie door slimmere inkoop"
+        ]
+      }
+    ]
+  },
+  "contactPage": {
+    "badge": "Neem contact op",
+    "title": "Laten we kennismaken",
+    "subtitle": "Mail, bel of app ons. We reageren binnen 24 uur.",
+    "contactMethods": {
+      "title": "Hoe je ons bereikt",
+      "whatsapp": {
+        "title": "WhatsApp",
+        "tagline": "Snelste reactietijd",
+        "body": "Stuur ons een bericht via WhatsApp voor directe vragen of een snelle intake.",
+        "button": "Start WhatsApp chat"
+      },
+      "email": {
+        "title": "E-mail",
+        "tagline": "Voor uitgebreide vragen",
+        "body": "Stuur ons een e-mail en we reageren binnen 24 uur."
+      },
+      "phone": {
+        "title": "Telefoon",
+        "tagline": "Voor directe gesprekken",
+        "body": "Bel ons tijdens kantooruren (09:00-17:00) voor een adviesgesprek."
+      }
+    },
+    "form": {
+      "title": "Stuur ons een bericht",
+      "description": "Deel je vraag en we nemen snel contact op."
+    },
+    "infoCards": {
+      "responseTime": {
+        "title": "Reactietijd",
+        "description": "We reageren binnen 24 uur op WhatsApp en e-mail. Telefonisch zijn we bereikbaar op werkdagen tussen 09:00-17:00."
+      },
+      "location": {
+        "title": "Locatie",
+        "description": "We werken remote-first, maar komen wekelijks samen in Amsterdam. Voor on-site workshops komen we graag naar jullie toe."
+      },
+      "noObligations": {
+        "title": "Geen verplichtingen",
+        "description": "Het eerste gesprek is altijd vrijblijvend. We bespreken je uitdaging en adviseren of automatisering impact kan maken."
+      }
     }
   }
 }

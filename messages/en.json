@@ -75,7 +75,82 @@
     "readyForConfigurator": "Ready for a configurator?",
     "bookIntakeConfigurator": "Book an intake to discuss your product, variants, and production process. We'll assess together whether a configurator is the best solution.",
     "viewCases": "View cases",
-    "cpqConfigDescription": "Check out our CPQ & Configure-to-Production solutions for complex products with thousands of variants."
+    "cpqConfigDescription": "Check out our CPQ & Configure-to-Production solutions for complex products with thousands of variants.",
+    "roiCalculator": {
+      "badge": "ROI Calculator",
+      "title": "What does automation deliver for you?",
+      "subtitle": "Calculate in 60 seconds how much time and money you save with automation",
+      "input": {
+        "title": "Your situation",
+        "description": "Adjust the sliders to match your current situation",
+        "teamSize": {
+          "label": "Team size",
+          "min": "1 person",
+          "max": "50+ people"
+        },
+        "hoursPerWeek": {
+          "label": "Hours of manual work per week",
+          "min": "5 hours/week",
+          "max": "40 hours/week"
+        },
+        "hourlyRate": {
+          "label": "Average hourly rate",
+          "min": "€25/hour",
+          "max": "€150/hour"
+        }
+      },
+      "results": {
+        "yearlySavings": "Annual savings",
+        "roi": "ROI (first year)",
+        "payback": "Paid back in",
+        "investment": "Investment"
+      },
+      "graph": {
+        "title": "Cumulative savings (24 months)",
+        "xAxisLabel": "Months",
+        "tooltipMonth": "Month",
+        "breakevenText": "Breakeven point after",
+        "totalSavingsText": "Total savings after 2 years:"
+      },
+      "cta": {
+        "button": "Get your personal blueprint",
+        "footer": "No-obligation conversation · Response within 24 hours"
+      },
+      "disclaimer": {
+        "bold": "Note:",
+        "text": "The calculation is an example and not a guarantee. Actual results vary per process and organization."
+      }
+    },
+    "contactForm": {
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your name",
+          "required": "Name must be at least 2 characters"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your.email@example.com",
+          "invalid": "Invalid email address"
+        },
+        "phone": {
+          "label": "Phone (optional)",
+          "placeholder": "+31 6 1234 5678"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Tell us how we can help you...",
+          "required": "Message must be at least 10 characters"
+        }
+      },
+      "status": {
+        "success": "Thank you! We'll be in touch soon.",
+        "error": "Something went wrong. Please try again.",
+        "sending": "Sending..."
+      },
+      "submit": "Send",
+      "requiredField": "*"
+    }
   },
   "hero": {
     "title": "From request to production—automated for manufacturing SMEs",
@@ -1016,6 +1091,116 @@
       "title": "10. Contact",
       "intro": "Do you have questions about this privacy policy or want to exercise your rights?",
       "details": "<strong>Email:</strong> <a href=\"mailto:privacy@caribbeanazure.com\" class=\"text-[color:var(--brand)] hover:underline\">privacy@caribbeanazure.com</a><br /><strong>Postal address:</strong> Caribbean Azure, [Address to be filled in], Netherlands"
+    }
+  },
+  "casesPage": {
+    "title": "Cases: measurable impact",
+    "subtitle": "How we help SMEs and scale-ups with process automation and AI. All cases are anonymized to ensure confidentiality.",
+    "caseLabel": "Case",
+    "sectionProblem": "Problem",
+    "sectionApproach": "Approach",
+    "sectionResults": "Results",
+    "cta": {
+      "title": "Do you recognize these challenges?",
+      "description": "Schedule a no-obligation 45-minute conversation. We'll discuss your situation and share concrete quick wins you can apply immediately.",
+      "buttonIntake": "Schedule an intake",
+      "buttonROI": "Calculate your ROI",
+      "footer": "Response within 24 hours · No obligations"
+    },
+    "caseStudies": [
+      {
+        "id": "fintech-onboarding",
+        "client": "Top-3 Dutch bank",
+        "sector": "Financial services",
+        "challenge": "Onboarding new business customers took 14 days due to manual checks, document verification, and approval processes. This led to customer frustration and increased drop-off rates.",
+        "approach": [
+          "Built: AI document parser for Chamber of Commerce extracts and identity documents with 98% accuracy",
+          "Integrated: Real-time Chamber of Commerce API check + AML screening via external providers",
+          "Automated: Approval workflow with intelligent routing based on risk score",
+          "Set up: Dashboard for compliance team with real-time status insights"
+        ],
+        "results": [
+          "89% faster onboarding (from 14 to 1.5 days)",
+          "67% fewer manual actions",
+          "34% higher conversion through faster processing"
+        ]
+      },
+      {
+        "id": "saas-customer-support",
+        "client": "EU CPaaS scale-up (40M+ API calls/month)",
+        "sector": "SaaS / Communication Platform",
+        "challenge": "Support team received 200+ questions per day via email, Slack, and tickets. 60% were frequently asked questions about API documentation, rate limits, and billing. Average response time: 8 hours.",
+        "approach": [
+          "Built: AI chatbot trained on 2 years of support tickets + API docs",
+          "Integrated: Slack, Intercom, and ticketing system (Zendesk) via unified interface",
+          "Automated: Intelligent triage (simple → bot, complex → human with context)",
+          "Set up: Self-service portal for API key management and usage dashboards"
+        ],
+        "results": [
+          "71% of questions automatically resolved",
+          "6.2 hours faster response (from 8h → 1h 48min)",
+          "3 FTE freed up for proactive support"
+        ]
+      },
+      {
+        "id": "ecommerce-inventory",
+        "client": "B2B webshop (15,000+ SKUs)",
+        "sector": "E-commerce / Wholesale",
+        "challenge": "Inventory data in 3 systems (ERP, webshop, warehouse) was often not synchronized. This led to overselling, disappointed customers, and manual corrections by the team.",
+        "approach": [
+          "Built: Real-time sync between ERP (Exact), Shopify, and WMS with conflict resolution",
+          "Automated: Daily inventory reporting + alerts for deviations >5%",
+          "Integrated: Automatic price adjustments based on inventory levels and season",
+          "Set up: Predictive reordering dashboard based on historical sales"
+        ],
+        "results": [
+          "94% fewer overselling incidents",
+          "12 hours per week saved on manual sync",
+          "18% higher inventory turnover through smarter purchasing"
+        ]
+      }
+    ]
+  },
+  "contactPage": {
+    "badge": "Get in touch",
+    "title": "Let's connect",
+    "subtitle": "Email, call, or message us. We respond within 24 hours.",
+    "contactMethods": {
+      "title": "How to reach us",
+      "whatsapp": {
+        "title": "WhatsApp",
+        "tagline": "Fastest response time",
+        "body": "Send us a message via WhatsApp for direct questions or a quick intake.",
+        "button": "Start WhatsApp chat"
+      },
+      "email": {
+        "title": "Email",
+        "tagline": "For detailed inquiries",
+        "body": "Send us an email and we'll respond within 24 hours."
+      },
+      "phone": {
+        "title": "Phone",
+        "tagline": "For direct conversations",
+        "body": "Call us during office hours (09:00-17:00) for a consultation."
+      }
+    },
+    "form": {
+      "title": "Send us a message",
+      "description": "Share your question and we'll get in touch soon."
+    },
+    "infoCards": {
+      "responseTime": {
+        "title": "Response time",
+        "description": "We respond within 24 hours on WhatsApp and email. By phone we're available on weekdays between 09:00-17:00."
+      },
+      "location": {
+        "title": "Location",
+        "description": "We work remote-first, but meet weekly in Amsterdam. For on-site workshops, we're happy to come to you."
+      },
+      "noObligations": {
+        "title": "No obligations",
+        "description": "The first conversation is always non-binding. We'll discuss your challenge and advise whether automation can make an impact."
+      }
     }
   }
 }

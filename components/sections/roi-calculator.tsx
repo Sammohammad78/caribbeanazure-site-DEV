@@ -6,15 +6,22 @@ import { CardPremium, CardPremiumHeader, CardPremiumTitle, CardPremiumDescriptio
 import { MagneticButton } from '@/components/ui/button-magnetic'
 import { Calculator, TrendingUp, Clock, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts'
 import { formatMonths } from '@/lib/format'
 
 export function ROICalculator() {
   const locale = useLocale() as 'nl' | 'en'
+  const t = useTranslations('common.roiCalculator')
   const [teamSize, setTeamSize] = useState(10)
   const [hoursPerWeek, setHoursPerWeek] = useState(20)
   const [hourlyRate, setHourlyRate] = useState(50)
+
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => {
+    const path = slug ? `/${slug}` : '/'
+    return locale === 'nl' ? path : `/en${path}`
+  }
 
   // Calculations
   const yearlyWaste = teamSize * hoursPerWeek * hourlyRate * 48 // 48 work weeks
@@ -63,7 +70,7 @@ export function ROICalculator() {
             transition={{ duration: 0.4 }}
           >
             <Calculator className="size-4" />
-            ROI Calculator
+            {t('badge')}
           </motion.div>
 
           <motion.h2
@@ -73,7 +80,7 @@ export function ROICalculator() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Wat levert automatisering jou op?
+            {t('title')}
           </motion.h2>
 
           <motion.p
@@ -83,7 +90,7 @@ export function ROICalculator() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Bereken in 60 seconden hoeveel tijd en geld je bespaart met automation
+            {t('subtitle')}
           </motion.p>
         </div>
 
@@ -98,9 +105,9 @@ export function ROICalculator() {
           >
             <CardPremium glow>
               <CardPremiumHeader>
-                <CardPremiumTitle>Je situatie</CardPremiumTitle>
+                <CardPremiumTitle>{t('input.title')}</CardPremiumTitle>
                 <CardPremiumDescription>
-                  Pas de schuifjes aan naar je huidige situatie
+                  {t('input.description')}
                 </CardPremiumDescription>
               </CardPremiumHeader>
 
@@ -109,7 +116,7 @@ export function ROICalculator() {
                 <div>
                   <div className="mb-3 flex items-center justify-between">
                     <label className="text-sm font-semibold text-body">
-                      Teamgrootte
+                      {t('input.teamSize.label')}
                     </label>
                     <span className="text-2xl font-bold text-[color:var(--brand)]">
                       {teamSize}
@@ -124,8 +131,8 @@ export function ROICalculator() {
                     className="h-2 w-full cursor-pointer appearance-none rounded-full bg-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[color:var(--brand)] [&::-webkit-slider-thumb]:shadow-[0_4px_16px_color-mix(in_oklab,var(--brand)_40%,transparent)] [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:hover:scale-110"
                   />
                   <div className="mt-2 flex justify-between text-xs text-[color:var(--fg-muted)]">
-                    <span>1 persoon</span>
-                    <span>50+ mensen</span>
+                    <span>{t('input.teamSize.min')}</span>
+                    <span>{t('input.teamSize.max')}</span>
                   </div>
                 </div>
 
@@ -133,7 +140,7 @@ export function ROICalculator() {
                 <div>
                   <div className="mb-3 flex items-center justify-between">
                     <label className="text-sm font-semibold text-body">
-                      Uren handmatig werk per week
+                      {t('input.hoursPerWeek.label')}
                     </label>
                     <span className="text-2xl font-bold text-[color:var(--brand)]">
                       {hoursPerWeek}h
@@ -148,8 +155,8 @@ export function ROICalculator() {
                     className="h-2 w-full cursor-pointer appearance-none rounded-full bg-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[color:var(--brand)] [&::-webkit-slider-thumb]:shadow-[0_4px_16px_color-mix(in_oklab,var(--brand)_40%,transparent)] [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:hover:scale-110"
                   />
                   <div className="mt-2 flex justify-between text-xs text-[color:var(--fg-muted)]">
-                    <span>5 uur/week</span>
-                    <span>40 uur/week</span>
+                    <span>{t('input.hoursPerWeek.min')}</span>
+                    <span>{t('input.hoursPerWeek.max')}</span>
                   </div>
                 </div>
 
@@ -157,7 +164,7 @@ export function ROICalculator() {
                 <div>
                   <div className="mb-3 flex items-center justify-between">
                     <label className="text-sm font-semibold text-body">
-                      Gemiddeld uurtarief
+                      {t('input.hourlyRate.label')}
                     </label>
                     <span className="text-2xl font-bold text-[color:var(--brand)]">
                       €{hourlyRate}
@@ -173,8 +180,8 @@ export function ROICalculator() {
                     className="h-2 w-full cursor-pointer appearance-none rounded-full bg-[color:color-mix(in_oklab,var(--fg)_12%,transparent)] [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[color:var(--brand)] [&::-webkit-slider-thumb]:shadow-[0_4px_16px_color-mix(in_oklab,var(--brand)_40%,transparent)] [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:hover:scale-110"
                   />
                   <div className="mt-2 flex justify-between text-xs text-[color:var(--fg-muted)]">
-                    <span>€25/uur</span>
-                    <span>€150/uur</span>
+                    <span>{t('input.hourlyRate.min')}</span>
+                    <span>{t('input.hourlyRate.max')}</span>
                   </div>
                 </div>
               </CardPremiumContent>
@@ -198,7 +205,7 @@ export function ROICalculator() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--fg-muted)]">
-                      Jaarlijkse besparing
+                      {t('results.yearlySavings')}
                     </p>
                     <p className="mt-2 text-3xl font-bold text-body">
                       {formatCurrency(automationSavings)}
@@ -214,7 +221,7 @@ export function ROICalculator() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--fg-muted)]">
-                      ROI (eerste jaar)
+                      {t('results.roi')}
                     </p>
                     <p className="mt-2 text-3xl font-bold text-body">
                       {formatNumber(roi)}%
@@ -230,7 +237,7 @@ export function ROICalculator() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--fg-muted)]">
-                      Terugverdiend in
+                      {t('results.payback')}
                     </p>
                     <p className="mt-2 text-3xl font-bold text-body">
                       {paybackMonths} {formatMonths(paybackMonths, locale)}
@@ -246,7 +253,7 @@ export function ROICalculator() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--fg-muted)]">
-                      Investering
+                      {t('results.investment')}
                     </p>
                     <p className="mt-2 text-3xl font-bold text-body">
                       {formatCurrency(implementationCost)}
@@ -259,7 +266,7 @@ export function ROICalculator() {
             {/* Graph */}
             <CardPremium className="p-6">
               <h3 className="mb-4 text-lg font-semibold text-body">
-                Cumulatieve besparing (24 maanden)
+                {t('graph.title')}
               </h3>
               <div className="h-[240px]">
                 <ResponsiveContainer width="100%" height="100%">
@@ -267,7 +274,7 @@ export function ROICalculator() {
                     <CartesianGrid strokeDasharray="3 3" stroke="color-mix(in oklab, var(--fg) 8%, transparent)" />
                     <XAxis
                       dataKey="month"
-                      label={{ value: 'Maanden', position: 'insideBottom', offset: -5 }}
+                      label={{ value: t('graph.xAxisLabel'), position: 'insideBottom', offset: -5 }}
                       stroke="var(--fg-muted)"
                       tick={{ fill: 'var(--fg-subtle)', fontSize: 12 }}
                     />
@@ -278,7 +285,7 @@ export function ROICalculator() {
                     />
                     <Tooltip
                       formatter={(value: number) => formatCurrency(value)}
-                      labelFormatter={(label) => `Maand ${label}`}
+                      labelFormatter={(label) => `${t('graph.tooltipMonth')} ${label}`}
                       contentStyle={{
                         backgroundColor: 'var(--panel)',
                         border: '1px solid color-mix(in oklab, var(--fg) 12%, transparent)',
@@ -298,21 +305,21 @@ export function ROICalculator() {
                 </ResponsiveContainer>
               </div>
               <p className="mt-4 text-sm text-[color:var(--fg-subtle)]">
-                Breakeven punt na <span className="font-semibold text-[color:var(--brand)]">{paybackMonths} {formatMonths(paybackMonths, locale)}</span>.
-                Totale besparing na 2 jaar: <span className="font-semibold text-[color:var(--brand)]">{formatCurrency(automationSavings * 2)}</span>
+                {t('graph.breakevenText')} <span className="font-semibold text-[color:var(--brand)]">{paybackMonths} {formatMonths(paybackMonths, locale)}</span>.
+                {' '}{t('graph.totalSavingsText')} <span className="font-semibold text-[color:var(--brand)]">{formatCurrency(automationSavings * 2)}</span>
               </p>
             </CardPremium>
 
             {/* CTA */}
             <div className="text-center">
-              <Link href={`/${locale}/contact?roi=${Math.round(roi)}&savings=${Math.round(automationSavings)}`}>
+              <Link href={`${buildHref('contact')}?roi=${Math.round(roi)}&savings=${Math.round(automationSavings)}`}>
                 <MagneticButton className="w-full min-w-[280px]">
-                  Ontvang je persoonlijke blueprint
+                  {t('cta.button')}
                   <ArrowRight className="size-5" />
                 </MagneticButton>
               </Link>
               <p className="mt-3 text-sm text-[color:var(--fg-muted)]">
-                Vrijblijvend gesprek · Reactie binnen 24 uur
+                {t('cta.footer')}
               </p>
             </div>
           </motion.div>
@@ -322,8 +329,7 @@ export function ROICalculator() {
         {/* Disclaimer */}
         <div className="mx-auto mt-8 max-w-3xl text-center">
           <p className="text-sm text-[color:var(--fg-muted)]">
-            <strong>Let op:</strong> De berekening is een voorbeeld en geen garantie.
-            Werkelijke resultaten variëren per proces en organisatie.
+            <strong>{t('disclaimer.bold')}</strong> {t('disclaimer.text')}
           </p>
         </div>
       </div>

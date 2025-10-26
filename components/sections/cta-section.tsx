@@ -9,6 +9,12 @@ export function CTASection() {
   const t = useTranslations('cta')
   const locale = useLocale()
 
+  // Build locale-aware href (NL at root, EN with /en prefix)
+  const buildHref = (slug: string) => {
+    const path = slug ? `/${slug}` : '/'
+    return locale === 'nl' ? path : `/en${path}`
+  }
+
   return (
     <section className="section-padding-y">
       <div className="container-custom">
@@ -26,7 +32,7 @@ export function CTASection() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Button asChild size="lg" className="w-full sm:w-auto">
-                <Link href={`/${locale}/contact`}>
+                <Link href={buildHref('contact')}>
                   <Calendar className="mr-2 h-5 w-5" />
                   {t('button')}
                 </Link>
